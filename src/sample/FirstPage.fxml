@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.FirstPageController">
+   <children>
+      <Button layoutX="254.0" layoutY="173.0" mnemonicParsing="false" text="Get Started!" />
+      <Button layoutX="268.0" layoutY="210.0" mnemonicParsing="false" text="Tutorial" />
+      <Label layoutX="254.0" layoutY="111.0" text="Not App">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="169.0" layoutY="149.0" text="Compare appliances and see your savings!" />
+   </children>
+</Pane>
