@@ -6,9 +6,9 @@
 <?import javafx.scene.layout.*?>
 
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.FirstPageController">
    <children>
-      <Button layoutX="254.0" layoutY="173.0" mnemonicParsing="false" text="Get Started!" />
+      <Button layoutX="254.0" layoutY="173.0" mnemonicParsing="false" onAction="#getStartedButtonClicked" text="Get Started!" />
       <Button layoutX="268.0" layoutY="210.0" mnemonicParsing="false" text="Tutorial" />
       <Label layoutX="254.0" layoutY="111.0" text="Not App">
          <font>
