@@ -34,4 +34,9 @@ public class WashingMachine implements Appliance {
     public double getEnergy() {
         return energy;
     }
+
+    @Override
+    public String toString() {
+        return model + " " + brand + " " + energy;
+    }
 }
