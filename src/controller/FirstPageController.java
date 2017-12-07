@@ -13,11 +13,11 @@ import java.io.IOException;
 public class FirstPageController {
 
     @FXML
-    public void getStartedButtonClicked(ActionEvent event) throws IOException{
+    public void getStartedButtonClicked(ActionEvent event) throws IOException {
         Parent compareAppParent = FXMLLoader.load(getClass().getResource("../fxml/CompareAppliances.fxml"));
         Scene compareAppScene = new Scene(compareAppParent);
 
-        Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+        Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
         window.setScene(compareAppScene);
 
         window.show();
@@ -25,7 +25,7 @@ public class FirstPageController {
     }
 
     @FXML
-    public void tutorialButtonClicked(ActionEvent event){
+    public void tutorialButtonClicked(ActionEvent event) {
 
 
     }
