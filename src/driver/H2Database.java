@@ -19,19 +19,32 @@ public class H2Database {
         }
     }
 
-    public void sql(String st) {
+    public void selectTable(String str) {
+        String query = generateSelectQuery(str);
+        sql(query);
+    }
+
+    /**
+     * For SQL statements
+     * @param str
+     */
+    public void sql(String str) {
         try {
             Statement stmt = conn.createStatement();
-            result = stmt.executeQuery(st);
+            result = stmt.executeQuery(str);
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
-    public void command(String st) {
+    /**
+     * For DBMS commands
+     * @param r
+     */
+    public void command(String r) {
         try {
             Statement stmt = conn.createStatement();
-            stmt.execute(st);
+            stmt.execute(str);
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -45,12 +58,49 @@ public class H2Database {
         conn.close();
     }
 
-    public void clear() {
+    private void clear() {
         command("DROP ALL OBJECTS");
     }
 
-    public void selectCsvFile(String f) {
-        command("CREATE TABLE CSV AS SELECT * FROM CSVREAD('" + f + ".csv');");
+    private void parseCsvFiles() {
+        command("CREATE TABLE AIR_CONDITIONER AS SELECT * FROM CSVREAD('airconditioner.csv');");
+        command("CREATE TABLE WASHING_MACHINE AS SELECT * FROM CSVREAD('washingmachine.csv');");
+        command("CREATE TABLE REFRIGERATOR AS SELECT * FROM CSVREAD('refrigerator.csv');");
+    }
+
+    /**
+     *  AIRCONDITIONER(model, brand, energy)    energy = watts
+     *  WASHINGMACHINE(model, brand, energy)    energy = cubic_feet_per_kilowatt_hour_per_cycle
+     *  REFRIGERATOR(mode, brand, energy)       energy = Annual_Energy_Use__Kilowatt_Hours_Year__d
+     *
+     * @param s - type of appliance
+     * @return query string for sql
+     */
+    private String generateSelectQuery(String s) {
+        String query;
+
+        switch (s) {
+            case "airconditioner":
+                query = "SELECT Individual_Model_Number_Covered_by_Basic_Model_m AS model," +
+                                "Brand_Name_s__s AS brand," +
+                                "Electrical_Power_Input__Watts__d AS energy" +
+                        "FROM AIR_CONDITIONER";
+                break;
+            case "washingmachine":
+                query = "SELECT  Individual_Model_Number_Covered_by_Basic_Model_m AS model," +
+                                "Brand_Name_s__s AS brand," +
+                                "Integrated_Modified_Energy_Factor__cubic_feet_per_kilowatt_hour_per_cycle__d AS energy" +
+                        "FROM WASHING_MACHINE";
+                break;
+            case "refrigerator":
+                query = "SELECT  Individual_Model_Number_Covered_by_Basic_Model_m AS model," +
+                                "Brand_Name_s__s AS brand," +
+                                "Annual_Energy_Use__Kilowatt_Hours_Year__d AS energy" +
+                        "FROM REFRIGERATOR";
+                break;
+        }
+
+        return query;
     }
 
 }
