@@ -1,4 +1,4 @@
-package sample;
+package controller;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -14,7 +14,7 @@ public class FirstPageController {
 
     @FXML
     public void getStartedButtonClicked(ActionEvent event) throws IOException{
-        Parent compareAppParent = FXMLLoader.load(getClass().getResource("CompareAppliances.fxml"));
+        Parent compareAppParent = FXMLLoader.load(getClass().getResource("../fxml/CompareAppliances.fxml"));
         Scene compareAppScene = new Scene(compareAppParent);
 
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();

@@ -1,4 +1,4 @@
-package sample;
+package driver;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -11,7 +11,7 @@ public class Main extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception{
 
-        Parent root = FXMLLoader.load(getClass().getResource("FirstPage.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("../fxml/FirstPage.fxml"));
         primaryStage.setTitle("Not App: Compare Appliances!");
         primaryStage.setScene(new Scene(root));
 
