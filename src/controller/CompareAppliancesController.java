@@ -23,4 +23,6 @@ public class CompareAppliancesController {
         window.show();
         System.out.println("This button works!");
     }
+
+
 }
