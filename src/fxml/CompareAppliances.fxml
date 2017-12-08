@@ -4,17 +4,23 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Tooltip?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.FlowPane?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
+<<<<<<< HEAD
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="491.0" prefWidth="681.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CompareAppliancesController">
+=======
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CompareAppliancesController">
+>>>>>>> mich
     <children>
-      <ScrollPane hbarPolicy="ALWAYS" layoutX="31.0" layoutY="67.0" prefHeight="227.0" prefWidth="538.0" vbarPolicy="NEVER">
+      <ScrollPane hbarPolicy="ALWAYS" layoutX="31.0" layoutY="43.0" prefHeight="227.0" prefWidth="538.0" vbarPolicy="NEVER">
         <content>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="200.0">
                <children>
+<<<<<<< HEAD
                   <FlowPane layoutX="2.0" layoutY="-1.0">
                      <children>
                         <Button mnemonicParsing="false" onAction="#createApplianceButtonClicked" prefHeight="200.0" prefWidth="200.0" text=" + ">
@@ -26,15 +32,27 @@
                            </FlowPane.margin></Button>
                      </children>
                   </FlowPane>
+=======
+                  <Button layoutX="2.0" layoutY="-1.0" mnemonicParsing="false" onAction="#createApplianceButtonClicked" prefHeight="200.0" prefWidth="200.0" text="+">
+                     <tooltip>
+                        <Tooltip text="Empty Tooltip" />
+                     </tooltip></Button>
+>>>>>>> mich
                </children>
             </AnchorPane>
         </content>
       </ScrollPane>
+<<<<<<< HEAD
         <Label layoutX="31.0" layoutY="22.0" text="Compare Appliances! Click the &quot;+&quot; to add an appliance" />
       <ScrollPane layoutX="31.0" layoutY="377.0" prefHeight="77.0" prefWidth="538.0">
         <content>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="200.0" />
         </content>
       </ScrollPane>
+=======
+        <Label layoutX="10.0" layoutY="14.0" text="Compare Appliances! Click the &quot;+&quot; to add an appliance" />
+      <ScrollPane hbarPolicy="NEVER" layoutX="31.0" layoutY="279.0" prefHeight="73.0" prefWidth="538.0" />
+      <Button layoutX="232.0" layoutY="359.0" mnemonicParsing="false" onAction="#calculateButtonClicked" text="Calculate Summary" />
+>>>>>>> mich
     </children>
 </Pane>

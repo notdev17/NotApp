@@ -12,6 +12,8 @@ import java.io.IOException;
 
 public class CompareAppliancesController {
 
+
+
     @FXML
     public void createApplianceButtonClicked(ActionEvent event) throws IOException {
         Parent compareAppParent = FXMLLoader.load(getClass().getResource("../fxml/SearchAppliance.fxml"));
@@ -22,5 +24,16 @@ public class CompareAppliancesController {
 
         window.show();
         System.out.println("This button works!");
+    }
+
+    @FXML
+    public void calculateButtonClicked(ActionEvent event) throws IOException {
+        Parent calculateParent = FXMLLoader.load(getClass().getResource("../fxml/SummaryPage.fxml"));
+        Scene calculateScene = new Scene(calculateParent);
+
+        Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        window.setScene(calculateScene);
+
+        window.show();
     }
 }
