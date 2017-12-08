@@ -11,11 +11,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<<<<<<< HEAD
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1">
-=======
-<GridPane alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1">
->>>>>>> mich
    <children>
       <TextField layoutX="42.0" layoutY="31.0" prefHeight="51.0" prefWidth="513.0" promptText="Search for an Appliance" />
       <ScrollPane hbarPolicy="NEVER" layoutX="42.0" layoutY="94.0" prefHeight="274.0" prefWidth="155.0" vbarPolicy="NEVER">
