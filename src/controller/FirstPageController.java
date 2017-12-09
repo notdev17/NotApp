@@ -24,9 +24,18 @@ public class FirstPageController {
 
     }
 
+    /**
+     * @author Michelle
+     * For getting back to tutorial page..
+     */
     @FXML
-    public void tutorialButtonClicked(ActionEvent event) {
+    public void tutorialButtonClicked(ActionEvent event) throws IOException{
+        Parent tutorialParent = FXMLLoader.load(getClass().getResource("../fxml/Tutorial.fxml"));
+        Scene tutorialScene = new Scene(tutorialParent);
 
+        Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        window.setScene(tutorialScene);
 
+        window.show();
     }
 }

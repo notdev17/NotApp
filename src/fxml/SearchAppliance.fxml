@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ChoiceBox?>
@@ -11,7 +16,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SearchApplianceController">
    <children>
       <TextField layoutX="42.0" layoutY="31.0" prefHeight="51.0" prefWidth="513.0" promptText="Search for an Appliance" />
       <ScrollPane hbarPolicy="NEVER" layoutX="42.0" layoutY="94.0" prefHeight="274.0" prefWidth="155.0" vbarPolicy="NEVER">
@@ -45,6 +50,6 @@
             <Font size="36.0" />
          </font>
       </Label>
-      <Button layoutX="415.0" layoutY="343.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="140.0" text="Select" />
+      <Button layoutX="415.0" layoutY="343.0" mnemonicParsing="false" onAction="#selectButtonClicked" prefHeight="51.0" prefWidth="140.0" text="Select" />
    </children>
 </Pane>

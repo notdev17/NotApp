@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
@@ -11,7 +16,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CompareAppliancesController">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CompareAppliancesController">
     <children>
       <ScrollPane hbarPolicy="ALWAYS" layoutX="31.0" layoutY="42.0" prefHeight="227.0" prefWidth="538.0" vbarPolicy="NEVER">
         <content>
@@ -37,11 +42,11 @@
         <content>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="200.0">
                <children>
-                  <VBox prefHeight="200.0" prefWidth="509.0">
+                  <VBox prefHeight="77.0" prefWidth="509.0">
                      <children>
                         <Label text="Appliance Usage:" />
                         <Slider prefHeight="28.0" prefWidth="403.0" />
-                        <Button mnemonicParsing="false" text="Calculate Savings" />
+                        <Button mnemonicParsing="false" onAction="#calculateSavingsButtonClicked" text="Calculate Savings" />
                      </children>
                   </VBox>
                </children></AnchorPane>

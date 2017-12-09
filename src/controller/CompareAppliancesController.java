@@ -21,8 +21,21 @@ public class CompareAppliancesController {
         window.setScene(compareAppScene);
 
         window.show();
-        System.out.println("This button works!");
     }
 
+    /**
+     * @author Michelle
+     * For getting back to calculations result page.. NEEDS TO LOAD SAVINGS PAGE ACCORDINGLY
+     */
+    @FXML
+    public void calculateSavingsButtonClicked(ActionEvent event) throws IOException {
+        Parent calcSumParent = FXMLLoader.load(getClass().getResource("../fxml/CalculationsSummary.fxml"));
+        Scene calcSumScene = new Scene(calcSumParent);
+
+        Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        window.setScene(calcSumScene);
+
+        window.show();
+    }
 
 }
