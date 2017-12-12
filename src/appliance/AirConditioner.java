@@ -9,13 +9,6 @@ public class AirConditioner implements Appliance {
     String brand;
     double energy;
 
-    public AirConditioner()
-    {
-        model = "";
-        brand = "";
-        energy = 0;
-    }
-
     public AirConditioner(String m, String b, double e) {
         model = m;
         brand = b;
@@ -24,7 +17,7 @@ public class AirConditioner implements Appliance {
 
     @Override
     public String getApplianceType() {
-        return "Air Conditioner";
+        return "airconditioner";
     }
 
     @Override
