@@ -9,6 +9,12 @@ public class AirConditioner implements Appliance {
     String brand;
     double energy;
 
+    public AirConditioner() {
+        model = "";
+        brand = "";
+        energy = 0;
+    }
+
     public AirConditioner(String m, String b, double e) {
         model = m;
         brand = b;
