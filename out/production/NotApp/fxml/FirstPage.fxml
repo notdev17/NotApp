@@ -2,27 +2,20 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
-
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.FirstPageController">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0"
+      prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="controller.FirstPageController">
     <children>
-      <BorderPane layoutX="76.0" layoutY="55.0" prefHeight="197.0" prefWidth="449.0">
-         <top>
-              <Label text="Not App" BorderPane.alignment="CENTER">
-                  <font>
-                      <Font size="54.0" />
-                  </font>
-              </Label>
-         </top>
-         <center>
-              <Button mnemonicParsing="false" onAction="#getStartedButtonClicked" text="Get Started!" BorderPane.alignment="CENTER_RIGHT" />
-         </center>
-         <left>
-              <Button mnemonicParsing="false" text="Tutorial" textAlignment="CENTER" BorderPane.alignment="CENTER_LEFT" />
-         </left>
-      </BorderPane>
-        <Label contentDisplay="CENTER" layoutX="76.0" layoutY="263.0" text="Compare appliances and see your savings!" />
+        <Button layoutX="253.0" layoutY="188.0" mnemonicParsing="false" onAction="#getStartedButtonClicked"
+                text="Get Started!"/>
+        <Button layoutX="264.0" layoutY="223.0" mnemonicParsing="false" text="Tutorial"/>
+        <Label layoutX="248.0" layoutY="107.0" text="Not App">
+            <font>
+                <Font size="24.0"/>
+            </font>
+        </Label>
+        <Label layoutX="181.0" layoutY="149.0" text="Compare appliances and see your savings!"/>
     </children>
 </Pane>
