@@ -9,6 +9,13 @@ public class WashingMachine implements Appliance {
     String brand;
     double energy;
 
+    public WashingMachine()
+    {
+        model = "";
+        brand = "";
+        energy = 0;
+    }
+
     public WashingMachine(String m, String b, double e) {
         model = m;
         brand = b;
@@ -17,7 +24,7 @@ public class WashingMachine implements Appliance {
 
     @Override
     public String getApplianceType() {
-        return "washingmachine";
+        return "Washing Machine";
     }
 
     @Override
