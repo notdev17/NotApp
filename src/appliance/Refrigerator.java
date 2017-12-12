@@ -9,6 +9,13 @@ public class Refrigerator implements Appliance {
     String brand;
     double energy;
 
+    public Refrigerator()
+    {
+        model = "";
+        brand = "";
+        energy = 0;
+    }
+
     public Refrigerator(String m, String b, double e) {
         model = m;
         brand = b;
@@ -17,7 +24,7 @@ public class Refrigerator implements Appliance {
 
     @Override
     public String getApplianceType() {
-        return "refrigerator";
+        return "Refrigerator";
     }
 
     @Override
