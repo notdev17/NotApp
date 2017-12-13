@@ -25,15 +25,17 @@
                   </ToolBar>
                     <Label text="Not App">
                         <font>
-                            <Font size="54.0" />
+                            <Font name="System Bold" size="54.0" />
                         </font>
                     </Label>
                     <Label contentDisplay="CENTER" text="Compare appliances and see your savings!">
                      <font>
                         <Font size="27.0" />
                      </font></Label>
-                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Created by notDev" />
                </children>
+               <BorderPane.margin>
+                  <Insets bottom="29.0" />
+               </BorderPane.margin>
             </VBox>
          </top>
          <center>

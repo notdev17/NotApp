@@ -3,11 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="87081450-ce1b-45b0-b6d1-ea77a7baf302" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/out/production/NotApp/controller/SearchApplianceController.class" afterPath="$PROJECT_DIR$/out/production/NotApp/controller/SearchApplianceController.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/NotApp/fxml/FirstPage.fxml" afterPath="$PROJECT_DIR$/out/production/NotApp/fxml/FirstPage.fxml" />
-      <change beforePath="$PROJECT_DIR$/out/production/NotApp/src/fxml/FirstPage.fxml" afterPath="$PROJECT_DIR$/out/production/NotApp/src/fxml/FirstPage.fxml" />
       <change beforePath="$PROJECT_DIR$/src/fxml/FirstPage.fxml" afterPath="$PROJECT_DIR$/src/fxml/FirstPage.fxml" />
-      <change beforePath="$PROJECT_DIR$/src/fxml/SearchAppliance.fxml" afterPath="$PROJECT_DIR$/src/fxml/SearchAppliance.fxml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -19,7 +15,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="FirstPage.fxml" pinned="false" current-in-tab="false">
+      <file leaf-file-name="FirstPage.fxml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/fxml/FirstPage.fxml">
           <provider editor-type-id="text-editor">
             <state relative-caret-position="0">
@@ -32,7 +28,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SearchAppliance.fxml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="SearchAppliance.fxml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/fxml/SearchAppliance.fxml">
           <provider editor-type-id="text-editor">
             <state relative-caret-position="357">
@@ -94,8 +90,8 @@
         <option value="$PROJECT_DIR$/src/fxml/CompareAppliances.fxml" />
         <option value="$PROJECT_DIR$/src/fxml/CalculateSavings.fxml" />
         <option value="$PROJECT_DIR$/src/controller/SearchApplianceController.java" />
-        <option value="$PROJECT_DIR$/src/fxml/FirstPage.fxml" />
         <option value="$PROJECT_DIR$/src/fxml/SearchAppliance.fxml" />
+        <option value="$PROJECT_DIR$/src/fxml/FirstPage.fxml" />
       </list>
     </option>
   </component>
@@ -382,7 +378,14 @@
       <option name="project" value="LOCAL" />
       <updated>1513142229125</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="fixing the select button on the search screen.&#10;fixing the back button on the home screen">
+      <created>1513143062691</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1513143062691</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -438,7 +441,8 @@
     <MESSAGE value="updated compareAppliances page, added future appliance information fxml." />
     <MESSAGE value="changes to gui. added table view to compare app" />
     <MESSAGE value="changes to gui adding back button to multiple pages&#10;changes to the compareappliance page" />
-    <option name="LAST_COMMIT_MESSAGE" value="changes to gui adding back button to multiple pages&#10;changes to the compareappliance page" />
+    <MESSAGE value="fixing the select button on the search screen.&#10;fixing the back button on the home screen" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixing the select button on the search screen.&#10;fixing the back button on the home screen" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -750,17 +754,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/fxml/FirstPage.fxml">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/fxml/SearchAppliance.fxml">
       <provider editor-type-id="text-editor">
         <state relative-caret-position="357">
@@ -768,6 +761,17 @@
           <folding>
             <marker date="1513143034158" expanded="true" signature="4287:4300" ph="..." />
           </folding>
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fxml/FirstPage.fxml">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
       <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
