@@ -20,7 +20,6 @@
                <children>
                   <VBox prefHeight="200.0" prefWidth="150.0">
                      <children>
-<<<<<<< HEAD
                         <Label text=" Appliance Type" />
                         <ChoiceBox prefHeight="35.0" prefWidth="150.0">
                            <padding>
@@ -35,26 +34,6 @@
                         <TextField layoutX="42.0" layoutY="31.0" prefHeight="25.0" prefWidth="121.0" promptText="max" />
                         <Button mnemonicParsing="false" text="Update Results" />
 
-=======
-                        <VBox prefHeight="200.0" prefWidth="150.0">
-                           <children>
-                              <Label text=" Appliance Type" />
-                              <ChoiceBox fx:id="myApplianceBox" prefHeight="35.0" prefWidth="150.0">
-                                 <padding>
-                                    <Insets right="6.0" />
-                                 </padding>
-                              </ChoiceBox>
-                              <Label layoutX="10.0" layoutY="10.0" text=" Price Range" />
-                              <TextField fx:id="myPriceMinimum" disable="true" prefHeight="25.0" prefWidth="56.0" promptText="min" />
-                              <TextField fx:id="myPriceMaximum" disable="true" layoutX="42.0" layoutY="31.0" prefHeight="25.0" prefWidth="121.0" promptText="max" />
-                              <Label layoutX="10.0" layoutY="10.0" text=" Energy Range" />
-                              <TextField fx:id="myEnergyMinimum" prefHeight="25.0" prefWidth="56.0" promptText="min" />
-                              <TextField fx:id="myEnergyMaximum" layoutX="42.0" layoutY="31.0" prefHeight="25.0" prefWidth="121.0" promptText="max" />
-                              <Button mnemonicParsing="false" onAction="#updateButtonClicked" text="Update Results" />
-      
-                           </children>
-                        </VBox>
->>>>>>> origin/dayday
                      </children>
                   </VBox>
                </children></AnchorPane>

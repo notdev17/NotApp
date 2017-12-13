@@ -10,36 +10,11 @@
     <children>
       <BorderPane layoutX="76.0" layoutY="55.0" prefHeight="197.0" prefWidth="449.0">
          <top>
-<<<<<<< HEAD
               <Label text="Not App" BorderPane.alignment="CENTER">
                   <font>
                       <Font size="54.0" />
                   </font>
               </Label>
-=======
-            <VBox alignment="CENTER" BorderPane.alignment="CENTER">
-               <children>
-                  <ToolBar prefHeight="40.0" prefWidth="600.0">
-                    <items>
-                      <Button disable="true" mnemonicParsing="false" text="Back" />
-                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Home Screen" />
-                    </items>
-                  </ToolBar>
-                    <Label text="Not App">
-                        <font>
-                            <Font name="System Bold" size="54.0" />
-                        </font>
-                    </Label>
-                    <Label contentDisplay="CENTER" text="Compare appliances and see your savings!">
-                     <font>
-                        <Font size="27.0" />
-                     </font></Label>
-               </children>
-               <BorderPane.margin>
-                  <Insets bottom="29.0" />
-               </BorderPane.margin>
-            </VBox>
->>>>>>> origin/dayday
          </top>
          <center>
               <Button mnemonicParsing="false" onAction="#getStartedButtonClicked" text="Get Started!" BorderPane.alignment="CENTER_RIGHT" />
