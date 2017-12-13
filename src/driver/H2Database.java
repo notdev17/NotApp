@@ -7,10 +7,14 @@ import appliance.Refrigerator;
 import java.sql.*;
 import java.util.ArrayList;
 
+/**
+ * Created by Tim on 12/7/2017.
+ */
 public class H2Database {
 
     private Connection conn;
     private ResultSet result;
+    //Holds all read inputs as the appropriate Appliance sub-type
     private ArrayList<Appliance> appliances;
     private String currentAppliance;
 
@@ -92,12 +96,22 @@ public class H2Database {
         command("DROP ALL OBJECTS");
     }
 
+    /*Edited By Devon, 12/12/2017
+      updated file paths to match new CSV files
+     */
     private void parseCsvFiles() {
-        command("CREATE TABLE AIR_CONDITIONER AS SELECT * FROM CSVREAD('./database/airconditioner.csv');");
-        command("CREATE TABLE WASHING_MACHINE AS SELECT * FROM CSVREAD('./database/washingmachine.csv');");
-        command("CREATE TABLE REFRIGERATOR AS SELECT * FROM CSVREAD('./database/refrigerator.csv');");
+        command("CREATE TABLE AIR_CONDITIONER AS SELECT * FROM CSVREAD('./database/ESC_Room_Air_Conditioners.csv');");
+        command("CREATE TABLE AIR_CLEANER AS SELECT * FROM CSVREAD('./database/ESC_Room_Air_Cleaners.csv');");
+        command("CREATE TABLE WASHING_MACHINE AS SELECT * FROM CSVREAD('./database/ESC_Residential_Clothes_Washers.csv');");
+        command("CREATE TABLE DRYING_MACHINE AS SELECT * FROM CSVREAD('./database/ESC_Residential_Clothes_Dryers.csv');");
+        command("CREATE TABLE REFRIGERATOR AS SELECT * FROM CSVREAD('./database/ESC_Residential_Refrigerators.csv');");
+        command("CREATE TABLE FREEZER AS SELECT * FROM CSVREAD('./database/ESC_Residential_Freezers.csv');");
+        command("CREATE TABLE DISHWASHER AS SELECT * FROM CSVREAD('./database/ESC_Residential_Dishwashers.csv');");
     }
 
+    /*Edited By Devon, 12/12/2017
+      updated query attribute names to match new CSV files
+     */
     /**
      *  AIRCONDITIONER(model, brand, energy)    energy = watts
      *  WASHINGMACHINE(model, brand, energy)    energy = cubic_feet_per_kilowatt_hour_per_cycle
@@ -111,21 +125,21 @@ public class H2Database {
 
         switch (s) {
             case "airconditioner":
-                query = "SELECT Individual_Model_Number_Covered_by_Basic_Model_m AS model," +
-                                "Brand_Name_s__s AS brand," +
-                                "Electrical_Power_Input__Watts__d AS energy" +
+                query = "SELECT Model_Number AS model," +
+                                "Brand_Name AS brand," +
+                                "Estimated_Annual_Energy_Use AS energy" +
                         " FROM AIR_CONDITIONER";
                 break;
             case "washingmachine":
-                query = "SELECT  Individual_Model_Number_Covered_by_Basic_Model_m AS model," +
-                                "Brand_Name_s__s AS brand," +
-                                "Integrated_Modified_Energy_Factor__cubic_feet_per_kilowatt_hour_per_cycle__d AS energy" +
+                query = "SELECT Model_Number AS model," +
+                        "Brand_Name AS brand," +
+                        "Estimated_Annual_Energy_Use AS energy" +
                         " FROM WASHING_MACHINE";
                 break;
             case "refrigerator":
                 query = "SELECT  Individual_Model_Number_Covered_by_Basic_Model_m AS model," +
                                 "Brand_Name_s__s AS brand," +
-                                "Annual_Energy_Use__Kilowatt_Hours_Year__d AS energy" +
+                                "Estimated_Annual_Energy_Use AS energy" +
                         " FROM REFRIGERATOR";
                 break;
         }

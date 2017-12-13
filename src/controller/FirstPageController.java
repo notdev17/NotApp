@@ -27,6 +27,5 @@ public class FirstPageController {
     @FXML
     public void tutorialButtonClicked(ActionEvent event) {
 
-
     }
 }

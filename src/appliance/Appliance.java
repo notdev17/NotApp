@@ -1,10 +1,38 @@
 package appliance;
 
-public interface Appliance {
+/**Created by Devon on 12/9/2017**/
+public class Appliance {
+    protected String model;
+    protected String brand;
+    //Holds estimated energy use in kilowatt hours
+    protected double energy;
 
-    public String getApplianceType();
-    public String getModel();
-    public String getBrand();
-    public double getEnergy();
+    /**Created by Devon on 12/9/2017**/
+    public Appliance(String inModel, String inBrand, double inEnergy) {
+        model = inModel;
+        brand = inBrand;
+        energy = inEnergy;
+    }
 
+    /**Created by Devon on 12/9/2017**/
+    public String getModel() {
+        return model;
+    }
+
+    /**Created by Devon on 12/9/2017**/
+    public String getBrand() {
+        return brand;
+    }
+
+    /**Created by Devon on 12/9/2017**/
+    public double getEnergy() {
+        return energy;
+    }
+
+    /**Created by Devon on 12/9/2017**/
+        /*
+    public double getPrice() {
+        return price;
+    }
+    */
 }

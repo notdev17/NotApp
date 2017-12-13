@@ -7,6 +7,9 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
+/**
+ * Created by Tim on 12/7/2017.
+ */
 public class Main extends Application {
 
     @Override
@@ -24,7 +27,7 @@ public class Main extends Application {
 
         H2Database h2db = new H2Database();
 
-        h2db.selectTable("airconditioner");
+        h2db.selectTable("washingmachine");
 
         for (Appliance a : h2db.getAppliances()) {
             System.out.println(a);
