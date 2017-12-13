@@ -4,18 +4,6 @@
     <list default="true" id="f517b4af-fb36-4f60-8ec3-dd7b6a57936e" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.gitattributes" afterPath="" />
       <change beforePath="$PROJECT_DIR$/.gitignore" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/NotApp.iml" afterPath="$PROJECT_DIR$/NotApp.iml" />
-      <change beforePath="$PROJECT_DIR$/database/ESC_Residential_Clothes_Dryers.csv" afterPath="$PROJECT_DIR$/database/ESC_Residential_Clothes_Dryers.csv" />
-      <change beforePath="$PROJECT_DIR$/database/ESC_Residential_Clothes_Washers.csv" afterPath="$PROJECT_DIR$/database/ESC_Residential_Clothes_Washers.csv" />
-      <change beforePath="$PROJECT_DIR$/src/controller/CompareAppliancesController.java" afterPath="$PROJECT_DIR$/src/controller/CompareAppliancesController.java" />
-      <change beforePath="$PROJECT_DIR$/src/controller/SearchApplianceController.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/fxml/CompareAppliances.fxml" afterPath="$PROJECT_DIR$/src/fxml/CompareAppliances.fxml" />
-      <change beforePath="$PROJECT_DIR$/src/fxml/FirstPage.fxml" afterPath="$PROJECT_DIR$/src/fxml/FirstPage.fxml" />
-      <change beforePath="$PROJECT_DIR$/src/fxml/SearchAppliance.fxml" afterPath="$PROJECT_DIR$/src/fxml/SearchAppliance.fxml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
