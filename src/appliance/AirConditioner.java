@@ -15,6 +15,10 @@ public class AirConditioner extends Appliance {
         super(inModel, inBrand, inEnergy);
     }
 
+    public AirConditioner() {
+        super();
+    }
+
     public String getApplianceType() {
         return applianceType;
     }

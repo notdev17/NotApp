@@ -14,6 +14,12 @@ public class Appliance {
         energy = inEnergy;
     }
 
+    public Appliance() {
+        model = "";
+        brand = "";
+        energy = 0;
+    }
+
     /**Created by Devon on 12/9/2017**/
     public String getModel() {
         return model;
@@ -30,7 +36,7 @@ public class Appliance {
     }
 
     /**Created by Devon on 12/9/2017**/
-        /*
+    /*
     public double getPrice() {
         return price;
     }

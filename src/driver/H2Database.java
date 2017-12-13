@@ -126,8 +126,8 @@ public class H2Database {
         switch (s) {
             case "airconditioner":
                 query = "SELECT Model_Number AS model," +
-                                "Brand_Name AS brand," +
-                                "Estimated_Annual_Energy_Use AS energy" +
+                        "Brand_Name AS brand," +
+                        "Estimated_Annual_Energy_Use AS energy" +
                         " FROM AIR_CONDITIONER";
                 break;
             case "washingmachine":
@@ -137,9 +137,9 @@ public class H2Database {
                         " FROM WASHING_MACHINE";
                 break;
             case "refrigerator":
-                query = "SELECT  Individual_Model_Number_Covered_by_Basic_Model_m AS model," +
-                                "Brand_Name_s__s AS brand," +
-                                "Estimated_Annual_Energy_Use AS energy" +
+                query = "SELECT Model_Number AS model," +
+                        "Brand_Name AS brand," +
+                        "Estimated_Annual_Energy_Use AS energy" +
                         " FROM REFRIGERATOR";
                 break;
         }

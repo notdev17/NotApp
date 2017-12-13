@@ -14,6 +14,10 @@ public class Refrigerator extends Appliance {
         super(inModel, inBrand, inEnergy);
     }
 
+    public Refrigerator() {
+        super();
+    }
+
     /**Created by Devon on 12/9/2017**/
     public String getApplianceType() {
         return applianceType;

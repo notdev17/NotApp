@@ -14,6 +14,10 @@ public class WashingMachine extends Appliance {
         super(inModel, inBrand, inEnergy);
     }
 
+    public WashingMachine() {
+        super();
+    }
+
     public String getApplianceType() {
         return applianceType;
     }
