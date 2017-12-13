@@ -13,7 +13,7 @@ import java.io.IOException;
 public class FirstPageController {
 
     @FXML
-    public void getStartedButtonClicked(ActionEvent event) throws IOException {
+    public void getCompareApplianceScreen(ActionEvent event) throws IOException {
         Parent compareAppParent = FXMLLoader.load(getClass().getResource("../fxml/CompareAppliances.fxml"));
         Scene compareAppScene = new Scene(compareAppParent);
 

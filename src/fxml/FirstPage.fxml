@@ -44,7 +44,7 @@
                   <Insets right="15.0" />
                </BorderPane.margin>
                <children>
-                    <Button mnemonicParsing="false" onAction="#getStartedButtonClicked" prefHeight="47.0" prefWidth="181.0" text="Get Started!">
+                    <Button mnemonicParsing="false" onAction="#getCompareApplianceScreen" prefHeight="47.0" prefWidth="181.0" text="Get Started!">
                      <font>
                         <Font name="System Bold" size="19.0" />
                      </font>
