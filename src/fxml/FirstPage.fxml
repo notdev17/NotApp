@@ -5,16 +5,40 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.FirstPageController">
     <children>
       <BorderPane layoutX="76.0" layoutY="55.0" prefHeight="197.0" prefWidth="449.0">
          <top>
+<<<<<<< HEAD
               <Label text="Not App" BorderPane.alignment="CENTER">
                   <font>
                       <Font size="54.0" />
                   </font>
               </Label>
+=======
+            <VBox alignment="CENTER" BorderPane.alignment="CENTER">
+               <children>
+                  <ToolBar prefHeight="40.0" prefWidth="600.0">
+                    <items>
+                      <Button disable="true" mnemonicParsing="false" text="Back" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Home Screen" />
+                    </items>
+                  </ToolBar>
+                    <Label text="Not App">
+                        <font>
+                            <Font size="54.0" />
+                        </font>
+                    </Label>
+                    <Label contentDisplay="CENTER" text="Compare appliances and see your savings!">
+                     <font>
+                        <Font size="27.0" />
+                     </font></Label>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Created by notDev" />
+               </children>
+            </VBox>
+>>>>>>> origin/dayday
          </top>
          <center>
               <Button mnemonicParsing="false" onAction="#getStartedButtonClicked" text="Get Started!" BorderPane.alignment="CENTER_RIGHT" />
