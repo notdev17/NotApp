@@ -9,12 +9,12 @@ import javafx.stage.Stage;
 
 public class Main extends Application {
 
-    public H2Database h2db;
+//    public H2Database h2db;
 
     @Override
     public void start(Stage primaryStage) throws Exception {
 
-        initializeDatabase();
+//        initializeDatabase();
 
         Parent root = FXMLLoader.load(getClass().getResource("../fxml/FirstPage.fxml"));
         primaryStage.setTitle("Not App: Compare Appliances!");
@@ -35,13 +35,13 @@ public class Main extends Application {
     /**
      * initialize database
      */
-    public void initializeDatabase() {
-        h2db = new H2Database();
-
-        h2db.selectTable("refrigerator");
-
-        for (Appliance a : h2db.getAppliances()) {
-            System.out.println(a);
-        }
-    }
+//    public void initializeDatabase() {
+//        h2db = new H2Database();
+//
+//        h2db.selectTable("refrigerator");
+//
+//        for (Appliance a : h2db.getAppliances()) {
+//            System.out.println(a);
+//        }
+//    }
 }

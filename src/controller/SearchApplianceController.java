@@ -4,6 +4,7 @@ import appliance.AirConditioner;
 import appliance.Appliance;
 import appliance.Refrigerator;
 import appliance.WashingMachine;
+import driver.H2Database;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
@@ -56,7 +57,7 @@ public class SearchApplianceController
     private TextField myEnergyMaximum;
 
     @FXML
-    private void initialize() throws IOException
+    private void initialize()
     {
         //set up the columns in the table
         //priceColumn.setCellValueFactory(new PropertyValueFactory<Appliance, String>("price"));
@@ -100,8 +101,15 @@ public class SearchApplianceController
         ObservableList<Appliance> applianceList = FXCollections.observableArrayList();
         //add a test appliance
         applianceList.add(new Refrigerator("test model","test brand",0));
+        H2Database h2db = new H2Database();
 
-        //return the populated list
+        h2db.selectTable("refrigerator");
+
+        for (Appliance a : h2db.getAppliances()) {
+            applianceList.add(new Refrigerator( a.getModel(), a.getBrand(), a.getEnergy()));
+            System.out.println(a);
+        }
+
         return applianceList;
     }
 
