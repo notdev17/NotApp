@@ -1,8 +1,6 @@
 package driver;
 
-import appliance.AirConditioner;
-import appliance.Appliance;
-import appliance.Refrigerator;
+import appliance.*;
 
 import java.sql.*;
 import java.util.ArrayList;
@@ -40,6 +38,9 @@ public class H2Database {
         sql(query);
     }
 
+    /*DEVON
+      Added new else branches for additional appliance types
+     */
     public ArrayList<Appliance> getAppliances() {
         try {
             while(result.next()) {
@@ -52,8 +53,17 @@ public class H2Database {
                 } else if (currentAppliance.equals("refrigerator")) {
                     appliances.add(new Refrigerator(m, b, e));
                 } else if (currentAppliance.equals("washingmachine")) {
-                    appliances.add(new Refrigerator(m, b, e));
+                    appliances.add(new WashingMachine(m, b, e));
+                } else if (currentAppliance.equals("dryer")) {
+                    appliances.add(new Dryer(m, b, e));
+                } else if (currentAppliance.equals("freezer")) {
+                    appliances.add(new Freezer(m, b, e));
+                } else if (currentAppliance.equals("aircleaner")) {
+                    appliances.add(new AirCleaner(m, b, e));
+                } else if (currentAppliance.equals("dishwasher")) {
+                    appliances.add(new Dishwasher(m, b, e));
                 }
+
             }
         } catch (Exception e) {
             e.printStackTrace();
@@ -110,12 +120,13 @@ public class H2Database {
     }
 
     /*Edited By Devon, 12/12/2017
-      updated query attribute names to match new CSV files
+      Updated query attribute names to match new CSV database files
+      Added new switch cases for additional database files
      */
     /**
-     *  AIRCONDITIONER(model, brand, energy)    energy = watts
-     *  WASHINGMACHINE(model, brand, energy)    energy = cubic_feet_per_kilowatt_hour_per_cycle
-     *  REFRIGERATOR(mode, brand, energy)       energy = Annual_Energy_Use__Kilowatt_Hours_Year__d
+     *  AIRCONDITIONER(model, brand, energy)
+     *  WASHINGMACHINE(model, brand, energy)
+     *  REFRIGERATOR(mode, brand, energy)
      *
      * @param s - type of appliance
      * @return query string for sql
@@ -141,6 +152,30 @@ public class H2Database {
                         "Brand_Name AS brand," +
                         "Estimated_Annual_Energy_Use AS energy" +
                         " FROM REFRIGERATOR";
+                break;
+            case "dishwasher":
+                query = "SELECT Model_Number AS model," +
+                        "Brand_Name AS brand," +
+                        "Estimated_Annual_Energy_Use AS energy" +
+                        " FROM DISHWASHER";
+                break;
+            case "aircleaner":
+                query = "SELECT Model_Number AS model," +
+                        "Brand_Name AS brand," +
+                        "Estimated_Annual_Energy_Use AS energy" +
+                        " FROM Air_Cleaner";
+                break;
+            case "dryer":
+                query = "SELECT Model_Number AS model," +
+                        "Brand_Name AS brand," +
+                        "Estimated_Annual_Energy_Use AS energy" +
+                        " FROM DRYING_MACHINE";
+                break;
+            case "freezer":
+                query = "SELECT Model_Number AS model," +
+                        "Brand_Name AS brand," +
+                        "Estimated_Annual_Energy_Use AS energy" +
+                        " FROM FREEZER";
                 break;
         }
 
