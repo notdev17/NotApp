@@ -5,6 +5,8 @@
 <?import javafx.scene.control.ChoiceBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
@@ -13,8 +15,8 @@
 
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SearchApplianceController">
    <children>
-      <TextField layoutX="42.0" layoutY="31.0" prefHeight="51.0" prefWidth="513.0" promptText="Search for an Appliance" />
-      <ScrollPane hbarPolicy="NEVER" layoutX="42.0" layoutY="94.0" prefHeight="274.0" prefWidth="155.0" vbarPolicy="NEVER">
+      <TextField alignment="CENTER" layoutX="32.0" layoutY="31.0" prefHeight="51.0" prefWidth="555.0" promptText="Search for an Appliance" />
+      <ScrollPane hbarPolicy="NEVER" layoutX="32.0" layoutY="95.0" prefHeight="247.0" prefWidth="155.0" vbarPolicy="NEVER">
         <content>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="128.0" prefWidth="200.0">
                <children>
@@ -32,19 +34,25 @@
                         <Label layoutX="10.0" layoutY="10.0" text=" Energy Range" />
                         <TextField fx:id="myEnergyMinimum" prefHeight="25.0" prefWidth="56.0" promptText="min" />
                         <TextField fx:id="myEnergyMaximum" layoutX="42.0" layoutY="31.0" prefHeight="25.0" prefWidth="121.0" promptText="max" />
-                        <Button mnemonicParsing="false" text="Update Results" onAction="#updateButtonClicked"/>
+                        <Button mnemonicParsing="false" onAction="#updateButtonClicked" text="Update Results" />
 
                      </children>
                   </VBox>
                </children></AnchorPane>
         </content>
       </ScrollPane>
-      <ScrollPane layoutX="209.0" layoutY="131.0" prefHeight="202.0" prefWidth="344.0" />
-      <Label layoutX="271.0" layoutY="82.0" text="Appliance List">
+      <Label layoutX="271.0" layoutY="82.0" prefWidth="266.0" text="Appliance List">
          <font>
             <Font size="36.0" />
          </font>
       </Label>
-      <Button layoutX="415.0" layoutY="343.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="140.0" text="Select" />
+      <Button layoutX="445.0" layoutY="359.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="140.0" text="Select" />
+      <TableView fx:id="myTableView" layoutX="208.0" layoutY="143.0" prefHeight="200.0" prefWidth="377.0">
+        <columns>
+          <TableColumn fx:id="modelColumn" prefWidth="96.0" text="Model" />
+          <TableColumn fx:id="brandColumn" prefWidth="82.0" text="Brand" />
+            <TableColumn fx:id="energyColumn" prefWidth="197.0" text="Energy Use" />
+        </columns>
+      </TableView>
    </children>
 </Pane>
