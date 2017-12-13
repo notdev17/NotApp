@@ -34,11 +34,4 @@ public class Appliance {
     public double getEnergy() {
         return energy;
     }
-
-    /**Created by Devon on 12/9/2017**/
-    /*
-    public double getPrice() {
-        return price;
-    }
-    */
 }

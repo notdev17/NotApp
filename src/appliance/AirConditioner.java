@@ -23,7 +23,9 @@ public class AirConditioner extends Appliance {
         return applianceType;
     }
 
-    public double getPrice() { return price; }
+    public double getPrice() {
+        return price;
+    }
 
     @Override
     public String toString() {

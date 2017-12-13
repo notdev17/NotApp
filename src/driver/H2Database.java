@@ -87,7 +87,7 @@ public class H2Database {
 
     /**
      * For DBMS commands
-     * @param r
+     * @param str
      */
     public void command(String str) {
         try {
