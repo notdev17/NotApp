@@ -51,7 +51,7 @@
         <columns>
           <TableColumn fx:id="modelColumn" prefWidth="96.0" text="Model" />
           <TableColumn fx:id="brandColumn" prefWidth="82.0" text="Brand" />
-            <TableColumn fx:id="energyColumn" prefWidth="197.0" text="Energy Use" />
+            <TableColumn fx:id="energyColumn" prefWidth="191.0" text="Energy Use" />
         </columns>
       </TableView>
    </children>
