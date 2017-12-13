@@ -53,14 +53,14 @@
                   </ScrollPane>
                   <ButtonBar prefHeight="40.0" prefWidth="200.0">
                     <buttons>
-                        <Button graphicTextGap="0.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="173.0" text="Calculate Savings">
+                        <Button graphicTextGap="0.0" mnemonicParsing="false" onAction="#calcSavingsButtonClicked" prefHeight="25.0" prefWidth="173.0" text="Calculate Savings">
                            <opaqueInsets>
                               <Insets right="10.0" />
                            </opaqueInsets>
                         </Button>
                     </buttons>
                      <VBox.margin>
-                        <Insets right="11.0" top="5.0" />
+                        <Insets right="11.0" top="7.0" />
                      </VBox.margin>
                   </ButtonBar>
                </children>

@@ -2,7 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="87081450-ce1b-45b0-b6d1-ea77a7baf302" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/controller/CalculateSavingsController.java" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/out/production/NotApp/controller/CompareAppliancesController.class" afterPath="$PROJECT_DIR$/out/production/NotApp/controller/CompareAppliancesController.class" />
+      <change beforePath="$PROJECT_DIR$/out/production/NotApp/driver/Main.class" afterPath="$PROJECT_DIR$/out/production/NotApp/driver/Main.class" />
+      <change beforePath="$PROJECT_DIR$/out/production/NotApp/fxml/CompareAppliances.fxml" afterPath="$PROJECT_DIR$/out/production/NotApp/fxml/CompareAppliances.fxml" />
+      <change beforePath="$PROJECT_DIR$/out/production/NotApp/fxml/FirstPage.fxml" afterPath="$PROJECT_DIR$/out/production/NotApp/fxml/FirstPage.fxml" />
+      <change beforePath="$PROJECT_DIR$/out/production/NotApp/fxml/SearchAppliance.fxml" afterPath="$PROJECT_DIR$/out/production/NotApp/fxml/SearchAppliance.fxml" />
+      <change beforePath="$PROJECT_DIR$/out/production/NotApp/src/fxml/CompareAppliances.fxml" afterPath="$PROJECT_DIR$/out/production/NotApp/src/fxml/CompareAppliances.fxml" />
+      <change beforePath="$PROJECT_DIR$/out/production/NotApp/src/fxml/FirstPage.fxml" afterPath="$PROJECT_DIR$/out/production/NotApp/src/fxml/FirstPage.fxml" />
+      <change beforePath="$PROJECT_DIR$/out/production/NotApp/src/fxml/SearchAppliance.fxml" afterPath="$PROJECT_DIR$/out/production/NotApp/src/fxml/SearchAppliance.fxml" />
+      <change beforePath="$PROJECT_DIR$/src/controller/CompareAppliancesController.java" afterPath="$PROJECT_DIR$/src/controller/CompareAppliancesController.java" />
+      <change beforePath="$PROJECT_DIR$/src/driver/Main.java" afterPath="$PROJECT_DIR$/src/driver/Main.java" />
+      <change beforePath="$PROJECT_DIR$/src/fxml/CalculateSavings.fxml" afterPath="$PROJECT_DIR$/src/fxml/CalculateSavings.fxml" />
+      <change beforePath="$PROJECT_DIR$/src/fxml/CompareAppliances.fxml" afterPath="$PROJECT_DIR$/src/fxml/CompareAppliances.fxml" />
       <change beforePath="$PROJECT_DIR$/src/fxml/FirstPage.fxml" afterPath="$PROJECT_DIR$/src/fxml/FirstPage.fxml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -15,7 +28,45 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="FirstPage.fxml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="CalculateSavingsController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/controller/CalculateSavingsController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="459">
+              <caret line="27" column="27" lean-forward="true" selection-start-line="27" selection-start-column="27" selection-end-line="27" selection-end-column="27" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CalculateSavings.fxml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/fxml/CalculateSavings.fxml">
+          <provider editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+          <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CompareAppliances.fxml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/fxml/CompareAppliances.fxml">
+          <provider editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="15" column="106" lean-forward="false" selection-start-line="15" selection-start-column="106" selection-end-line="15" selection-end-column="106" />
+              <folding />
+            </state>
+          </provider>
+          <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FirstPage.fxml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/fxml/FirstPage.fxml">
           <provider editor-type-id="text-editor">
             <state relative-caret-position="0">
@@ -28,18 +79,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SearchAppliance.fxml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/fxml/SearchAppliance.fxml">
-          <provider editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="21" column="14" lean-forward="false" selection-start-line="21" selection-start-column="14" selection-end-line="21" selection-end-column="14" />
-              <folding>
-                <marker date="1513143034158" expanded="true" signature="4287:4300" ph="..." />
-              </folding>
+      <file leaf-file-name="FirstPageController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/controller/FirstPageController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="221">
+              <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
-          <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
-            <state />
+        </entry>
+      </file>
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/driver/Main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="21" column="41" lean-forward="true" selection-start-line="21" selection-start-column="41" selection-end-line="21" selection-end-column="41" />
+              <folding />
+            </state>
           </provider>
         </entry>
       </file>
@@ -48,8 +104,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="FxmlFile" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -85,13 +141,15 @@
         <option value="$PROJECT_DIR$/src/appCatalogComponent.java" />
         <option value="$PROJECT_DIR$/src/fxml/appCatalogDefaultGridLayout.fxml" />
         <option value="$PROJECT_DIR$/src/driver/H2Database.java" />
-        <option value="$PROJECT_DIR$/src/driver/Main.java" />
-        <option value="$PROJECT_DIR$/src/controller/CompareAppliancesController.java" />
-        <option value="$PROJECT_DIR$/src/fxml/CompareAppliances.fxml" />
-        <option value="$PROJECT_DIR$/src/fxml/CalculateSavings.fxml" />
         <option value="$PROJECT_DIR$/src/controller/SearchApplianceController.java" />
         <option value="$PROJECT_DIR$/src/fxml/SearchAppliance.fxml" />
+        <option value="$PROJECT_DIR$/src/fxml/CompareAppliances.fxml" />
+        <option value="$PROJECT_DIR$/src/controller/CompareAppliancesController.java" />
+        <option value="$PROJECT_DIR$/src/controller/CalculateSavingsController.java" />
+        <option value="$PROJECT_DIR$/src/fxml/CalculateSavings.fxml" />
         <option value="$PROJECT_DIR$/src/fxml/FirstPage.fxml" />
+        <option value="$PROJECT_DIR$/src/controller/FirstPageController.java" />
+        <option value="$PROJECT_DIR$/src/driver/Main.java" />
       </list>
     </option>
   </component>
@@ -385,7 +443,14 @@
       <option name="project" value="LOCAL" />
       <updated>1513143062691</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="fixing the select button on the search screen.&#10;fixing the back button on the home screen">
+      <created>1513143414265</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1513143414265</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -458,13 +523,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/dbcsvfilelinks.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/NotApp.iml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -682,25 +740,56 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller/FirstPageController.java">
+    <entry file="file://$PROJECT_DIR$/src/home-image.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fxml/SearchAppliance.fxml">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="14" lean-forward="false" selection-start-line="21" selection-start-column="14" selection-end-line="21" selection-end-column="14" />
+          <folding>
+            <marker date="1513143034158" expanded="true" signature="4287:4300" ph="..." />
+          </folding>
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controller/SearchApplianceController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="23" column="0" lean-forward="true" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+        <state relative-caret-position="17">
+          <caret line="58" column="0" lean-forward="true" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controller/CompareAppliancesController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="544">
+          <caret line="40" column="60" lean-forward="true" selection-start-line="40" selection-start-column="60" selection-end-line="40" selection-end-column="60" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/driver/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="34" column="4" lean-forward="false" selection-start-line="34" selection-start-column="4" selection-end-line="34" selection-end-column="4" />
+    <entry file="file://$PROJECT_DIR$/src/fxml/CalculateSavings.fxml">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
+      </provider>
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/fxml/CompareAppliances.fxml">
       <provider editor-type-id="text-editor">
-        <state relative-caret-position="34">
+        <state relative-caret-position="255">
           <caret line="15" column="106" lean-forward="false" selection-start-line="15" selection-start-column="106" selection-end-line="15" selection-end-column="106" />
           <folding />
         </state>
@@ -720,53 +809,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/home-image.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/fxml/CalculateSavings.fxml">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller/CompareAppliancesController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="23" column="7" lean-forward="false" selection-start-line="23" selection-start-column="7" selection-end-line="23" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller/SearchApplianceController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="58" column="0" lean-forward="true" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/fxml/SearchAppliance.fxml">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="14" lean-forward="false" selection-start-line="21" selection-start-column="14" selection-end-line="21" selection-end-column="14" />
-          <folding>
-            <marker date="1513143034158" expanded="true" signature="4287:4300" ph="..." />
-          </folding>
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/fxml/FirstPage.fxml">
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -776,6 +818,32 @@
       </provider>
       <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
         <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controller/CalculateSavingsController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="27" column="27" lean-forward="true" selection-start-line="27" selection-start-column="27" selection-end-line="27" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controller/FirstPageController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/driver/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="21" column="41" lean-forward="true" selection-start-line="21" selection-start-column="41" selection-end-line="21" selection-end-column="41" />
+          <folding />
+        </state>
       </provider>
     </entry>
   </component>

@@ -21,11 +21,23 @@ public class CompareAppliancesController {
         window.setScene(compareAppScene);
 
         window.show();
-       }
+    }
 
     @FXML
     public void createApplianceButtonClicked(ActionEvent event) throws IOException {
         Parent compareAppParent = FXMLLoader.load(getClass().getResource("../fxml/SearchAppliance.fxml"));
+        Scene compareAppScene = new Scene(compareAppParent);
+
+        Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        window.setScene(compareAppScene);
+
+        window.show();
+        System.out.println("This button works!");
+    }
+
+    @FXML
+    public void calcSavingsButtonClicked(ActionEvent event) throws IOException {
+        Parent compareAppParent = FXMLLoader.load(getClass().getResource("../fxml/CalculateSavings.fxml"));
         Scene compareAppScene = new Scene(compareAppParent);
 
         Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();

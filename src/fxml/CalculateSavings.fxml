@@ -1,15 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.ToolBar?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fxml.CalculateSavings">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CalculateSavingsController">
    <children>
-      <ToolBar prefHeight="40.0" prefWidth="600.0">
-        <items>
-          <Button mnemonicParsing="false" text="Button" />
-        </items>
-      </ToolBar>
+      <BorderPane prefHeight="400.0" prefWidth="600.0">
+         <top>
+            <ToolBar prefHeight="40.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+              <items>
+                <Button mnemonicParsing="false" onAction="#backButtonClicked" text="Back" />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Results Page" />
+              </items>
+            </ToolBar>
+         </top>
+         <bottom>
+            <ToolBar prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+              <items>
+                  <BorderPane prefHeight="24.0" prefWidth="586.0">
+                     <left>
+                      <Button mnemonicParsing="false" text="Export Results" BorderPane.alignment="CENTER" />
+                     </left>
+                     <right>
+                        <Button mnemonicParsing="false" onAction="#doneButtonClicked" text="Done" BorderPane.alignment="CENTER" />
+                     </right>
+                  </BorderPane>
+              </items>
+            </ToolBar>
+         </bottom>
+         <center>
+            <TableView prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+              <columns>
+                <TableColumn prefWidth="75.0" text="C1" />
+                <TableColumn prefWidth="75.0" text="C2" />
+              </columns>
+            </TableView>
+         </center>
+      </BorderPane>
    </children>
 </AnchorPane>
