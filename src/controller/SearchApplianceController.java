@@ -12,6 +12,7 @@ import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.ChoiceBox;
@@ -19,7 +20,7 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
-import javafx.scene.layout.VBox;
+import javafx.stage.Stage;
 
 import java.io.IOException;
 
@@ -93,10 +94,28 @@ public class SearchApplianceController
     }
 
     /**
+     * returns back to the compare appliances page
+     * by daylen
+     * @param event
+     * @throws IOException
+     */
+    @FXML
+    public void backButtonClicked(ActionEvent event) throws IOException
+    {
+        Parent compareAppParent = FXMLLoader.load(getClass().getResource("../fxml/CompareAppliances.fxml"));
+        Scene compareAppScene = new Scene(compareAppParent);
+
+        Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        window.setScene(compareAppScene);
+
+        window.show();
+    }
+    /**
      * by Daylen
      * @return returns the list of appliances (test atm)
      */
     public ObservableList<Appliance> getAppliances(){
+
         //create an applianceList to populate
         ObservableList<Appliance> applianceList = FXCollections.observableArrayList();
         //add a test appliance
