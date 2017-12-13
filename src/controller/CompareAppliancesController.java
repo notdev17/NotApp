@@ -13,6 +13,17 @@ import java.io.IOException;
 public class CompareAppliancesController {
 
     @FXML
+    public void backButtonClicked(ActionEvent event) throws IOException {
+        Parent compareAppParent = FXMLLoader.load(getClass().getResource("../fxml/FirstPage.fxml"));
+        Scene compareAppScene = new Scene(compareAppParent);
+
+        Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        window.setScene(compareAppScene);
+
+        window.show();
+       }
+
+    @FXML
     public void createApplianceButtonClicked(ActionEvent event) throws IOException {
         Parent compareAppParent = FXMLLoader.load(getClass().getResource("../fxml/SearchAppliance.fxml"));
         Scene compareAppScene = new Scene(compareAppParent);
@@ -23,6 +34,4 @@ public class CompareAppliancesController {
         window.show();
         System.out.println("This button works!");
     }
-
-
 }

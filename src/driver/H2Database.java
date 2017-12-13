@@ -3,6 +3,7 @@ package driver;
 import appliance.AirConditioner;
 import appliance.Appliance;
 import appliance.Refrigerator;
+import appliance.WashingMachine;
 
 import java.sql.*;
 import java.util.ArrayList;
@@ -52,7 +53,7 @@ public class H2Database {
                 } else if (currentAppliance.equals("refrigerator")) {
                     appliances.add(new Refrigerator(m, b, e));
                 } else if (currentAppliance.equals("washingmachine")) {
-                    appliances.add(new Refrigerator(m, b, e));
+                    appliances.add(new WashingMachine(m, b, e));
                 }
             }
         } catch (Exception e) {
