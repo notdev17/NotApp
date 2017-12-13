@@ -39,9 +39,6 @@ public class SearchApplianceController
     @FXML
     private TableColumn<Appliance, String> energyColumn;
 
-
-
-
     @FXML
     private ChoiceBox<String> myApplianceBox;
 
@@ -68,9 +65,6 @@ public class SearchApplianceController
 
         //set the items in the table to the items returned by the getAppliance() method
         myTableView.setItems(getAppliances());
-
-
-
         myApplianceBox.getItems().add(new AirConditioner().getApplianceType());
         myApplianceBox.getItems().add(new Refrigerator().getApplianceType());
         myApplianceBox.getItems().add(new WashingMachine().getApplianceType());
