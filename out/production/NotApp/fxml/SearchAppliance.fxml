@@ -46,8 +46,8 @@
                                  </padding>
                               </ChoiceBox>
                               <Label layoutX="10.0" layoutY="10.0" text=" Price Range" />
-                              <TextField fx:id="myPriceMinimum" prefHeight="25.0" prefWidth="56.0" promptText="min" />
-                              <TextField fx:id="myPriceMaximum" layoutX="42.0" layoutY="31.0" prefHeight="25.0" prefWidth="121.0" promptText="max" />
+                              <TextField fx:id="myPriceMinimum" disable="true" prefHeight="25.0" prefWidth="56.0" promptText="min" />
+                              <TextField fx:id="myPriceMaximum" disable="true" layoutX="42.0" layoutY="31.0" prefHeight="25.0" prefWidth="121.0" promptText="max" />
                               <Label layoutX="10.0" layoutY="10.0" text=" Energy Range" />
                               <TextField fx:id="myEnergyMinimum" prefHeight="25.0" prefWidth="56.0" promptText="min" />
                               <TextField fx:id="myEnergyMaximum" layoutX="42.0" layoutY="31.0" prefHeight="25.0" prefWidth="121.0" promptText="max" />

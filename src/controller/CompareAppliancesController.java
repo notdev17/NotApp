@@ -32,7 +32,6 @@ public class CompareAppliancesController {
         window.setScene(compareAppScene);
 
         window.show();
-        System.out.println("This button works!");
     }
 
     @FXML
@@ -44,6 +43,5 @@ public class CompareAppliancesController {
         window.setScene(compareAppScene);
 
         window.show();
-        System.out.println("This button works!");
     }
 }
