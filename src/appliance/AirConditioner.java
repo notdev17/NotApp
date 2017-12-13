@@ -8,26 +8,7 @@ public class AirConditioner extends Appliance {
 
     private double price = 300.00;
 
-<<<<<<< HEAD
     private String applianceType = "Air Conditioner";
-=======
-    public AirConditioner() {
-        model = "";
-        brand = "";
-        energy = 0;
-    }
-
-    public AirConditioner(String m, String b, double e) {
-        model = m;
-        brand = b;
-        energy = e;
-    }
-
-    @Override
-    public String getApplianceType() {
-        return "airconditioner";
-    }
->>>>>>> origin/dayday
 
     /**Created by Devon on 12/9/2017**/
     public AirConditioner(String inModel, String inBrand, double inEnergy) {
