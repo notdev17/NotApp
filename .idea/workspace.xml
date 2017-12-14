@@ -4,21 +4,30 @@
     <list default="true" id="0cc94476-c86e-42f6-9935-664e431b6d04" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
 <<<<<<< HEAD
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/out/production/NotApp/driver/Main.class" afterPath="$PROJECT_DIR$/out/production/NotApp/driver/Main.class" />
 =======
+=======
+>>>>>>> parent of bc6b600... small change to populate the table in search appliance
       <change beforePath="$PROJECT_DIR$/out/production/NotApp/controller/CompareAppliancesController.class" afterPath="$PROJECT_DIR$/out/production/NotApp/controller/CompareAppliancesController.class" />
       <change beforePath="$PROJECT_DIR$/out/production/NotApp/controller/SearchApplianceController$1.class" afterPath="$PROJECT_DIR$/out/production/NotApp/controller/SearchApplianceController$1.class" />
       <change beforePath="$PROJECT_DIR$/out/production/NotApp/controller/SearchApplianceController.class" afterPath="$PROJECT_DIR$/out/production/NotApp/controller/SearchApplianceController.class" />
       <change beforePath="$PROJECT_DIR$/out/production/NotApp/fxml/ApplianceInformation.fxml" afterPath="$PROJECT_DIR$/out/production/NotApp/fxml/ApplianceInformation.fxml" />
+<<<<<<< HEAD
+>>>>>>> parent of bc6b600... small change to populate the table in search appliance
+=======
 >>>>>>> parent of bc6b600... small change to populate the table in search appliance
       <change beforePath="$PROJECT_DIR$/out/production/NotApp/fxml/CalculateSavings.fxml" afterPath="$PROJECT_DIR$/out/production/NotApp/fxml/CalculateSavings.fxml" />
       <change beforePath="$PROJECT_DIR$/out/production/NotApp/fxml/CompareAppliances.fxml" afterPath="$PROJECT_DIR$/out/production/NotApp/fxml/CompareAppliances.fxml" />
       <change beforePath="$PROJECT_DIR$/out/production/NotApp/fxml/FirstPage.fxml" afterPath="$PROJECT_DIR$/out/production/NotApp/fxml/FirstPage.fxml" />
       <change beforePath="$PROJECT_DIR$/out/production/NotApp/fxml/SearchAppliance.fxml" afterPath="$PROJECT_DIR$/out/production/NotApp/fxml/SearchAppliance.fxml" />
 <<<<<<< HEAD
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/src/controller/MasterController.java" afterPath="$PROJECT_DIR$/src/controller/MasterController.java" />
       <change beforePath="$PROJECT_DIR$/src/controller/SearchApplianceController.java" afterPath="$PROJECT_DIR$/src/controller/SearchApplianceController.java" />
       <change beforePath="$PROJECT_DIR$/src/fxml/SearchAppliance.fxml" afterPath="$PROJECT_DIR$/src/fxml/SearchAppliance.fxml" />
+=======
+>>>>>>> parent of bc6b600... small change to populate the table in search appliance
 =======
 >>>>>>> parent of bc6b600... small change to populate the table in search appliance
     </list>
@@ -53,6 +62,7 @@
   <component name="FileEditorManager">
     <leaf>
 <<<<<<< HEAD
+<<<<<<< HEAD
       <file leaf-file-name="MasterController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/controller/MasterController.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -62,6 +72,8 @@
                 <element signature="imports" expanded="true" />
               </folding>
 =======
+=======
+>>>>>>> parent of bc6b600... small change to populate the table in search appliance
       <file leaf-file-name="CalculateSavingsController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/controller/CalculateSavingsController.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -87,6 +99,7 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="85">
               <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+<<<<<<< HEAD
               <folding />
 >>>>>>> parent of bc6b600... small change to populate the table in search appliance
             </state>
@@ -108,11 +121,36 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="187">
               <caret line="237" column="13" lean-forward="true" selection-start-line="237" selection-start-column="13" selection-end-line="237" selection-end-column="13" />
+=======
+>>>>>>> parent of bc6b600... small change to populate the table in search appliance
               <folding />
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
+=======
+      <file leaf-file-name="SearchApplianceController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/controller/SearchApplianceController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="39" column="0" lean-forward="false" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="workspace.xml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="237" column="13" lean-forward="true" selection-start-line="237" selection-start-column="13" selection-end-line="237" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+>>>>>>> parent of bc6b600... small change to populate the table in search appliance
       <file leaf-file-name="ApplianceInformation.fxml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/fxml/ApplianceInformation.fxml">
           <provider editor-type-id="JavaFX-Scene-Builder">
@@ -120,9 +158,12 @@
           </provider>
           <provider selected="true" editor-type-id="text-editor">
 <<<<<<< HEAD
+<<<<<<< HEAD
             <state relative-caret-position="799">
               <caret line="101" column="41" lean-forward="true" selection-start-line="101" selection-start-column="41" selection-end-line="101" selection-end-column="41" />
 =======
+=======
+>>>>>>> parent of bc6b600... small change to populate the table in search appliance
             <state relative-caret-position="136">
               <caret line="8" column="125" lean-forward="false" selection-start-line="8" selection-start-column="125" selection-end-line="8" selection-end-column="125" />
               <folding />
@@ -174,6 +215,9 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="901">
               <caret line="66" column="61" lean-forward="false" selection-start-line="66" selection-start-column="61" selection-end-line="66" selection-end-column="61" />
+<<<<<<< HEAD
+>>>>>>> parent of bc6b600... small change to populate the table in search appliance
+=======
 >>>>>>> parent of bc6b600... small change to populate the table in search appliance
               <folding />
             </state>
@@ -204,8 +248,12 @@
         <option value="$PROJECT_DIR$/.idea/workspace.xml" />
         <option value="$PROJECT_DIR$/src/fxml/ApplianceInformation.fxml" />
 <<<<<<< HEAD
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/src/controller/FirstPageController.java" />
         <option value="$PROJECT_DIR$/src/controller/CalculateSavingsController.java" />
+=======
+        <option value="$PROJECT_DIR$/src/controller/SearchApplianceController.java" />
+>>>>>>> parent of bc6b600... small change to populate the table in search appliance
 =======
         <option value="$PROJECT_DIR$/src/controller/SearchApplianceController.java" />
 >>>>>>> parent of bc6b600... small change to populate the table in search appliance
@@ -222,6 +270,9 @@
 =======
         <option value="$PROJECT_DIR$/src/controller/FirstPageController.java" />
         <option value="$PROJECT_DIR$/src/controller/CalculateSavingsController.java" />
+<<<<<<< HEAD
+>>>>>>> parent of bc6b600... small change to populate the table in search appliance
+=======
 >>>>>>> parent of bc6b600... small change to populate the table in search appliance
       </list>
     </option>
@@ -447,6 +498,7 @@
       <updated>1513250092145</updated>
     </task>
 <<<<<<< HEAD
+<<<<<<< HEAD
     <task id="LOCAL-00002" summary="Completing the merge of devon and dayday branch">
       <created>1513250200263</created>
       <option name="number" value="00002" />
@@ -469,6 +521,9 @@
       <updated>1513258959273</updated>
     </task>
     <option name="localTasksCounter" value="5" />
+=======
+    <option name="localTasksCounter" value="2" />
+>>>>>>> parent of bc6b600... small change to populate the table in search appliance
 =======
     <option name="localTasksCounter" value="2" />
 >>>>>>> parent of bc6b600... small change to populate the table in search appliance
@@ -522,6 +577,7 @@
   </component>
   <component name="editorHistoryManager">
 <<<<<<< HEAD
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -561,6 +617,8 @@
         <state relative-caret-position="238">
           <caret line="19" column="8" lean-forward="false" selection-start-line="19" selection-start-column="8" selection-end-line="19" selection-end-column="8" />
 =======
+=======
+>>>>>>> parent of bc6b600... small change to populate the table in search appliance
     <entry file="file://$PROJECT_DIR$/src/fxml/SearchAppliance.fxml">
       <provider editor-type-id="JavaFX-Scene-Builder">
         <state />
@@ -568,6 +626,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
           <caret line="17" column="88" lean-forward="false" selection-start-line="17" selection-start-column="88" selection-end-line="17" selection-end-column="88" />
+<<<<<<< HEAD
+>>>>>>> parent of bc6b600... small change to populate the table in search appliance
+=======
 >>>>>>> parent of bc6b600... small change to populate the table in search appliance
           <folding />
         </state>
@@ -605,6 +666,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/fxml/ApplianceInformation.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="125" lean-forward="false" selection-start-line="8" selection-start-column="125" selection-end-line="8" selection-end-column="125" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/fxml/CalculateSavings.fxml">
 >>>>>>> parent of bc6b600... small change to populate the table in search appliance
       <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
@@ -618,24 +690,35 @@
       </provider>
     </entry>
 <<<<<<< HEAD
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/fxml/CalculateSavings.fxml">
       <provider editor-type-id="JavaFX-Scene-Builder">
         <state />
 =======
+=======
+>>>>>>> parent of bc6b600... small change to populate the table in search appliance
     <entry file="file://$PROJECT_DIR$/src/driver/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
           <folding />
         </state>
+<<<<<<< HEAD
+>>>>>>> parent of bc6b600... small change to populate the table in search appliance
+=======
 >>>>>>> parent of bc6b600... small change to populate the table in search appliance
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/controller/CalculateSavingsController.java">
       <provider selected="true" editor-type-id="text-editor">
 <<<<<<< HEAD
+<<<<<<< HEAD
         <state relative-caret-position="408">
           <caret line="24" column="80" lean-forward="false" selection-start-line="24" selection-start-column="80" selection-end-line="24" selection-end-column="80" />
+=======
+        <state relative-caret-position="85">
+          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+>>>>>>> parent of bc6b600... small change to populate the table in search appliance
 =======
         <state relative-caret-position="85">
           <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
@@ -644,6 +727,7 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
 <<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/fxml/FirstPage.fxml">
       <provider editor-type-id="JavaFX-Scene-Builder">
@@ -658,10 +742,17 @@
         <state relative-caret-position="901">
           <caret line="66" column="61" lean-forward="false" selection-start-line="66" selection-start-column="61" selection-end-line="66" selection-end-column="61" />
 >>>>>>> parent of bc6b600... small change to populate the table in search appliance
+=======
+    <entry file="file://$PROJECT_DIR$/src/controller/CompareAppliancesController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="901">
+          <caret line="66" column="61" lean-forward="false" selection-start-line="66" selection-start-column="61" selection-end-line="66" selection-end-column="61" />
+>>>>>>> parent of bc6b600... small change to populate the table in search appliance
           <folding />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
 <<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/fxml/User.fxml">
       <provider editor-type-id="JavaFX-Scene-Builder">
@@ -695,6 +786,12 @@
         <state relative-caret-position="85">
           <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
 >>>>>>> parent of bc6b600... small change to populate the table in search appliance
+=======
+    <entry file="file://$PROJECT_DIR$/src/controller/FirstPageController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+>>>>>>> parent of bc6b600... small change to populate the table in search appliance
           <folding />
         </state>
       </provider>
@@ -702,11 +799,24 @@
     <entry file="file://$PROJECT_DIR$/src/controller/SearchApplianceController.java">
       <provider selected="true" editor-type-id="text-editor">
 <<<<<<< HEAD
+<<<<<<< HEAD
         <state relative-caret-position="183">
           <caret line="118" column="16" lean-forward="true" selection-start-line="118" selection-start-column="16" selection-end-line="118" selection-end-column="16" />
 =======
         <state relative-caret-position="306">
           <caret line="39" column="0" lean-forward="false" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+=======
+        <state relative-caret-position="306">
+          <caret line="39" column="0" lean-forward="false" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="237" column="13" lean-forward="true" selection-start-line="237" selection-start-column="13" selection-end-line="237" selection-end-column="13" />
+>>>>>>> parent of bc6b600... small change to populate the table in search appliance
           <folding />
         </state>
       </provider>
