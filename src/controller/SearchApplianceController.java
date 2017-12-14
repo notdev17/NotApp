@@ -132,13 +132,6 @@ public class SearchApplianceController
 
         //create an applianceList to populate
         ObservableList<Appliance> applianceList = FXCollections.observableArrayList();
-<<<<<<< HEAD
-
-=======
-        //add a test appliance
-        applianceList.add(new Refrigerator("test model","test brand",0));
-        applianceList.add(new Refrigerator("model","idk",1));
->>>>>>> dayday
         H2Database h2db = new H2Database();
 
 

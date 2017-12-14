@@ -14,8 +14,17 @@
          <top>
             <ToolBar prefHeight="40.0" prefWidth="600.0" BorderPane.alignment="CENTER">
               <items>
-                <Button mnemonicParsing="false" onAction="#backButtonClicked" text="Back" />
-                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Results Page" />
+                  <BorderPane prefHeight="30.0" prefWidth="584.0">
+                     <left>
+                      <Button mnemonicParsing="false" onAction="#backButtonClicked" text="Back" BorderPane.alignment="CENTER" />
+                     </left>
+                     <center>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Results Page" BorderPane.alignment="CENTER" />
+                     </center>
+                     <right>
+                        <Button disable="true" mnemonicParsing="false" text="User Profile" BorderPane.alignment="CENTER" />
+                     </right>
+                  </BorderPane>
               </items>
             </ToolBar>
          </top>
@@ -24,7 +33,7 @@
               <items>
                   <BorderPane prefHeight="24.0" prefWidth="586.0">
                      <left>
-                      <Button mnemonicParsing="false" text="Export Results" BorderPane.alignment="CENTER" />
+                      <Button disable="true" mnemonicParsing="false" text="Export Results" BorderPane.alignment="CENTER" />
                      </left>
                      <right>
                         <Button mnemonicParsing="false" onAction="#doneButtonClicked" text="Done" BorderPane.alignment="CENTER" />
@@ -36,8 +45,12 @@
          <center>
             <TableView prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
               <columns>
-                <TableColumn prefWidth="75.0" text="C1" />
-                <TableColumn prefWidth="75.0" text="C2" />
+                <TableColumn prefWidth="75.0" text="Model" />
+                <TableColumn prefWidth="75.0" text="Brand" />
+                  <TableColumn prefWidth="75.0" text="Price" />
+                  <TableColumn prefWidth="75.0" text="Energy Use" />
+                  <TableColumn prefWidth="75.0" text="CALC 1" />
+                  <TableColumn prefWidth="75.0" text="CALC 2" />
               </columns>
             </TableView>
          </center>

@@ -29,6 +29,12 @@ public class CompareAppliancesController {
     @FXML
     private TableColumn<Appliance, String> energyColumn;
 
+    /**
+     * By Daylen
+     * Displays the first page from the fxml file
+     * @param event, sent when the button is clicked
+     * @throws IOException
+     */
     @FXML
     public void backButtonClicked(ActionEvent event) throws IOException {
         Parent compareAppParent = FXMLLoader.load(getClass().getResource("../fxml/FirstPage.fxml"));
@@ -39,7 +45,12 @@ public class CompareAppliancesController {
 
         window.show();
     }
-
+    /**
+     * By Daylen
+     * Displays the search appliance page from the fxml file
+     * @param event, sent when the button is clicked
+     * @throws IOException
+     */
     @FXML
     public void createApplianceButtonClicked(ActionEvent event) throws IOException {
         Parent compareAppParent = FXMLLoader.load(getClass().getResource("../fxml/SearchAppliance.fxml"));
@@ -51,6 +62,12 @@ public class CompareAppliancesController {
         window.show();
     }
 
+    /**
+     * By Daylen
+     * Displays the calculate savings page from the fxml file
+     * @param event, sent when the button is clicked
+     * @throws IOException
+     */
     @FXML
     public void calcSavingsButtonClicked(ActionEvent event) throws IOException {
         Parent compareAppParent = FXMLLoader.load(getClass().getResource("../fxml/CalculateSavings.fxml"));

@@ -9,12 +9,7 @@ import java.io.IOException;
 
 public class CalculateSavingsController {
 
-    /**
-     * returns back to the compare appliances screen when the back button is pressed
-     * By: Daylen
-     * @param event
-     * @throws IOException
-     */
+
     @FXML
     public void backButtonClicked(ActionEvent event) throws IOException
     {
