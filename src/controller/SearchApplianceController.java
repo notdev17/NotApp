@@ -1,9 +1,6 @@
 package controller;
 
-import appliance.AirConditioner;
-import appliance.Appliance;
-import appliance.Refrigerator;
-import appliance.WashingMachine;
+import appliance.*;
 import driver.H2Database;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
@@ -63,11 +60,16 @@ public class SearchApplianceController
         modelColumn.setCellValueFactory(new PropertyValueFactory<Appliance, String>("model"));
         energyColumn.setCellValueFactory(new PropertyValueFactory<Appliance, String>("energy"));
 
-        //set the items in the table to the items returned by the getAppliance() method
+        //set the items in the table to the items returned by the getApplianceType() method
         myTableView.setItems(getAppliances());
+        myApplianceBox.getItems().add(new AirCleaner().getApplianceType());
         myApplianceBox.getItems().add(new AirConditioner().getApplianceType());
-        myApplianceBox.getItems().add(new Refrigerator().getApplianceType());
+        myApplianceBox.getItems().add(new Dishwasher().getApplianceType());
+        myApplianceBox.getItems().add(new Dryer().getApplianceType());
         myApplianceBox.getItems().add(new WashingMachine().getApplianceType());
+        myApplianceBox.getItems().add(new Refrigerator().getApplianceType());
+        myApplianceBox.getItems().add(new Freezer().getApplianceType());
+
 
         myApplianceBox.getSelectionModel().selectedIndexProperty().addListener(new ChangeListener<Number>() {
             @Override

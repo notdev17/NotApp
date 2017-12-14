@@ -5,7 +5,7 @@ package appliance;
  */
 public class Freezer extends Appliance {
 
-    private String applianceType = "Dryer";
+    private String applianceType = "Freezer";
     private double price = 150.00;
 
     /**Created by Devon on 12/9/2017**/
