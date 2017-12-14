@@ -18,6 +18,11 @@ public class Refrigerator extends Appliance {
         super();
     }
 
+    //Used when populating lists from database (to avoid call by reference issues)
+    public Refrigerator getCopy() {
+        return new Refrigerator(this.getModel(), this.getBrand(), this.getEnergy());
+    }
+
     /**Created by Devon on 12/9/2017**/
     public String getApplianceType() {
         return applianceType;
