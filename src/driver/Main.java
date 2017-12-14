@@ -9,39 +9,23 @@ import javafx.stage.Stage;
 
 public class Main extends Application {
 
-//    public H2Database h2db;
-
     @Override
     public void start(Stage primaryStage) throws Exception {
-
-//        initializeDatabase();
-
+        //load the fxml file for the first page
         Parent root = FXMLLoader.load(getClass().getResource("../fxml/FirstPage.fxml"));
+        //set the title of the window
         primaryStage.setTitle("Not App: Compare Appliances!");
+        //set the scene as the fxml file
         primaryStage.setScene(new Scene(root));
-
+        //the window is not resizable
+        primaryStage.setResizable(false);
+        //show the stage
         primaryStage.show();
     }
 
 
     public static void main(String[] args) {
-
-
-
-
+        //launch the application
         launch(args);
     }
-
-    /**
-     * initialize database
-     */
-//    public void initializeDatabase() {
-//        h2db = new H2Database();
-//
-//        h2db.selectTable("refrigerator");
-//
-//        for (Appliance a : h2db.getAppliances()) {
-//            System.out.println(a);
-//        }
-//    }
 }

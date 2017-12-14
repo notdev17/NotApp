@@ -17,7 +17,9 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
 import java.io.IOException;
 
@@ -95,6 +97,23 @@ public class SearchApplianceController
     }
 
     /**
+     * Takes the currently selected appliance and gives it to the
+     * CompareApplianceController, then shows the CompareAppliance stage.
+     * by Brandon
+     */
+    @FXML
+    public void selectButtonClicked(ActionEvent event) throws IOException
+    {
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../fxml/CompareAppliances.fxml"));
+        Pane p = fxmlLoader.load();
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        stage.setScene(new Scene(p));
+        CompareAppliancesController cmpController = fxmlLoader.getController();
+        cmpController.setTableView(myTableView.getSelectionModel().getTableView());
+        stage.show();
+    }
+
+    /**
      * returns back to the compare appliances page
      * by daylen
      * @param event
@@ -103,13 +122,7 @@ public class SearchApplianceController
     @FXML
     public void backButtonClicked(ActionEvent event) throws IOException
     {
-        Parent compareAppParent = FXMLLoader.load(getClass().getResource("../fxml/CompareAppliances.fxml"));
-        Scene compareAppScene = new Scene(compareAppParent);
-
-        Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        window.setScene(compareAppScene);
-
-        window.show();
+        new FirstPageController().getCompareApplianceScreen(event);
     }
     /**
      * by Daylen
@@ -119,7 +132,13 @@ public class SearchApplianceController
 
         //create an applianceList to populate
         ObservableList<Appliance> applianceList = FXCollections.observableArrayList();
+<<<<<<< HEAD
 
+=======
+        //add a test appliance
+        applianceList.add(new Refrigerator("test model","test brand",0));
+        applianceList.add(new Refrigerator("model","idk",1));
+>>>>>>> dayday
         H2Database h2db = new H2Database();
 
 

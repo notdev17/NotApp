@@ -72,7 +72,7 @@
          <bottom>
             <ButtonBar prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER">
               <buttons>
-                  <Button mnemonicParsing="false" prefHeight="27.0" prefWidth="140.0" text="Select" />
+                  <Button mnemonicParsing="false" onAction="#selectButtonClicked" prefHeight="27.0" prefWidth="140.0" text="Select" />
               </buttons>
                <BorderPane.margin>
                   <Insets right="10.0" />
