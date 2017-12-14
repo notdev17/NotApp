@@ -1,6 +1,8 @@
 package controller;
 
 import appliance.Appliance;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -16,6 +18,8 @@ import java.io.IOException;
 import java.util.Arrays;
 
 public class CompareAppliancesController {
+
+    public ObservableList<Appliance> currentUserApplianceList = FXCollections.observableArrayList();
 
     //table view from the fxml file
     @FXML

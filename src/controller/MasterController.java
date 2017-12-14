@@ -19,13 +19,11 @@ import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
-import javafx.stage.StageStyle;
 
 import java.io.IOException;
 
-
-public class SearchApplianceController
-{
+public class MasterController {
+    //FXML COMPONENTS
     //table view from the fxml file
     @FXML
     private TableView<Appliance> myTableView;
@@ -52,10 +50,23 @@ public class SearchApplianceController
 
     @FXML
     private TextField myEnergyMaximum;
+    //
 
-    @FXML
-    private void initialize()
-    {
+    public ObservableList<Appliance> currentUserApplianceList;
+    public ObservableList<Appliance> userFavoriteList;
+
+//    MasterController() {
+//        super();
+//    }
+
+    /**
+     * By: Daylen
+     * displays the Search Appliance Screen
+     * @param event
+     * @throws IOException
+     */
+    public void getSearchApplianceScreen(ActionEvent event) throws IOException {
+        loadFXML(event, "../fxml/SearchAppliance.fxml");
         //set up the columns in the table
         //priceColumn.setCellValueFactory(new PropertyValueFactory<Appliance, String>("price"));
         brandColumn.setCellValueFactory(new PropertyValueFactory<Appliance, String>("brand"));
@@ -87,6 +98,77 @@ public class SearchApplianceController
         });
     }
 
+    /**
+     * By: Daylen
+     * displays the User screen
+     * @param event
+     * @throws IOException
+     */
+    public void getUserScreen(ActionEvent event) throws IOException {
+        loadFXML(event, "../fxml/User.fxml");
+    }
+
+    /**
+     * By: Daylen
+     * displays the Calculate Savings screen
+     * @param event
+     * @throws IOException
+     */
+    public void getCalculateSavingsScreen(ActionEvent event) throws IOException {
+        loadFXML(event, "../fxml/CalculateSavings.fxml");
+    }
+
+    /**
+     * By: Daylen
+     * displays the first page screen
+     * @param event
+     * @throws IOException
+     */
+    public void getFirstPageScreen(ActionEvent event) throws IOException {
+        loadFXML(event, "../fxml/FirstPage.fxml");
+    }
+
+    /**
+     * By: Daylen
+     * displays the CompareApplianceScreen
+     * @param event
+     * @throws IOException
+     */
+    public void getCompareApplianceScreen(ActionEvent event) throws IOException {
+        loadFXML(event, "../fxml/CompareAppliances.fxml");
+    }
+
+    /**
+     * By: Daylen
+     * Loads the fxml file when the action event is sent
+     * @param event
+     * @param fxmlLocation
+     * @throws IOException
+     */
+    @FXML
+    public void loadFXML(ActionEvent event, String fxmlLocation) throws IOException {
+        Parent compareAppParent = FXMLLoader.load(getClass().getResource(fxmlLocation));
+        Scene compareAppScene = new Scene(compareAppParent);
+        Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        window.setScene(compareAppScene);
+        window.show();
+    }
+
+    /**
+     * closes the window when the done button that is clicked
+     * By: Daylen
+     * @param event
+     * @throws IOException
+     */
+    @FXML
+    public void doneButtonClicked(ActionEvent event) throws IOException {
+        //get the window from the action event
+        Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+
+        //close the window
+        window.close();
+    }
+
     @FXML
     public void updateButtonClicked(ActionEvent event) throws IOException
     {
@@ -95,7 +177,6 @@ public class SearchApplianceController
         System.out.println("Energy Min: " + myEnergyMinimum.getCharacters());
         System.out.println("Energy Max: " + myEnergyMaximum.getCharacters());
     }
-
     /**
      * Takes the currently selected appliance and gives it to the
      * CompareApplianceController, then shows the CompareAppliance stage.
@@ -112,18 +193,6 @@ public class SearchApplianceController
         cmpController.setTableView(myTableView.getSelectionModel().getTableView());
         System.err.println(myTableView.getSelectionModel().getSelectedItem());
         stage.show();
-    }
-
-    /**
-     * returns back to the compare appliances page
-     * by daylen
-     * @param event
-     * @throws IOException
-     */
-    @FXML
-    public void backButtonClicked(ActionEvent event) throws IOException
-    {
-        new FirstPageController().getCompareApplianceScreen(event);
     }
 
     /**
@@ -204,6 +273,4 @@ public class SearchApplianceController
 
         return applianceList;
     }
-
-
 }
