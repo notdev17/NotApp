@@ -82,7 +82,7 @@ public class SearchApplianceController
                   When a user clicks an appliance type in the drop down menu, it will be re-populated with the proper
                   appliances (using getAppliances).
                  */
-                myTableView.setItems(getAppliances(myApplianceBox.getItems().get(newValue.intValue())));
+                getAppliances(myApplianceBox.getItems().get(newValue.intValue()));
             }
         });
     }
