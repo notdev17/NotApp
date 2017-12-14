@@ -12,8 +12,13 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
+<<<<<<< HEAD
 <!--By Daylen; the FXML File which will be loaded to display the compareappliances page-->
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MasterController">
+=======
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CompareAppliancesController">
+>>>>>>> parent of 0deee91... Completing the merge of devon and dayday branch
     <children>
       <BorderPane layoutY="1.0" prefHeight="391.0" prefWidth="600.0">
          <top>
@@ -42,7 +47,7 @@
                      <content>
                         <VBox prefHeight="56.0" prefWidth="585.0">
                            <children>
-                              <Slider maxHeight="28.0" minHeight="28.0" prefHeight="28.0" prefWidth="595.0">
+                              <Slider fx:id="myUsageSlider" maxHeight="28.0" minHeight="28.0" prefHeight="28.0" prefWidth="595.0">
                                  <padding>
                                     <Insets left="5.0" />
                                  </padding>
@@ -53,7 +58,15 @@
                   </ScrollPane>
                   <ButtonBar prefHeight="40.0" prefWidth="200.0">
                     <buttons>
+<<<<<<< HEAD
                         <Button graphicTextGap="0.0" mnemonicParsing="false" onAction="#getCalculateSavingsScreen" prefHeight="25.0" prefWidth="173.0" text="Calculate Savings">
+=======
+<<<<<<< HEAD
+                        <Button fx:id="myCalculateButton" graphicTextGap="0.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="173.0" text="Calculate Savings">
+=======
+                        <Button graphicTextGap="0.0" mnemonicParsing="false" onAction="#calcSavingsButtonClicked" prefHeight="25.0" prefWidth="173.0" text="Calculate Savings">
+>>>>>>> dayday
+>>>>>>> parent of 0deee91... Completing the merge of devon and dayday branch
                            <opaqueInsets>
                               <Insets right="10.0" />
                            </opaqueInsets>

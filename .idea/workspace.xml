@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0cc94476-c86e-42f6-9935-664e431b6d04" name="Default" comment="">
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -30,6 +31,18 @@
 >>>>>>> parent of bc6b600... small change to populate the table in search appliance
 =======
 >>>>>>> parent of bc6b600... small change to populate the table in search appliance
+=======
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/controller/CalculateSavingsController.java" afterPath="$PROJECT_DIR$/src/controller/CalculateSavingsController.java" />
+      <change beforePath="$PROJECT_DIR$/src/controller/CompareAppliancesController.java" afterPath="$PROJECT_DIR$/src/controller/CompareAppliancesController.java" />
+      <change beforePath="$PROJECT_DIR$/src/controller/FirstPageController.java" afterPath="$PROJECT_DIR$/src/controller/FirstPageController.java" />
+      <change beforePath="$PROJECT_DIR$/src/controller/SearchApplianceController.java" afterPath="$PROJECT_DIR$/src/controller/SearchApplianceController.java" />
+      <change beforePath="$PROJECT_DIR$/src/fxml/ApplianceInformation.fxml" afterPath="$PROJECT_DIR$/src/fxml/ApplianceInformation.fxml" />
+      <change beforePath="$PROJECT_DIR$/src/fxml/CalculateSavings.fxml" afterPath="$PROJECT_DIR$/src/fxml/CalculateSavings.fxml" />
+      <change beforePath="$PROJECT_DIR$/src/fxml/CompareAppliances.fxml" afterPath="$PROJECT_DIR$/src/fxml/CompareAppliances.fxml" />
+      <change beforePath="$PROJECT_DIR$/src/fxml/FirstPage.fxml" afterPath="$PROJECT_DIR$/src/fxml/FirstPage.fxml" />
+      <change beforePath="$PROJECT_DIR$/src/fxml/SearchAppliance.fxml" afterPath="$PROJECT_DIR$/src/fxml/SearchAppliance.fxml" />
+>>>>>>> parent of 0deee91... Completing the merge of devon and dayday branch
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -129,22 +142,16 @@
         </entry>
       </file>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
       <file leaf-file-name="SearchApplianceController.java" pinned="false" current-in-tab="false">
+=======
+      <file leaf-file-name="SearchApplianceController.java" pinned="false" current-in-tab="true">
+>>>>>>> parent of 0deee91... Completing the merge of devon and dayday branch
         <entry file="file://$PROJECT_DIR$/src/controller/SearchApplianceController.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="306">
-              <caret line="39" column="0" lean-forward="false" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="workspace.xml" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="237" column="13" lean-forward="true" selection-start-line="237" selection-start-column="13" selection-end-line="237" selection-end-column="13" />
+              <caret line="39" column="0" lean-forward="true" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -210,15 +217,32 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="SearchAppliance.fxml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/fxml/SearchAppliance.fxml">
+          <provider editor-type-id="JavaFX-Scene-Builder">
+            <state />
+          </provider>
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="289">
+              <caret line="17" column="88" lean-forward="false" selection-start-line="17" selection-start-column="88" selection-end-line="17" selection-end-column="88" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="CompareAppliancesController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/controller/CompareAppliancesController.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="901">
+<<<<<<< HEAD
               <caret line="66" column="61" lean-forward="false" selection-start-line="66" selection-start-column="61" selection-end-line="66" selection-end-column="61" />
 <<<<<<< HEAD
 >>>>>>> parent of bc6b600... small change to populate the table in search appliance
 =======
 >>>>>>> parent of bc6b600... small change to populate the table in search appliance
+=======
+              <caret line="66" column="61" lean-forward="true" selection-start-line="66" selection-start-column="61" selection-end-line="66" selection-end-column="61" />
+>>>>>>> parent of 0deee91... Completing the merge of devon and dayday branch
               <folding />
             </state>
           </provider>
@@ -277,12 +301,15 @@
       </list>
     </option>
   </component>
+<<<<<<< HEAD
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-1159" />
     <option name="y" value="-12" />
     <option name="width" value="1150" />
     <option name="height" value="824" />
   </component>
+=======
+>>>>>>> parent of 0deee91... Completing the merge of devon and dayday branch
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
       <flattenPackages />
@@ -490,6 +517,7 @@
       <option name="presentableId" value="Default" />
       <updated>1513248889018</updated>
     </task>
+<<<<<<< HEAD
     <task id="LOCAL-00001" summary="Completing the merge of devon and dayday branch">
       <created>1513250092145</created>
       <option name="number" value="00001" />
@@ -527,6 +555,8 @@
 =======
     <option name="localTasksCounter" value="2" />
 >>>>>>> parent of bc6b600... small change to populate the table in search appliance
+=======
+>>>>>>> parent of 0deee91... Completing the merge of devon and dayday branch
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -565,12 +595,15 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+<<<<<<< HEAD
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Completing the merge of devon and dayday branch" />
     <MESSAGE value="small change to populate the table in search appliance" />
     <MESSAGE value="Master Controller" />
     <option name="LAST_COMMIT_MESSAGE" value="Master Controller" />
   </component>
+=======
+>>>>>>> parent of 0deee91... Completing the merge of devon and dayday branch
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
@@ -691,12 +724,23 @@
     </entry>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/fxml/CalculateSavings.fxml">
       <provider editor-type-id="JavaFX-Scene-Builder">
         <state />
 =======
 =======
 >>>>>>> parent of bc6b600... small change to populate the table in search appliance
+=======
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="227" column="44" lean-forward="true" selection-start-line="227" selection-start-column="44" selection-end-line="227" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+>>>>>>> parent of 0deee91... Completing the merge of devon and dayday branch
     <entry file="file://$PROJECT_DIR$/src/driver/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -746,6 +790,7 @@
     <entry file="file://$PROJECT_DIR$/src/controller/CompareAppliancesController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="901">
+<<<<<<< HEAD
           <caret line="66" column="61" lean-forward="false" selection-start-line="66" selection-start-column="61" selection-end-line="66" selection-end-column="61" />
 >>>>>>> parent of bc6b600... small change to populate the table in search appliance
           <folding />
@@ -769,6 +814,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+=======
+          <caret line="66" column="61" lean-forward="true" selection-start-line="66" selection-start-column="61" selection-end-line="66" selection-end-column="61" />
+>>>>>>> parent of 0deee91... Completing the merge of devon and dayday branch
           <folding />
         </state>
       </provider>
@@ -807,6 +855,7 @@
           <caret line="39" column="0" lean-forward="false" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
 =======
         <state relative-caret-position="306">
+<<<<<<< HEAD
           <caret line="39" column="0" lean-forward="false" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
           <folding />
         </state>
@@ -817,6 +866,9 @@
         <state relative-caret-position="187">
           <caret line="237" column="13" lean-forward="true" selection-start-line="237" selection-start-column="13" selection-end-line="237" selection-end-column="13" />
 >>>>>>> parent of bc6b600... small change to populate the table in search appliance
+=======
+          <caret line="39" column="0" lean-forward="true" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+>>>>>>> parent of 0deee91... Completing the merge of devon and dayday branch
           <folding />
         </state>
       </provider>
