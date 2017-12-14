@@ -23,6 +23,8 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 public class MasterController {
+
+    private FXMLLoader fxmlLoader;
     //FXML COMPONENTS
     //table view from the fxml file
     @FXML
@@ -31,13 +33,15 @@ public class MasterController {
     //columns in the table view
     @FXML
     private TableColumn<Appliance, String> brandColumn;
+
     @FXML
     private TableColumn<Appliance, String> modelColumn;
+
     @FXML
     private TableColumn<Appliance, String> energyColumn;
 
     @FXML
-    private ChoiceBox<String> myApplianceBox;
+    public ChoiceBox myApplianceBox;
 
     @FXML
     private TextField myPriceMinimum;
@@ -67,35 +71,14 @@ public class MasterController {
      */
     public void getSearchApplianceScreen(ActionEvent event) throws IOException {
         loadFXML(event, "../fxml/SearchAppliance.fxml");
-        //set up the columns in the table
-        //priceColumn.setCellValueFactory(new PropertyValueFactory<Appliance, String>("price"));
         brandColumn.setCellValueFactory(new PropertyValueFactory<Appliance, String>("brand"));
         modelColumn.setCellValueFactory(new PropertyValueFactory<Appliance, String>("model"));
         energyColumn.setCellValueFactory(new PropertyValueFactory<Appliance, String>("energy"));
+        System.out.println(energyColumn);
+//        //set the items in the table to the items returned by the getApplianceType() method
+//        //myTableView.setItems(getAppliances())
+        System.out.println(myApplianceBox);
 
-        //set the items in the table to the items returned by the getApplianceType() method
-        //myTableView.setItems(getAppliances());
-        myApplianceBox.getItems().add(new AirCleaner().getApplianceType());
-        myApplianceBox.getItems().add(new AirConditioner().getApplianceType());
-        myApplianceBox.getItems().add(new Dishwasher().getApplianceType());
-        myApplianceBox.getItems().add(new Dryer().getApplianceType());
-        myApplianceBox.getItems().add(new WashingMachine().getApplianceType());
-        myApplianceBox.getItems().add(new Refrigerator().getApplianceType());
-        myApplianceBox.getItems().add(new Freezer().getApplianceType());
-
-
-        myApplianceBox.getSelectionModel().selectedIndexProperty().addListener(new ChangeListener<Number>() {
-            @Override
-            public void changed(ObservableValue<? extends Number> observable, Number oldValue, Number newValue)
-            {
-                System.out.println("The Appliance you selected was: " + myApplianceBox.getItems().get(newValue.intValue()));
-                /*DEVON
-                  When a user clicks an appliance type in the drop down menu, it will be re-populated with the proper
-                  appliances (using getAppliances).
-                 */
-                myTableView.setItems(getAppliances(myApplianceBox.getItems().get(newValue.intValue())));
-            }
-        });
     }
 
     /**
@@ -147,10 +130,10 @@ public class MasterController {
      */
     @FXML
     public void loadFXML(ActionEvent event, String fxmlLocation) throws IOException {
-        Parent compareAppParent = FXMLLoader.load(getClass().getResource(fxmlLocation));
-        Scene compareAppScene = new Scene(compareAppParent);
+        Parent parent = FXMLLoader.load(getClass().getResource(fxmlLocation));
+        Scene scene = new Scene(parent);
         Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        window.setScene(compareAppScene);
+        window.setScene(scene);
         window.show();
     }
 

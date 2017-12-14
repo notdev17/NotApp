@@ -15,7 +15,9 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Text?>
+
 <!--By Daylen; the FXML File which will be loaded to display the searchappliance page-->
+
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SearchApplianceController">
    <children>
       <BorderPane prefHeight="400.0" prefWidth="600.0">
@@ -28,7 +30,7 @@
                         <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Search Screen" />
                     </items>
                   </ToolBar>
-                  <TextField alignment="CENTER" prefHeight="51.0" prefWidth="555.0" promptText="Search for an Appliance" />
+                  <TextField alignment="CENTER" prefHeight="51.0" prefWidth="555.0" promptText="Click here to search for an appliance" />
                </children>
             </VBox>
          </top>
@@ -39,19 +41,41 @@
                      <children>
                         <VBox prefHeight="200.0" prefWidth="150.0">
                            <children>
-                              <Label text=" Appliance Type" />
-                              <ChoiceBox fx:id="myApplianceBox" prefHeight="35.0" prefWidth="150.0">
-                                 <padding>
-                                    <Insets right="6.0" />
-                                 </padding>
-                              </ChoiceBox>
-                              <Label layoutX="10.0" layoutY="10.0" text=" Price Range" />
-                              <TextField fx:id="myPriceMinimum" disable="true" prefHeight="25.0" prefWidth="56.0" promptText="min" />
-                              <TextField fx:id="myPriceMaximum" disable="true" layoutX="42.0" layoutY="31.0" prefHeight="25.0" prefWidth="121.0" promptText="max" />
-                              <Label layoutX="10.0" layoutY="10.0" text=" Energy Range" />
+                              <ToolBar prefHeight="40.0" prefWidth="200.0">
+                                 <items>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Filters" textAlignment="CENTER" wrappingWidth="135.13671875" />
+                                 </items>
+                              </ToolBar>
+                              <Label text=" Appliance Type">
+                                 <VBox.margin>
+                                    <Insets top="8.0" />
+                                 </VBox.margin></Label>
+                              <ChoiceBox fx:id="myApplianceBox" prefWidth="150.0" />
+                              <Label layoutX="10.0" layoutY="10.0" text=" Price Range">
+                                 <VBox.margin>
+                                    <Insets top="10.0" />
+                                 </VBox.margin></Label>
+                              <TextField fx:id="myPriceMinimum" disable="true" prefHeight="25.0" prefWidth="56.0" promptText="min">
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin></TextField>
+                              <TextField fx:id="myPriceMaximum" disable="true" layoutX="42.0" layoutY="31.0" prefHeight="25.0" prefWidth="121.0" promptText="max">
+                                 <VBox.margin>
+                                    <Insets top="3.0" />
+                                 </VBox.margin></TextField>
+                              <Label layoutX="10.0" layoutY="10.0" text=" Energy Range">
+                                 <VBox.margin>
+                                    <Insets top="8.0" />
+                                 </VBox.margin></Label>
                               <TextField fx:id="myEnergyMinimum" prefHeight="25.0" prefWidth="56.0" promptText="min" />
-                              <TextField fx:id="myEnergyMaximum" layoutX="42.0" layoutY="31.0" prefHeight="25.0" prefWidth="121.0" promptText="max" />
-                              <Button mnemonicParsing="false" onAction="#updateButtonClicked" text="Update Results" />
+                              <TextField fx:id="myEnergyMaximum" layoutX="42.0" layoutY="31.0" prefHeight="25.0" prefWidth="121.0" promptText="max">
+                                 <VBox.margin>
+                                    <Insets top="3.0" />
+                                 </VBox.margin></TextField>
+                              <Button mnemonicParsing="false" onAction="#updateButtonClicked" text="Update Results">
+                                 <VBox.margin>
+                                    <Insets top="5.0" />
+                                 </VBox.margin></Button>
       
                            </children>
                         </VBox>

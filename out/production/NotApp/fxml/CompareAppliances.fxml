@@ -13,15 +13,15 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
 <!--By Daylen; the FXML File which will be loaded to display the compareappliances page-->
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CompareAppliancesController">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MasterController">
     <children>
       <BorderPane layoutY="1.0" prefHeight="391.0" prefWidth="600.0">
          <top>
             <ToolBar prefHeight="40.0" prefWidth="600.0" BorderPane.alignment="CENTER">
               <items>
-                <Button mnemonicParsing="false" onAction="#backButtonClicked" text="Back" />
+                <Button mnemonicParsing="false" onAction="#getFirstPageScreen" text="Back" />
                   <Label text="Current User Appliances: (Click the &quot;+&quot; to add an appliance)" />
-                  <Button alignment="CENTER" mnemonicParsing="false" onAction="#createApplianceButtonClicked" text="+" />
+                  <Button alignment="CENTER" mnemonicParsing="false" onAction="#getSearchApplianceScreen" text="+" />
               </items>
             </ToolBar>
          </top>
@@ -53,7 +53,7 @@
                   </ScrollPane>
                   <ButtonBar prefHeight="40.0" prefWidth="200.0">
                     <buttons>
-                        <Button graphicTextGap="0.0" mnemonicParsing="false" onAction="#calcSavingsButtonClicked" prefHeight="25.0" prefWidth="173.0" text="Calculate Savings">
+                        <Button graphicTextGap="0.0" mnemonicParsing="false" onAction="#getCalculateSavingsScreen" prefHeight="25.0" prefWidth="173.0" text="Calculate Savings">
                            <opaqueInsets>
                               <Insets right="10.0" />
                            </opaqueInsets>

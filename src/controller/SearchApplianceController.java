@@ -123,9 +123,8 @@ public class SearchApplianceController
     @FXML
     public void backButtonClicked(ActionEvent event) throws IOException
     {
-        new FirstPageController().getCompareApplianceScreen(event);
+        new MasterController().getCompareApplianceScreen(event);
     }
-
     /**
      * by Daylen
      * @return returns the list of appliances (test atm)
