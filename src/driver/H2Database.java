@@ -138,7 +138,7 @@ public class H2Database {
             case "airconditioner":
                 query = "SELECT Model_Number AS model," +
                         "Brand_Name AS brand," +
-                        "Estimated_Annual_Energy_Use AS energy" +
+                        "Energy_Efficiency_Ratio AS energy" +
                         " FROM AIR_CONDITIONER";
                 break;
             case "washingmachine":
@@ -162,7 +162,7 @@ public class H2Database {
             case "aircleaner":
                 query = "SELECT Model_Number AS model," +
                         "Brand_Name AS brand," +
-                        "Estimated_Annual_Energy_Use AS energy" +
+                        "Total_Energy_Consumption_Watts AS energy" +
                         " FROM Air_Cleaner";
                 break;
             case "dryer":

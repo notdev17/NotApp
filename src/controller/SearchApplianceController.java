@@ -61,7 +61,7 @@ public class SearchApplianceController
         energyColumn.setCellValueFactory(new PropertyValueFactory<Appliance, String>("energy"));
 
         //set the items in the table to the items returned by the getApplianceType() method
-        myTableView.setItems(getAppliances());
+        //myTableView.setItems(getAppliances());
         myApplianceBox.getItems().add(new AirCleaner().getApplianceType());
         myApplianceBox.getItems().add(new AirConditioner().getApplianceType());
         myApplianceBox.getItems().add(new Dishwasher().getApplianceType());
@@ -76,6 +76,11 @@ public class SearchApplianceController
             public void changed(ObservableValue<? extends Number> observable, Number oldValue, Number newValue)
             {
                 System.out.println("The Appliance you selected was: " + myApplianceBox.getItems().get(newValue.intValue()));
+                /*DEVON
+                  When a user clicks an appliance type in the drop down menu, it will be re-populated with the proper
+                  appliances (using getAppliances).
+                 */
+                getAppliances(myApplianceBox.getItems().get(newValue.intValue()));
             }
         });
     }
@@ -110,20 +115,78 @@ public class SearchApplianceController
      * by Daylen
      * @return returns the list of appliances (test atm)
      */
-    public ObservableList<Appliance> getAppliances(){
+    public ObservableList<Appliance> getAppliances(String applianceType){
 
         //create an applianceList to populate
         ObservableList<Appliance> applianceList = FXCollections.observableArrayList();
-        //add a test appliance
-        applianceList.add(new Refrigerator("test model","test brand",0));
+
         H2Database h2db = new H2Database();
 
-        h2db.selectTable("refrigerator");
 
-        for (Appliance a : h2db.getAppliances()) {
-            applianceList.add(new Refrigerator( a.getModel(), a.getBrand(), a.getEnergy()));
-            System.out.println(a);
+        /*DEVON
+          Added this switch statement to facilitate applianceList population and search filtering.
+          Can likely be refactored to reduce the mostly identical case bodies.
+         */
+        switch(applianceType) {
+            //IMPORTANT the energy value for air cleaners is Watts. Not kWHrs per Year.
+            case "Air Cleaner":
+                h2db.selectTable("aircleaner");
+                for (Appliance a : h2db.getAppliances()) {
+                    applianceList.add(new AirCleaner( a.getModel(), a.getBrand(), a.getEnergy()));
+                    System.out.println(a);
+                }
+                break;
+            //IMPORTANT the energy value for conditioners is in energy efficiency ratio. Not kWHrs/Yr.
+            case "Air Conditioner":
+                h2db.selectTable("airconditioner");
+                for (Appliance a : h2db.getAppliances()) {
+                    applianceList.add(new AirConditioner( a.getModel(), a.getBrand(), a.getEnergy()));
+                    System.out.println(a);
+                }
+                break;
+
+            case "Dishwasher":
+                h2db.selectTable("dishwasher");
+                for (Appliance a : h2db.getAppliances()) {
+                    applianceList.add(new Dishwasher( a.getModel(), a.getBrand(), a.getEnergy()));
+                    System.out.println(a);
+                }
+                break;
+
+            case "Dryer":
+                h2db.selectTable("dryer");
+                for (Appliance a : h2db.getAppliances()) {
+                    applianceList.add(new Dryer( a.getModel(), a.getBrand(), a.getEnergy()));
+                    System.out.println(a);
+                }
+                break;
+
+            case "Freezer":
+                h2db.selectTable("freezer");
+                for (Appliance a : h2db.getAppliances()) {
+                    applianceList.add(new Freezer( a.getModel(), a.getBrand(), a.getEnergy()));
+                    System.out.println(a);
+                }
+                break;
+
+            case "Refrigerator":
+                h2db.selectTable("refrigerator");
+                for (Appliance a : h2db.getAppliances()) {
+                    applianceList.add(new Refrigerator( a.getModel(), a.getBrand(), a.getEnergy()));
+                    System.out.println(a);
+                }
+                break;
+
+            case "Washer":
+                h2db.selectTable("washingmachine");
+                for (Appliance a : h2db.getAppliances()) {
+                    applianceList.add(new WashingMachine( a.getModel(), a.getBrand(), a.getEnergy()));
+                    System.out.println(a);
+                }
+                break;
+
         }
+
 
         return applianceList;
     }
