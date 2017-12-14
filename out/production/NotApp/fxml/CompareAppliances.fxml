@@ -26,7 +26,7 @@
             </ToolBar>
          </top>
          <center>
-            <TableView fx:id="myTableView" prefHeight="200.0" prefWidth="377.0" BorderPane.alignment="CENTER">
+            <TableView fx:id="selectedTableView" prefHeight="200.0" prefWidth="377.0" BorderPane.alignment="CENTER">
                <columns>
                   <TableColumn fx:id="modelColumn" prefWidth="190.0" text="Model" />
                   <TableColumn fx:id="brandColumn" prefWidth="216.0" text="Brand" />

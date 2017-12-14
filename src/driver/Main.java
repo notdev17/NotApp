@@ -1,6 +1,7 @@
 package driver;
 
 import appliance.Appliance;
+import controller.MasterController;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -10,6 +11,8 @@ import javafx.stage.Stage;
 public class Main extends Application {
 
 //    public H2Database h2db;
+    public MasterController mc = new MasterController();
+
 
     @Override
     public void start(Stage primaryStage) throws Exception {

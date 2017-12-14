@@ -29,7 +29,7 @@ public class SearchApplianceController
 
     //table view from the fxml file
     @FXML
-    private TableView<Appliance> myTableView;
+    private TableView<Appliance> resultTableView;
 
     //columns in the table view
     @FXML
@@ -64,7 +64,7 @@ public class SearchApplianceController
         energyColumn.setCellValueFactory(new PropertyValueFactory<Appliance, String>("energy"));
 
         //set the items in the table to the items returned by the getApplianceType() method
-        //myTableView.setItems(getAppliances());
+        //resultTableView.setItems(getAppliances());
         myApplianceBox.getItems().add(new AirCleaner().getApplianceType());
         myApplianceBox.getItems().add(new AirConditioner().getApplianceType());
         myApplianceBox.getItems().add(new Dishwasher().getApplianceType());
@@ -83,7 +83,7 @@ public class SearchApplianceController
                   When a user clicks an appliance type in the drop down menu, it will be re-populated with the proper
                   appliances (using getAppliances).
                  */
-                getAppliances(myApplianceBox.getItems().get(newValue.intValue()));
+                resultTableView.setItems(getAppliances(myApplianceBox.getItems().get(newValue.intValue())));
             }
         });
     }
@@ -114,6 +114,22 @@ public class SearchApplianceController
 
         window.show();
     }
+
+    @FXML
+    public void selectButtonClicked(ActionEvent event) throws IOException {
+        Appliance appliance = resultTableView.getSelectionModel().getSelectedItem();
+
+        masterController.addSelected(appliance);
+
+        Parent compareAppParent = FXMLLoader.load(getClass().getResource("../fxml/CompareAppliancesController.fxml"));
+        Scene compareAppScene = new Scene(compareAppParent);
+
+        Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        window.setScene(compareAppScene);
+
+        window.show();
+    }
+
     /**
      * by Daylen
      * @return returns the list of appliances (test atm)
@@ -136,7 +152,7 @@ public class SearchApplianceController
                 h2db.selectTable("aircleaner");
                 for (Appliance a : h2db.getAppliances()) {
                     applianceList.add(new AirCleaner( a.getModel(), a.getBrand(), a.getEnergy()));
-                    System.out.println(a);
+                    //System.out.println(a);
                 }
                 break;
             //IMPORTANT the energy value for conditioners is in energy efficiency ratio. Not kWHrs/Yr.
@@ -144,7 +160,7 @@ public class SearchApplianceController
                 h2db.selectTable("airconditioner");
                 for (Appliance a : h2db.getAppliances()) {
                     applianceList.add(new AirConditioner( a.getModel(), a.getBrand(), a.getEnergy()));
-                    System.out.println(a);
+                    //System.out.println(a);
                 }
                 break;
 
@@ -152,7 +168,7 @@ public class SearchApplianceController
                 h2db.selectTable("dishwasher");
                 for (Appliance a : h2db.getAppliances()) {
                     applianceList.add(new Dishwasher( a.getModel(), a.getBrand(), a.getEnergy()));
-                    System.out.println(a);
+                    //System.out.println(a);
                 }
                 break;
 
@@ -160,7 +176,7 @@ public class SearchApplianceController
                 h2db.selectTable("dryer");
                 for (Appliance a : h2db.getAppliances()) {
                     applianceList.add(new Dryer( a.getModel(), a.getBrand(), a.getEnergy()));
-                    System.out.println(a);
+                    //System.out.println(a);
                 }
                 break;
 
@@ -168,7 +184,7 @@ public class SearchApplianceController
                 h2db.selectTable("freezer");
                 for (Appliance a : h2db.getAppliances()) {
                     applianceList.add(new Freezer( a.getModel(), a.getBrand(), a.getEnergy()));
-                    System.out.println(a);
+                    //System.out.println(a);
                 }
                 break;
 
@@ -176,7 +192,7 @@ public class SearchApplianceController
                 h2db.selectTable("refrigerator");
                 for (Appliance a : h2db.getAppliances()) {
                     applianceList.add(new Refrigerator( a.getModel(), a.getBrand(), a.getEnergy()));
-                    System.out.println(a);
+                    //System.out.println(a);
                 }
                 break;
 
@@ -184,12 +200,14 @@ public class SearchApplianceController
                 h2db.selectTable("washingmachine");
                 for (Appliance a : h2db.getAppliances()) {
                     applianceList.add(new WashingMachine( a.getModel(), a.getBrand(), a.getEnergy()));
-                    System.out.println(a);
+                    //System.out.println(a);
                 }
                 break;
 
         }
 
+
+        h2db.closeConnection();
 
         return applianceList;
     }

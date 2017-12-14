@@ -2,6 +2,7 @@
 
 package controller;
 
+import appliance.Appliance;
 import javafx.fxml.FXML;
 
 /**
@@ -12,14 +13,15 @@ public class MasterController {
     @FXML CompareAppliancesController compareAppliancesController;
     @FXML SearchApplianceController searchApplianceController;
 
-
-
     @FXML
-    public void initialize() {
+    private void initialize() {
         firstPageController.setMasterController(this);
         compareAppliancesController.setMasterController(this);
         searchApplianceController.setMasterController(this);
     }
 
-
+    public void addSelected(Appliance a) {
+        //compareAppliancesController.addSelectedAppliance(a);
+        System.out.println("adding success");
+    }
 }

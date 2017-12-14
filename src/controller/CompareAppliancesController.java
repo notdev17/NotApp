@@ -1,6 +1,7 @@
 package controller;
 
 import appliance.Appliance;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -20,7 +21,9 @@ public class CompareAppliancesController {
     private MasterController masterController;
 
     @FXML
-    private TableView<Appliance> myTableView;
+    private TableView<Appliance> selectedTableView;
+
+    ObservableList<Appliance> applianceList;
 
     //columns in the table view
     @FXML
@@ -39,7 +42,8 @@ public class CompareAppliancesController {
     @FXML
     private void initialize()
     {
-        if (myTableView.getSelectionModel().isEmpty())
+
+        if (selectedTableView.getSelectionModel().isEmpty())
         {
             myUsageSlider.setDisable(true);
             myCalculateButton.setDisable(true);
@@ -76,5 +80,9 @@ public class CompareAppliancesController {
 
     public void setMasterController(MasterController mc) {
         masterController = mc;
+    }
+
+    public void addSelectedAppliance(Appliance a) {
+        selectedTableView.setItems(applianceList);
     }
 }
