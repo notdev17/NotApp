@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="200.0" prefWidth="200.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <ImageView fitHeight="100.0" fitWidth="100.0" layoutY="-7.0" pickOnBounds="true" preserveRatio="true" />
+            <AnchorPane layoutX="0.0" layoutY="90.0" prefHeight="128.0" prefWidth="202.0">
+               <children>
+                  <TextArea prefHeight="128.0" prefWidth="116.0" text="Appliance Name:&#10;&#10;Appliance Type:&#10;&#10;Initial Price:&#10;&#10;Kilowatt/Hour:" />
+                  <TextField layoutX="116.0" layoutY="105.0" prefHeight="14.0" prefWidth="86.0">
+                     <font>
+                        <Font size="10.0" />
+                     </font>
+                  </TextField>
+                  <TextField layoutX="116.0" layoutY="68.0" prefHeight="14.0" prefWidth="86.0">
+                     <font>
+                        <Font size="10.0" />
+                     </font>
+                  </TextField>
+                  <TextField layoutX="116.0" layoutY="35.0" prefHeight="23.0" prefWidth="86.0">
+                     <font>
+                        <Font size="10.0" />
+                     </font>
+                  </TextField>
+                  <TextField layoutX="116.0" prefHeight="23.0" prefWidth="86.0">
+                     <font>
+                        <Font size="10.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </AnchorPane>
+
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
