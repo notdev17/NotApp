@@ -17,6 +17,11 @@ public class Dryer extends Appliance {
         super();
     }
 
+    //Used when populating lists from database (to avoid call by reference issues)
+    public Dryer getCopy() {
+        return new Dryer(this.getModel(), this.getBrand(), this.getEnergy());
+    }
+
     /**Created by Devon on 12/9/2017**/
     public String getApplianceType() {
         return applianceType;

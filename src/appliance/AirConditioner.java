@@ -2,7 +2,7 @@ package appliance;
 
 /**
  * Created by Tim on 12/7/2017.
- * Edited by Devon on 12/9/2017
+ * Edited and expanded by Devon on 12/9/2017
  */
 public class AirConditioner extends Appliance {
 
@@ -17,6 +17,11 @@ public class AirConditioner extends Appliance {
 
     public AirConditioner() {
         super();
+    }
+
+    //Used when populating lists from database (to avoid call by reference issues)
+    public AirConditioner getCopy() {
+        return new AirConditioner(this.getModel(), this.getBrand(), this.getEnergy());
     }
 
     public String getApplianceType() {

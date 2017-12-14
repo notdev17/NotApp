@@ -18,6 +18,11 @@ public class WashingMachine extends Appliance {
         super();
     }
 
+    //Used when populating lists from database (to avoid call by reference issues)
+    public WashingMachine getCopy() {
+        return new WashingMachine(this.getModel(), this.getBrand(), this.getEnergy());
+    }
+
     public String getApplianceType() {
         return applianceType;
     }
