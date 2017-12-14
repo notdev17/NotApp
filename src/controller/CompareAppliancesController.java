@@ -17,6 +17,8 @@ import java.io.IOException;
 
 public class CompareAppliancesController {
 
+    private MasterController masterController;
+
     @FXML
     private TableView<Appliance> myTableView;
 
@@ -70,5 +72,9 @@ public class CompareAppliancesController {
 
         window.show();
         System.out.println("This button works!");
+    }
+
+    public void setMasterController(MasterController mc) {
+        masterController = mc;
     }
 }

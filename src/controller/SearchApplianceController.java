@@ -24,6 +24,9 @@ import java.io.IOException;
 
 public class SearchApplianceController
 {
+
+    private MasterController masterController;
+
     //table view from the fxml file
     @FXML
     private TableView<Appliance> myTableView;
@@ -189,6 +192,10 @@ public class SearchApplianceController
 
 
         return applianceList;
+    }
+
+    public void setMasterController(MasterController mc) {
+        masterController = mc;
     }
 
 

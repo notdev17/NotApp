@@ -12,6 +12,8 @@ import java.io.IOException;
 
 public class FirstPageController {
 
+    private MasterController masterController;
+
     @FXML
     public void getStartedButtonClicked(ActionEvent event) throws IOException {
         Parent compareAppParent = FXMLLoader.load(getClass().getResource("../fxml/CompareAppliances.fxml"));
@@ -28,5 +30,9 @@ public class FirstPageController {
     public void tutorialButtonClicked(ActionEvent event) {
 
 
+    }
+
+    public void setMasterController(MasterController mc) {
+        masterController = mc;
     }
 }
