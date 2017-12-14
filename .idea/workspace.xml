@@ -2,16 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0cc94476-c86e-42f6-9935-664e431b6d04" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/controller/CalculateSavingsController.java" afterPath="$PROJECT_DIR$/src/controller/CalculateSavingsController.java" />
-      <change beforePath="$PROJECT_DIR$/src/controller/CompareAppliancesController.java" afterPath="$PROJECT_DIR$/src/controller/CompareAppliancesController.java" />
-      <change beforePath="$PROJECT_DIR$/src/controller/FirstPageController.java" afterPath="$PROJECT_DIR$/src/controller/FirstPageController.java" />
-      <change beforePath="$PROJECT_DIR$/src/controller/SearchApplianceController.java" afterPath="$PROJECT_DIR$/src/controller/SearchApplianceController.java" />
-      <change beforePath="$PROJECT_DIR$/src/fxml/ApplianceInformation.fxml" afterPath="$PROJECT_DIR$/src/fxml/ApplianceInformation.fxml" />
-      <change beforePath="$PROJECT_DIR$/src/fxml/CalculateSavings.fxml" afterPath="$PROJECT_DIR$/src/fxml/CalculateSavings.fxml" />
-      <change beforePath="$PROJECT_DIR$/src/fxml/CompareAppliances.fxml" afterPath="$PROJECT_DIR$/src/fxml/CompareAppliances.fxml" />
-      <change beforePath="$PROJECT_DIR$/src/fxml/FirstPage.fxml" afterPath="$PROJECT_DIR$/src/fxml/FirstPage.fxml" />
-      <change beforePath="$PROJECT_DIR$/src/fxml/SearchAppliance.fxml" afterPath="$PROJECT_DIR$/src/fxml/SearchAppliance.fxml" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/out/production/NotApp/controller/CompareAppliancesController.class" afterPath="$PROJECT_DIR$/out/production/NotApp/controller/CompareAppliancesController.class" />
+      <change beforePath="$PROJECT_DIR$/out/production/NotApp/controller/SearchApplianceController$1.class" afterPath="$PROJECT_DIR$/out/production/NotApp/controller/SearchApplianceController$1.class" />
+      <change beforePath="$PROJECT_DIR$/out/production/NotApp/controller/SearchApplianceController.class" afterPath="$PROJECT_DIR$/out/production/NotApp/controller/SearchApplianceController.class" />
+      <change beforePath="$PROJECT_DIR$/out/production/NotApp/fxml/ApplianceInformation.fxml" afterPath="$PROJECT_DIR$/out/production/NotApp/fxml/ApplianceInformation.fxml" />
+      <change beforePath="$PROJECT_DIR$/out/production/NotApp/fxml/CalculateSavings.fxml" afterPath="$PROJECT_DIR$/out/production/NotApp/fxml/CalculateSavings.fxml" />
+      <change beforePath="$PROJECT_DIR$/out/production/NotApp/fxml/CompareAppliances.fxml" afterPath="$PROJECT_DIR$/out/production/NotApp/fxml/CompareAppliances.fxml" />
+      <change beforePath="$PROJECT_DIR$/out/production/NotApp/fxml/FirstPage.fxml" afterPath="$PROJECT_DIR$/out/production/NotApp/fxml/FirstPage.fxml" />
+      <change beforePath="$PROJECT_DIR$/out/production/NotApp/fxml/SearchAppliance.fxml" afterPath="$PROJECT_DIR$/out/production/NotApp/fxml/SearchAppliance.fxml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -53,11 +52,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SearchApplianceController.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="SearchApplianceController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/controller/SearchApplianceController.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="306">
-              <caret line="39" column="0" lean-forward="true" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+              <caret line="39" column="0" lean-forward="false" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="workspace.xml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="237" column="13" lean-forward="true" selection-start-line="237" selection-start-column="13" selection-end-line="237" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -115,24 +124,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SearchAppliance.fxml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/fxml/SearchAppliance.fxml">
-          <provider editor-type-id="JavaFX-Scene-Builder">
-            <state />
-          </provider>
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="17" column="88" lean-forward="false" selection-start-line="17" selection-start-column="88" selection-end-line="17" selection-end-column="88" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="CompareAppliancesController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/controller/CompareAppliancesController.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="901">
-              <caret line="66" column="61" lean-forward="true" selection-start-line="66" selection-start-column="61" selection-end-line="66" selection-end-column="61" />
+              <caret line="66" column="61" lean-forward="false" selection-start-line="66" selection-start-column="61" selection-end-line="66" selection-end-column="61" />
               <folding />
             </state>
           </provider>
@@ -163,6 +159,11 @@
         <option value="$PROJECT_DIR$/src/controller/CalculateSavingsController.java" />
       </list>
     </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="7" />
+    <option name="width" value="1150" />
+    <option name="height" value="824" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -362,6 +363,14 @@
       <option name="presentableId" value="Default" />
       <updated>1513248889018</updated>
     </task>
+    <task id="LOCAL-00001" summary="Completing the merge of devon and dayday branch">
+      <created>1513250092145</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1513250092145</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -399,6 +408,10 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Completing the merge of devon and dayday branch" />
+    <option name="LAST_COMMIT_MESSAGE" value="Completing the merge of devon and dayday branch" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -460,14 +473,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="227" column="44" lean-forward="true" selection-start-line="227" selection-start-column="44" selection-end-line="227" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/driver/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -487,7 +492,7 @@
     <entry file="file://$PROJECT_DIR$/src/controller/CompareAppliancesController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="901">
-          <caret line="66" column="61" lean-forward="true" selection-start-line="66" selection-start-column="61" selection-end-line="66" selection-end-column="61" />
+          <caret line="66" column="61" lean-forward="false" selection-start-line="66" selection-start-column="61" selection-end-line="66" selection-end-column="61" />
           <folding />
         </state>
       </provider>
@@ -503,7 +508,15 @@
     <entry file="file://$PROJECT_DIR$/src/controller/SearchApplianceController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
-          <caret line="39" column="0" lean-forward="true" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+          <caret line="39" column="0" lean-forward="false" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="237" column="13" lean-forward="true" selection-start-line="237" selection-start-column="13" selection-end-line="237" selection-end-column="13" />
           <folding />
         </state>
       </provider>
