@@ -2,38 +2,32 @@ package appliance;
 
 /**
  * Created by Tim on 12/7/2017.
+ * Edited by Devon on 12/9/2017
  */
-public class WashingMachine implements Appliance {
+public class WashingMachine extends Appliance {
 
-    String model;
-    String brand;
-    double energy;
+    private String applianceType = "Washer";
+    private double price = 550.00;
 
-    public WashingMachine(String m, String b, double e) {
-        model = m;
-        brand = b;
-        energy = e;
+    /**Created by Devon on 12/9/2017**/
+    public WashingMachine(String inModel, String inBrand, double inEnergy) {
+        super(inModel, inBrand, inEnergy);
     }
 
-    @Override
+    public WashingMachine() {
+        super();
+    }
+
+    //Used when populating lists from database (to avoid call by reference issues)
+    public WashingMachine getCopy() {
+        return new WashingMachine(this.getModel(), this.getBrand(), this.getEnergy());
+    }
+
     public String getApplianceType() {
-        return "washingmachine";
+        return applianceType;
     }
 
-    @Override
-    public String getModel() {
-        return model;
-    }
-
-    @Override
-    public String getBrand() {
-        return brand;
-    }
-
-    @Override
-    public double getEnergy() {
-        return energy;
-    }
+    public double getPrice() { return price; }
 
     @Override
     public String toString() {

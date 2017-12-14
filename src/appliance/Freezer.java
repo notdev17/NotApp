@@ -1,26 +1,25 @@
 package appliance;
 
 /**
- * Created by Tim on 12/7/2017.
- * Edited by Devon on 12/9/2017
+ * Created by Devon on 12/9/2017
  */
-public class Refrigerator extends Appliance {
+public class Freezer extends Appliance {
 
-    private String applianceType = "Refrigerator";
+    private String applianceType = "Freezer";
     private double price = 150.00;
 
     /**Created by Devon on 12/9/2017**/
-    public Refrigerator(String inModel, String inBrand, double inEnergy) {
+    public Freezer(String inModel, String inBrand, double inEnergy) {
         super(inModel, inBrand, inEnergy);
     }
 
-    public Refrigerator() {
+    public Freezer() {
         super();
     }
 
     //Used when populating lists from database (to avoid call by reference issues)
-    public Refrigerator getCopy() {
-        return new Refrigerator(this.getModel(), this.getBrand(), this.getEnergy());
+    public Freezer getCopy() {
+        return new Freezer(this.getModel(), this.getBrand(), this.getEnergy());
     }
 
     /**Created by Devon on 12/9/2017**/
