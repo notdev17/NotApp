@@ -107,7 +107,7 @@ public class SearchApplianceController
             @Override
             public void changed(ObservableValue<? extends Number> observable, Number oldValue, Number newValue)
             {
-                System.out.println("The Appliance you selected was: " + myApplianceBox.getItems().get(newValue.intValue()));
+                //System.out.println("The Appliance you selected was: " + myApplianceBox.getItems().get(newValue.intValue()));
                 /*DEVON
                   When a user clicks an appliance type in the drop down menu, it will be re-populated with the proper
                   appliances (using getAppliances).
