@@ -2,8 +2,6 @@ package appliance;
 
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 class RefrigeratorTest {
 
     @Test
@@ -19,6 +17,6 @@ class RefrigeratorTest {
     }
 
     @Test
-    void toString() {
+    void toStringTest() {
     }
 }
