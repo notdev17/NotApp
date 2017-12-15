@@ -102,7 +102,6 @@ public class SearchApplianceController
         myApplianceBox.getItems().add(new Freezer().getApplianceType());
 
 
-
         myApplianceBox.getSelectionModel().selectedIndexProperty().addListener(new ChangeListener<Number>() {
             @Override
             public void changed(ObservableValue<? extends Number> observable, Number oldValue, Number newValue)
@@ -115,6 +114,8 @@ public class SearchApplianceController
                 myTableView.setItems(getAppliances(myApplianceBox.getItems().get(newValue.intValue())));
             }
         });
+
+        populateListOnLoad();
     }
 
     /**
@@ -269,6 +270,13 @@ public class SearchApplianceController
         masterController = mc;
     }
 
-
+    /**
+     * Populate the appliance list with first item on list onload
+     * @author Tim
+     */
+    private void populateListOnLoad() {
+        myApplianceBox.getSelectionModel().selectFirst();
+        myTableView.setItems(getAppliances(myApplianceBox.getItems().get(0)));
+    }
 
 }
