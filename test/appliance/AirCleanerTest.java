@@ -17,6 +17,8 @@ class AirCleanerTest {
 
     @Test
     void getApplianceType() {
+        airCleaner = new AirCleaner();
+        assertEquals("Air Cleaner", airCleaner.getApplianceType());
     }
 
     @Test

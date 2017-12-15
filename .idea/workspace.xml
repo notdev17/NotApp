@@ -2,44 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="58872dad-c50b-497a-85d3-b9f0679a52df" name="Default" comment="initial MasterController commit">
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/h2_1_4_196.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/NotApp.iml" afterPath="$PROJECT_DIR$/NotApp.iml" />
-      <change beforePath="$PROJECT_DIR$/out/production/NotApp/appliance/AirCleaner.class" afterPath="$PROJECT_DIR$/out/production/NotApp/appliance/AirCleaner.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/NotApp/appliance/AirConditioner.class" afterPath="$PROJECT_DIR$/out/production/NotApp/appliance/AirConditioner.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/NotApp/appliance/Appliance.class" afterPath="$PROJECT_DIR$/out/production/NotApp/appliance/Appliance.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/NotApp/appliance/Dishwasher.class" afterPath="$PROJECT_DIR$/out/production/NotApp/appliance/Dishwasher.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/NotApp/appliance/Dryer.class" afterPath="$PROJECT_DIR$/out/production/NotApp/appliance/Dryer.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/NotApp/appliance/Freezer.class" afterPath="$PROJECT_DIR$/out/production/NotApp/appliance/Freezer.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/NotApp/appliance/Refrigerator.class" afterPath="$PROJECT_DIR$/out/production/NotApp/appliance/Refrigerator.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/NotApp/appliance/WashingMachine.class" afterPath="$PROJECT_DIR$/out/production/NotApp/appliance/WashingMachine.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/NotApp/controller/CalculateSavingsController.class" afterPath="$PROJECT_DIR$/out/production/NotApp/controller/CalculateSavingsController.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/NotApp/controller/CompareAppliancesController.class" afterPath="$PROJECT_DIR$/out/production/NotApp/controller/CompareAppliancesController.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/NotApp/controller/FirstPageController.class" afterPath="$PROJECT_DIR$/out/production/NotApp/controller/FirstPageController.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/NotApp/controller/MasterController.class" afterPath="$PROJECT_DIR$/out/production/NotApp/controller/MasterController.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/NotApp/controller/SearchApplianceController$1.class" afterPath="$PROJECT_DIR$/out/production/NotApp/controller/SearchApplianceController$1.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/NotApp/controller/SearchApplianceController.class" afterPath="$PROJECT_DIR$/out/production/NotApp/controller/SearchApplianceController.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/NotApp/driver/H2Database.class" afterPath="$PROJECT_DIR$/out/production/NotApp/driver/H2Database.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/NotApp/driver/Main.class" afterPath="$PROJECT_DIR$/out/production/NotApp/driver/Main.class" />
+      <change beforePath="$PROJECT_DIR$/out/production/NotApp/User.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/NotApp/appliance/AirCleaner.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/NotApp/appliance/AirConditioner.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/NotApp/appliance/Appliance.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/NotApp/appliance/Calculate.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/NotApp/appliance/Dishwasher.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/NotApp/appliance/Dryer.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/NotApp/appliance/Freezer.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/NotApp/appliance/Refrigerator.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/NotApp/appliance/WashingMachine.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/NotApp/controller/CompareAppliancesController.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/NotApp/controller/FirstPageController.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/NotApp/controller/SearchApplianceController$1.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/NotApp/controller/SearchApplianceController.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/NotApp/driver/H2Database.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/NotApp/driver/Main.class" afterPath="" />
       <change beforePath="$PROJECT_DIR$/test/appliance/AirCleanerTest.java" afterPath="$PROJECT_DIR$/test/appliance/AirCleanerTest.java" />
-      <change beforePath="$PROJECT_DIR$/test/appliance/AirConditionerTest.java" afterPath="$PROJECT_DIR$/test/appliance/AirConditionerTest.java" />
-      <change beforePath="$PROJECT_DIR$/test/appliance/ApplianceTest.java" afterPath="$PROJECT_DIR$/test/appliance/ApplianceTest.java" />
-      <change beforePath="$PROJECT_DIR$/test/appliance/CalculateTest.java" afterPath="$PROJECT_DIR$/test/appliance/CalculateTest.java" />
-      <change beforePath="$PROJECT_DIR$/test/appliance/DishwasherTest.java" afterPath="$PROJECT_DIR$/test/appliance/DishwasherTest.java" />
-      <change beforePath="$PROJECT_DIR$/test/appliance/DryerTest.java" afterPath="$PROJECT_DIR$/test/appliance/DryerTest.java" />
-      <change beforePath="$PROJECT_DIR$/test/appliance/FreezerTest.java" afterPath="$PROJECT_DIR$/test/appliance/FreezerTest.java" />
-      <change beforePath="$PROJECT_DIR$/test/appliance/RefrigeratorTest.java" afterPath="$PROJECT_DIR$/test/appliance/RefrigeratorTest.java" />
-      <change beforePath="$PROJECT_DIR$/test/appliance/WashingMachineTest.java" afterPath="$PROJECT_DIR$/test/appliance/WashingMachineTest.java" />
-      <change beforePath="$PROJECT_DIR$/test/controller/CalculateSavingsControllerTest.java" afterPath="$PROJECT_DIR$/test/controller/CalculateSavingsControllerTest.java" />
-      <change beforePath="$PROJECT_DIR$/test/controller/CompareAppliancesControllerTest.java" afterPath="$PROJECT_DIR$/test/controller/CompareAppliancesControllerTest.java" />
-      <change beforePath="$PROJECT_DIR$/test/controller/FirstPageControllerTest.java" afterPath="$PROJECT_DIR$/test/controller/FirstPageControllerTest.java" />
-      <change beforePath="$PROJECT_DIR$/test/controller/MasterControllerTest.java" afterPath="$PROJECT_DIR$/test/controller/MasterControllerTest.java" />
-      <change beforePath="$PROJECT_DIR$/test/controller/SearchApplianceControllerTest.java" afterPath="$PROJECT_DIR$/test/controller/SearchApplianceControllerTest.java" />
-      <change beforePath="$PROJECT_DIR$/test/driver/H2DatabaseTest.java" afterPath="$PROJECT_DIR$/test/driver/H2DatabaseTest.java" />
-      <change beforePath="$PROJECT_DIR$/test/driver/MainTest.java" afterPath="$PROJECT_DIR$/test/driver/MainTest.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -57,8 +38,18 @@
       <file leaf-file-name="AirCleanerTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test/appliance/AirCleanerTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="26" column="21" lean-forward="false" selection-start-line="26" selection-start-column="21" selection-end-line="26" selection-end-column="21" />
+            <state relative-caret-position="68">
+              <caret line="4" column="21" lean-forward="false" selection-start-line="4" selection-start-column="21" selection-end-line="4" selection-end-column="21" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/driver/Main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="6" column="15" lean-forward="false" selection-start-line="6" selection-start-column="15" selection-end-line="6" selection-end-column="15" />
               <folding />
             </state>
           </provider>
@@ -67,7 +58,7 @@
       <file leaf-file-name="RefrigeratorTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/appliance/RefrigeratorTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
+            <state relative-caret-position="323">
               <caret line="19" column="21" lean-forward="false" selection-start-line="19" selection-start-column="21" selection-end-line="19" selection-end-column="21" />
               <folding />
             </state>
@@ -77,7 +68,7 @@
       <file leaf-file-name="WashingMachineTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/appliance/WashingMachineTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
+            <state relative-caret-position="323">
               <caret line="19" column="21" lean-forward="false" selection-start-line="19" selection-start-column="21" selection-end-line="19" selection-end-column="21" />
               <folding />
             </state>
@@ -87,7 +78,7 @@
       <file leaf-file-name="ApplianceTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/appliance/ApplianceTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
+            <state relative-caret-position="34">
               <caret line="2" column="28" lean-forward="false" selection-start-line="2" selection-start-column="28" selection-end-line="2" selection-end-column="28" />
               <folding />
             </state>
@@ -97,7 +88,7 @@
       <file leaf-file-name="FirstPageControllerTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/controller/FirstPageControllerTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
+            <state relative-caret-position="51">
               <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
               <folding />
             </state>
@@ -107,7 +98,7 @@
       <file leaf-file-name="AirConditionerTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/appliance/AirConditionerTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
+            <state relative-caret-position="323">
               <caret line="19" column="21" lean-forward="false" selection-start-line="19" selection-start-column="21" selection-end-line="19" selection-end-column="21" />
               <folding />
             </state>
@@ -117,8 +108,8 @@
       <file leaf-file-name="DryerTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/appliance/DryerTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="19" column="9" lean-forward="false" selection-start-line="19" selection-start-column="9" selection-end-line="19" selection-end-column="9" />
+            <state relative-caret-position="306">
+              <caret line="18" column="9" lean-forward="false" selection-start-line="18" selection-start-column="9" selection-end-line="18" selection-end-column="9" />
               <folding />
             </state>
           </provider>
@@ -127,7 +118,7 @@
       <file leaf-file-name="FreezerTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/appliance/FreezerTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
+            <state relative-caret-position="323">
               <caret line="19" column="21" lean-forward="false" selection-start-line="19" selection-start-column="9" selection-end-line="19" selection-end-column="21" />
               <folding />
             </state>
@@ -137,18 +128,8 @@
       <file leaf-file-name="DishwasherTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/appliance/DishwasherTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
+            <state relative-caret-position="323">
               <caret line="19" column="21" lean-forward="false" selection-start-line="19" selection-start-column="21" selection-end-line="19" selection-end-column="21" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="H2DatabaseTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/driver/H2DatabaseTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="15" column="14" lean-forward="false" selection-start-line="15" selection-start-column="14" selection-end-line="15" selection-end-column="14" />
               <folding />
             </state>
           </provider>
@@ -220,9 +201,9 @@
         <option value="$PROJECT_DIR$/test/appliance/FreezerTest.java" />
         <option value="$PROJECT_DIR$/test/appliance/DishwasherTest.java" />
         <option value="$PROJECT_DIR$/test/appliance/AirConditionerTest.java" />
-        <option value="$PROJECT_DIR$/test/appliance/AirCleanerTest.java" />
         <option value="$PROJECT_DIR$/test/appliance/RefrigeratorTest.java" />
         <option value="$PROJECT_DIR$/test/appliance/WashingMachineTest.java" />
+        <option value="$PROJECT_DIR$/test/appliance/AirCleanerTest.java" />
       </list>
     </option>
   </component>
@@ -233,7 +214,7 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
-  <component name="ProjectFrameBounds" extendedState="6" fullScreen="true">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="523" />
     <option name="y" value="379" />
     <option name="width" value="1379" />
@@ -254,6 +235,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="PackagesPane">
         <subPane>
           <expand>
@@ -270,17 +253,13 @@
           <select />
         </subPane>
       </pane>
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="NotApp" type="b2602c69:ProjectViewProjectNode" />
               <item name="NotApp" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="NotApp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="NotApp" type="462c0819:PsiDirectoryNode" />
-              <item name="database" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="NotApp" type="b2602c69:ProjectViewProjectNode" />
@@ -334,13 +313,14 @@
               <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="driver" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="NotApp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView" />
-      <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -349,7 +329,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="Downloaded.Files.Path.Enabled" value="true" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
@@ -385,7 +365,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.AirCleanerTest">
+  <component name="RunManager" selected="Application.Main">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="HTML_USED" value="false" />
       <option name="WIDTH" value="400" />
@@ -537,8 +517,8 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.AirCleanerTest" />
-        <item index="1" class="java.lang.String" itemvalue="Application.Main" />
+        <item index="0" class="java.lang.String" itemvalue="Application.Main" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.AirCleanerTest" />
         <item index="2" class="java.lang.String" itemvalue="Application.ChoiceBoxSample" />
         <item index="3" class="java.lang.String" itemvalue="Application.ChoiceBoxSample" />
         <item index="4" class="java.lang.String" itemvalue="Application.Main" />
@@ -579,22 +559,22 @@
     <option name="totallyTimeSpent" value="2166000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1440" height="900" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32648125" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32555673" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34340993" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32889965" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35843053" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19957082" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19947916" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -860,14 +840,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/driver/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="6" column="15" lean-forward="false" selection-start-line="6" selection-start-column="15" selection-end-line="6" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/driver/MainTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -969,7 +941,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test/driver/H2DatabaseTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
+        <state relative-caret-position="255">
           <caret line="15" column="14" lean-forward="false" selection-start-line="15" selection-start-column="14" selection-end-line="15" selection-end-column="14" />
           <folding />
         </state>
@@ -977,7 +949,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test/appliance/ApplianceTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
+        <state relative-caret-position="34">
           <caret line="2" column="28" lean-forward="false" selection-start-line="2" selection-start-column="28" selection-end-line="2" selection-end-column="28" />
           <folding />
         </state>
@@ -985,7 +957,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test/controller/FirstPageControllerTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
+        <state relative-caret-position="51">
           <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
           <folding />
         </state>
@@ -993,7 +965,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test/appliance/FreezerTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
+        <state relative-caret-position="323">
           <caret line="19" column="21" lean-forward="false" selection-start-line="19" selection-start-column="9" selection-end-line="19" selection-end-column="21" />
           <folding />
         </state>
@@ -1001,7 +973,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test/appliance/DishwasherTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
+        <state relative-caret-position="323">
           <caret line="19" column="21" lean-forward="false" selection-start-line="19" selection-start-column="21" selection-end-line="19" selection-end-column="21" />
           <folding />
         </state>
@@ -1009,15 +981,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test/appliance/AirConditionerTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="21" lean-forward="false" selection-start-line="19" selection-start-column="21" selection-end-line="19" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/appliance/RefrigeratorTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
+        <state relative-caret-position="323">
           <caret line="19" column="21" lean-forward="false" selection-start-line="19" selection-start-column="21" selection-end-line="19" selection-end-column="21" />
           <folding />
         </state>
@@ -1025,24 +989,40 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test/appliance/WashingMachineTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
+        <state relative-caret-position="323">
           <caret line="19" column="21" lean-forward="false" selection-start-line="19" selection-start-column="21" selection-end-line="19" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/appliance/RefrigeratorTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="21" lean-forward="false" selection-start-line="19" selection-start-column="21" selection-end-line="19" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/driver/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="6" column="15" lean-forward="false" selection-start-line="6" selection-start-column="15" selection-end-line="6" selection-end-column="15" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test/appliance/DryerTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="9" lean-forward="false" selection-start-line="19" selection-start-column="9" selection-end-line="19" selection-end-column="9" />
+        <state relative-caret-position="306">
+          <caret line="18" column="9" lean-forward="false" selection-start-line="18" selection-start-column="9" selection-end-line="18" selection-end-column="9" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test/appliance/AirCleanerTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="26" column="21" lean-forward="false" selection-start-line="26" selection-start-column="21" selection-end-line="26" selection-end-column="21" />
+        <state relative-caret-position="68">
+          <caret line="4" column="21" lean-forward="false" selection-start-line="4" selection-start-column="21" selection-end-line="4" selection-end-column="21" />
           <folding />
         </state>
       </provider>
