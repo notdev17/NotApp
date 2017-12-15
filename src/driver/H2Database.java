@@ -98,8 +98,12 @@ public class H2Database {
         }
     }
 
-    public void closeConnection() throws Exception {
-        conn.close();
+    public void closeConnection() {
+        try {
+            conn.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     private void clear() {
@@ -138,7 +142,7 @@ public class H2Database {
             case "airconditioner":
                 query = "SELECT Model_Number AS model," +
                         "Brand_Name AS brand," +
-                        "Energy_Efficiency_Ratio AS energy" +
+                        "Combined_Energy_Efficiency_Ratio AS energy" +
                         " FROM AIR_CONDITIONER";
                 break;
             case "washingmachine":

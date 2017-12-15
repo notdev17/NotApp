@@ -17,9 +17,7 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
-import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
-import javafx.stage.StageStyle;
 
 import java.io.IOException;
 
@@ -27,10 +25,11 @@ import java.io.IOException;
 public class SearchApplianceController
 {
 
-    String currentApplianceType;
+    private MasterController masterController;
+
     //table view from the fxml file
     @FXML
-    private TableView<Appliance> myTableView;
+    private TableView<Appliance> resultTableView;
 
     //columns in the table view
     @FXML
@@ -54,32 +53,6 @@ public class SearchApplianceController
 
     @FXML
     private TextField myEnergyMaximum;
-    @FXML
-    private TextField mySearchBar;
-
-    /**
-     * By Daylen
-     * called every time the user types in the search bar
-     * The elements that do not contain the characters typed will be removed
-     */
-    @FXML
-    public void searchBarFilter() {
-        //apply the filters first
-        updateButtonClicked();
-
-        //get the observable list
-        ObservableList<Appliance> currentList = myTableView.getItems();
-        //create a copy as an array so we can go through it
-        Object[] toSearch = currentList.toArray();
-        //traverse the list, if the model of the appliance does not contain the characters typed, remove it
-        for (Object a : toSearch) {
-           if(!((Appliance)a).getModel().contains(mySearchBar.getCharacters()))
-               currentList.remove(a);
-        }
-
-        //update the table view
-        myTableView.setItems(currentList);
-    }
 
     @FXML
     private void initialize()
@@ -91,7 +64,7 @@ public class SearchApplianceController
         energyColumn.setCellValueFactory(new PropertyValueFactory<Appliance, String>("energy"));
 
         //set the items in the table to the items returned by the getApplianceType() method
-        //myTableView.setItems(getAppliances());
+        //resultTableView.setItems(getAppliances());
         myApplianceBox.getItems().add(new AirCleaner().getApplianceType());
         myApplianceBox.getItems().add(new AirConditioner().getApplianceType());
         myApplianceBox.getItems().add(new Dishwasher().getApplianceType());
@@ -99,84 +72,30 @@ public class SearchApplianceController
         myApplianceBox.getItems().add(new WashingMachine().getApplianceType());
         myApplianceBox.getItems().add(new Refrigerator().getApplianceType());
         myApplianceBox.getItems().add(new Freezer().getApplianceType());
+        resultTableView.getItems().add(new Refrigerator("0","0",0));
 
 
         myApplianceBox.getSelectionModel().selectedIndexProperty().addListener(new ChangeListener<Number>() {
             @Override
             public void changed(ObservableValue<? extends Number> observable, Number oldValue, Number newValue)
             {
-                currentApplianceType = myApplianceBox.getItems().get(newValue.intValue());
                 System.out.println("The Appliance you selected was: " + myApplianceBox.getItems().get(newValue.intValue()));
                 /*DEVON
                   When a user clicks an appliance type in the drop down menu, it will be re-populated with the proper
                   appliances (using getAppliances).
                  */
-                myTableView.setItems(getAppliances(myApplianceBox.getItems().get(newValue.intValue())));
+                resultTableView.setItems(getAppliances(myApplianceBox.getItems().get(newValue.intValue())));
             }
         });
     }
 
-    /**
-     * By: Daylen
-     * When the user clicks the update button, the list of items is
-     * updated to correlate with any filters the user may have input
-     * @throws IOException
-     */
     @FXML
-    public void updateButtonClicked()
+    public void updateButtonClicked(ActionEvent event) throws IOException
     {
-        //if the user has selected an appliance from the drop down
-        if (!currentApplianceType.isEmpty()) {
-            ObservableList<Appliance> updateList = getAppliances(currentApplianceType);
-            int myEnergyMinInt;
-            int myEnergyMaxInt;
-
-            //convert the strings to ints if the fields are not empty
-            if(!myEnergyMinimum.getCharacters().toString().isEmpty()){
-                myEnergyMinInt = Integer.parseInt(myEnergyMinimum.getCharacters().toString());
-            } else {
-                myEnergyMinInt = 0; //if empty
-            }
-            if(!myEnergyMaximum.getCharacters().toString().isEmpty()){
-                myEnergyMaxInt = Integer.parseInt(myEnergyMaximum.getCharacters().toString());
-            } else {
-                myEnergyMaxInt = 9999; //if empty
-            }
-
-            //convert the observable list to an array
-            Object[] w = updateList.toArray();
-
-            //iterate over that array and remove any appliances that are not contained in the filter
-            for (Object a : w) {
-                //cast the objects as appliances
-                if (((Appliance) a).getEnergy() != 0) {
-                    if (((Appliance) a).getEnergy() < myEnergyMinInt)
-                        updateList.remove(a);
-                    else if (((Appliance) a).getEnergy() > myEnergyMaxInt)
-                        updateList.remove(a);
-                }
-            }
-
-            //update the table view
-            myTableView.setItems(updateList);
-        }
-    }
-
-    /**
-     * Takes the currently selected appliance and gives it to the
-     * CompareApplianceController, then shows the CompareAppliance stage.
-     * by Brandon
-     */
-    @FXML
-    public void selectButtonClicked(ActionEvent event) throws IOException
-    {
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../fxml/CompareAppliances.fxml"));
-        Pane p = fxmlLoader.load();
-        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        stage.setScene(new Scene(p));
-        CompareAppliancesController cmpController = fxmlLoader.getController();
-        cmpController.setTableView(myTableView.getSelectionModel().getTableView());
-        stage.show();
+        System.out.println("Price Min: " + myPriceMinimum.getCharacters());
+        System.out.println("Price Max: " + myPriceMaximum.getCharacters());
+        System.out.println("Energy Min: " + myEnergyMinimum.getCharacters());
+        System.out.println("Energy Max: " + myEnergyMaximum.getCharacters());
     }
 
     /**
@@ -188,8 +107,15 @@ public class SearchApplianceController
     @FXML
     public void backButtonClicked(ActionEvent event) throws IOException
     {
-        new FirstPageController().getCompareApplianceScreen(event);
+        masterController.getComparePage();
     }
+
+    @FXML
+    public void selectButtonClicked(ActionEvent event) throws IOException
+    {
+        masterController.addAppliance(resultTableView.getSelectionModel().getSelectedItem());
+    }
+
     /**
      * by Daylen
      * @return returns the list of appliances (test atm)
@@ -198,6 +124,7 @@ public class SearchApplianceController
 
         //create an applianceList to populate
         ObservableList<Appliance> applianceList = FXCollections.observableArrayList();
+
         H2Database h2db = new H2Database();
 
 
@@ -211,6 +138,7 @@ public class SearchApplianceController
                 h2db.selectTable("aircleaner");
                 for (Appliance a : h2db.getAppliances()) {
                     applianceList.add(new AirCleaner( a.getModel(), a.getBrand(), a.getEnergy()));
+                    //System.out.println(a);
                 }
                 break;
             //IMPORTANT the energy value for conditioners is in energy efficiency ratio. Not kWHrs/Yr.
@@ -218,6 +146,7 @@ public class SearchApplianceController
                 h2db.selectTable("airconditioner");
                 for (Appliance a : h2db.getAppliances()) {
                     applianceList.add(new AirConditioner( a.getModel(), a.getBrand(), a.getEnergy()));
+                    //System.out.println(a);
                 }
                 break;
 
@@ -225,6 +154,7 @@ public class SearchApplianceController
                 h2db.selectTable("dishwasher");
                 for (Appliance a : h2db.getAppliances()) {
                     applianceList.add(new Dishwasher( a.getModel(), a.getBrand(), a.getEnergy()));
+                    //System.out.println(a);
                 }
                 break;
 
@@ -232,6 +162,7 @@ public class SearchApplianceController
                 h2db.selectTable("dryer");
                 for (Appliance a : h2db.getAppliances()) {
                     applianceList.add(new Dryer( a.getModel(), a.getBrand(), a.getEnergy()));
+                    //System.out.println(a);
                 }
                 break;
 
@@ -239,6 +170,7 @@ public class SearchApplianceController
                 h2db.selectTable("freezer");
                 for (Appliance a : h2db.getAppliances()) {
                     applianceList.add(new Freezer( a.getModel(), a.getBrand(), a.getEnergy()));
+                    //System.out.println(a);
                 }
                 break;
 
@@ -246,6 +178,7 @@ public class SearchApplianceController
                 h2db.selectTable("refrigerator");
                 for (Appliance a : h2db.getAppliances()) {
                     applianceList.add(new Refrigerator( a.getModel(), a.getBrand(), a.getEnergy()));
+                    //System.out.println(a);
                 }
                 break;
 
@@ -253,13 +186,23 @@ public class SearchApplianceController
                 h2db.selectTable("washingmachine");
                 for (Appliance a : h2db.getAppliances()) {
                     applianceList.add(new WashingMachine( a.getModel(), a.getBrand(), a.getEnergy()));
+                    //System.out.println(a);
                 }
                 break;
+
         }
 
 
+        h2db.closeConnection();
+
         return applianceList;
     }
+
+    public void setMasterController(MasterController mc)
+    {
+        masterController = mc;
+    }
+
 
 
 }
