@@ -8,10 +8,8 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.Slider;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
+import javafx.scene.control.*;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -21,9 +19,7 @@ public class CompareAppliancesController {
     private MasterController masterController;
 
     @FXML
-    private TableView<Appliance> selectedTableView;
-
-    ObservableList<Appliance> applianceList;
+    private TableView<Appliance> myTableView;
 
     //columns in the table view
     @FXML
@@ -34,55 +30,51 @@ public class CompareAppliancesController {
     private TableColumn<Appliance, String> energyColumn;
 
     @FXML
-    Slider myUsageSlider;
-
-    @FXML
-    Button myCalculateButton;
+    ButtonBar myCalculateBox;
 
     @FXML
     private void initialize()
     {
+        //set up the columns in the table
+        //priceColumn.setCellValueFactory(new PropertyValueFactory<Appliance, String>("price"));
+        brandColumn.setCellValueFactory(new PropertyValueFactory<Appliance, String>("brand"));
+        modelColumn.setCellValueFactory(new PropertyValueFactory<Appliance, String>("model"));
+        energyColumn.setCellValueFactory(new PropertyValueFactory<Appliance, String>("energy"));
 
-        if (selectedTableView.getSelectionModel().isEmpty())
+        if (masterController == null)
         {
-            myUsageSlider.setDisable(true);
-            myCalculateButton.setDisable(true);
-        }
-        else
-        {
-            myUsageSlider.setDisable(false);
-            myCalculateButton.setDisable(false);
+            myCalculateBox.setDisable(true);
         }
     }
 
     @FXML
     public void backButtonClicked(ActionEvent event) throws IOException {
-        Parent compareAppParent = FXMLLoader.load(getClass().getResource("../fxml/FirstPage.fxml"));
-        Scene compareAppScene = new Scene(compareAppParent);
-
-        Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        window.setScene(compareAppScene);
-
-        window.show();
-       }
+        masterController.getFirstPage();
+    }
 
     @FXML
     public void createApplianceButtonClicked(ActionEvent event) throws IOException {
-        Parent compareAppParent = FXMLLoader.load(getClass().getResource("../fxml/SearchAppliance.fxml"));
-        Scene compareAppScene = new Scene(compareAppParent);
-
-        Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        window.setScene(compareAppScene);
-
-        window.show();
-        System.out.println("This button works!");
+        masterController.getSearchPage();
     }
 
-    public void setMasterController(MasterController mc) {
+    void setMasterController(MasterController mc)
+    {
         masterController = mc;
+        if (masterController.getSelectedAppliances().size() > 0)
+        {
+            myTableView.getItems().addAll(masterController.getSelectedAppliances());
+            myCalculateBox.setDisable(false);
+        }
     }
 
-    public void addSelectedAppliance(Appliance a) {
-        selectedTableView.setItems(applianceList);
+    /**
+     * By Daylen
+     * Displays the calculate savings page from the fxml file
+     * @param event, sent when the button is clicked
+     * @throws IOException
+     */
+    @FXML
+    public void calcSavingsButtonClicked(ActionEvent event) throws IOException {
+        masterController.getCalculationsPage();
     }
 }

@@ -9,11 +9,12 @@ import java.io.IOException;
 
 public class CalculateSavingsController {
 
+    private MasterController masterController;
 
     @FXML
     public void backButtonClicked(ActionEvent event) throws IOException
     {
-        new FirstPageController().getCompareApplianceScreen(event);
+        masterController.getComparePage();
     }
 
     /**
@@ -29,5 +30,9 @@ public class CalculateSavingsController {
 
         //close the window
         window.close();
+    }
+    void setMasterController(MasterController mc)
+    {
+        masterController = mc;
     }
 }
