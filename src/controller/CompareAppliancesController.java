@@ -12,6 +12,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Slider;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -42,8 +43,14 @@ public class CompareAppliancesController {
     @FXML
     private void initialize()
     {
+        //set up the columns in the table
+        //priceColumn.setCellValueFactory(new PropertyValueFactory<Appliance, String>("price"));
+        brandColumn.setCellValueFactory(new PropertyValueFactory<Appliance, String>("brand"));
+        modelColumn.setCellValueFactory(new PropertyValueFactory<Appliance, String>("model"));
+        energyColumn.setCellValueFactory(new PropertyValueFactory<Appliance, String>("energy"));
 
-        if (selectedTableView.getSelectionModel().isEmpty())
+
+        if (masterController == null)
         {
             myUsageSlider.setDisable(true);
             myCalculateButton.setDisable(true);
@@ -57,32 +64,22 @@ public class CompareAppliancesController {
 
     @FXML
     public void backButtonClicked(ActionEvent event) throws IOException {
-        Parent compareAppParent = FXMLLoader.load(getClass().getResource("../fxml/FirstPage.fxml"));
-        Scene compareAppScene = new Scene(compareAppParent);
-
-        Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        window.setScene(compareAppScene);
-
-        window.show();
-       }
+        masterController.getFirstPage();
+    }
 
     @FXML
     public void createApplianceButtonClicked(ActionEvent event) throws IOException {
-        Parent compareAppParent = FXMLLoader.load(getClass().getResource("../fxml/SearchAppliance.fxml"));
-        Scene compareAppScene = new Scene(compareAppParent);
-
-        Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        window.setScene(compareAppScene);
-
-        window.show();
-        System.out.println("This button works!");
+        masterController.getSearchPage();
     }
 
-    public void setMasterController(MasterController mc) {
+    void setMasterController(MasterController mc)
+    {
         masterController = mc;
     }
 
-    public void addSelectedAppliance(Appliance a) {
-        selectedTableView.setItems(applianceList);
+    void addAppliance(Appliance theAppliance)
+    {
+        System.out.println(theAppliance.getBrand());
+        selectedTableView.getItems().add(theAppliance);
     }
 }

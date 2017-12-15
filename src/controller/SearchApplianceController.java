@@ -72,6 +72,7 @@ public class SearchApplianceController
         myApplianceBox.getItems().add(new WashingMachine().getApplianceType());
         myApplianceBox.getItems().add(new Refrigerator().getApplianceType());
         myApplianceBox.getItems().add(new Freezer().getApplianceType());
+        resultTableView.getItems().add(new Refrigerator("0","0",0));
 
 
         myApplianceBox.getSelectionModel().selectedIndexProperty().addListener(new ChangeListener<Number>() {
@@ -106,28 +107,13 @@ public class SearchApplianceController
     @FXML
     public void backButtonClicked(ActionEvent event) throws IOException
     {
-        Parent compareAppParent = FXMLLoader.load(getClass().getResource("../fxml/CompareAppliances.fxml"));
-        Scene compareAppScene = new Scene(compareAppParent);
-
-        Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        window.setScene(compareAppScene);
-
-        window.show();
+        masterController.getComparePage();
     }
 
     @FXML
-    public void selectButtonClicked(ActionEvent event) throws IOException {
-        Appliance appliance = resultTableView.getSelectionModel().getSelectedItem();
-
-        masterController.addSelected(appliance);
-
-        Parent compareAppParent = FXMLLoader.load(getClass().getResource("../fxml/CompareAppliancesController.fxml"));
-        Scene compareAppScene = new Scene(compareAppParent);
-
-        Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        window.setScene(compareAppScene);
-
-        window.show();
+    public void selectButtonClicked(ActionEvent event) throws IOException
+    {
+        masterController.addAppliance(resultTableView.getSelectionModel().getSelectedItem());
     }
 
     /**
@@ -212,9 +198,11 @@ public class SearchApplianceController
         return applianceList;
     }
 
-    public void setMasterController(MasterController mc) {
+    public void setMasterController(MasterController mc)
+    {
         masterController = mc;
     }
+
 
 
 }
