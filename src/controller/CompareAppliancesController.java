@@ -79,7 +79,6 @@ public class CompareAppliancesController {
 
     void addAppliance(Appliance theAppliance)
     {
-        System.out.println(theAppliance.getBrand());
         selectedTableView.getItems().add(theAppliance);
     }
 }
