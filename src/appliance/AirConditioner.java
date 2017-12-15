@@ -10,7 +10,9 @@ public class AirConditioner extends Appliance {
 
     private String applianceType = "Air Conditioner";
 
-    /**Created by Devon on 12/9/2017**/
+    /**
+     * Created by Devon on 12/9/2017
+     **/
     public AirConditioner(String inModel, String inBrand, double inEnergy) {
         super(inModel, inBrand, inEnergy);
     }
