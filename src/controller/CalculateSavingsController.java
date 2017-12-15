@@ -10,6 +10,13 @@ import java.io.IOException;
 public class CalculateSavingsController {
 
 
+
+    @FXML
+    private void initialize()
+    {
+
+    }
+
     @FXML
     public void backButtonClicked(ActionEvent event) throws IOException
     {

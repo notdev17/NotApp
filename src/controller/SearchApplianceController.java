@@ -54,6 +54,32 @@ public class SearchApplianceController
 
     @FXML
     private TextField myEnergyMaximum;
+    @FXML
+    private TextField mySearchBar;
+
+    /**
+     * By Daylen
+     * called every time the user types in the search bar
+     * The elements that do not contain the characters typed will be removed
+     */
+    @FXML
+    public void searchBarFilter() {
+        //apply the filters first
+        updateButtonClicked();
+
+        //get the observable list
+        ObservableList<Appliance> currentList = myTableView.getItems();
+        //create a copy as an array so we can go through it
+        Object[] toSearch = currentList.toArray();
+        //traverse the list, if the model of the appliance does not contain the characters typed, remove it
+        for (Object a : toSearch) {
+           if(!((Appliance)a).getModel().contains(mySearchBar.getCharacters()))
+               currentList.remove(a);
+        }
+
+        //update the table view
+        myTableView.setItems(currentList);
+    }
 
     @FXML
     private void initialize()
@@ -94,11 +120,10 @@ public class SearchApplianceController
      * By: Daylen
      * When the user clicks the update button, the list of items is
      * updated to correlate with any filters the user may have input
-     * @param event
      * @throws IOException
      */
     @FXML
-    public void updateButtonClicked(ActionEvent event) throws IOException
+    public void updateButtonClicked()
     {
         //if the user has selected an appliance from the drop down
         if (!currentApplianceType.isEmpty()) {
