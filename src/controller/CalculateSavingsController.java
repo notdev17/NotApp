@@ -12,14 +12,14 @@ public class CalculateSavingsController {
     private MasterController masterController;
 
     @FXML
-    public void backButtonClicked(ActionEvent event) throws IOException
-    {
+    public void backButtonClicked(ActionEvent event) throws IOException {
         masterController.getComparePage();
     }
 
     /**
      * closes the window when the done button that is clicked
      * By: Daylen
+     *
      * @param event
      * @throws IOException
      */
@@ -31,8 +31,8 @@ public class CalculateSavingsController {
         //close the window
         window.close();
     }
-    void setMasterController(MasterController mc)
-    {
+
+    void setMasterController(MasterController mc) {
         masterController = mc;
     }
 }
