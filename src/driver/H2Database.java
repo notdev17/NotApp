@@ -2,7 +2,10 @@ package driver;
 
 import appliance.*;
 
-import java.sql.*;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.Statement;
 import java.util.ArrayList;
 
 /**
@@ -43,7 +46,7 @@ public class H2Database {
      */
     public ArrayList<Appliance> getAppliances() {
         try {
-            while(result.next()) {
+            while (result.next()) {
                 String m = result.getString("model"),
                         b = result.getString("brand");
                 double e = result.getDouble("energy");
@@ -74,6 +77,7 @@ public class H2Database {
 
     /**
      * For SQL statements
+     *
      * @param str
      */
     public void sql(String str) {
@@ -87,6 +91,7 @@ public class H2Database {
 
     /**
      * For DBMS commands
+     *
      * @param str
      */
     public void command(String str) {
@@ -98,8 +103,12 @@ public class H2Database {
         }
     }
 
-    public void closeConnection() throws Exception {
-        conn.close();
+    public void closeConnection() {
+        try {
+            conn.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     private void clear() {
@@ -123,10 +132,11 @@ public class H2Database {
       Updated query attribute names to match new CSV database files
       Added new switch cases for additional database files
      */
+
     /**
-     *  AIRCONDITIONER(model, brand, energy)
-     *  WASHINGMACHINE(model, brand, energy)
-     *  REFRIGERATOR(mode, brand, energy)
+     * AIRCONDITIONER(model, brand, energy)
+     * WASHINGMACHINE(model, brand, energy)
+     * REFRIGERATOR(mode, brand, energy)
      *
      * @param s - type of appliance
      * @return query string for sql
@@ -138,7 +148,7 @@ public class H2Database {
             case "airconditioner":
                 query = "SELECT Model_Number AS model," +
                         "Brand_Name AS brand," +
-                        "Energy_Efficiency_Ratio AS energy" +
+                        "Combined_Energy_Efficiency_Ratio AS energy" +
                         " FROM AIR_CONDITIONER";
                 break;
             case "washingmachine":

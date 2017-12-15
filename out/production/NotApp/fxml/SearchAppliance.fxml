@@ -16,7 +16,9 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Text?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SearchApplianceController">
+<!--By Daylen; the FXML File which will be loaded to display the searchappliance page-->
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SearchApplianceController">
    <children>
       <BorderPane prefHeight="400.0" prefWidth="600.0">
          <top>
@@ -24,11 +26,18 @@
                <children>
                   <ToolBar prefHeight="40.0" prefWidth="200.0">
                     <items>
-                      <Button mnemonicParsing="false" onAction="#backButtonClicked" text="Back" />
-                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Search Screen" />
+                        <AnchorPane prefHeight="28.0" prefWidth="585.0">
+                           <children>
+                            <Button layoutY="1.0" mnemonicParsing="false" onAction="#backButtonClicked" text="Back" />
+                              <Text layoutX="245.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Search Screen" wrappingWidth="95.44482421875" />
+                           </children>
+                        </AnchorPane>
                     </items>
                   </ToolBar>
-                  <TextField alignment="CENTER" prefHeight="51.0" prefWidth="555.0" promptText="Search for an Appliance" />
+                  <TextField fx:id="mySearchBar" alignment="CENTER" onKeyReleased="#searchBarFilter" prefHeight="27.0" prefWidth="518.0" promptText="Search for an Appliance">
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </VBox.margin></TextField>
                </children>
             </VBox>
          </top>
@@ -72,7 +81,7 @@
          <bottom>
             <ButtonBar prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER">
               <buttons>
-                  <Button mnemonicParsing="false" prefHeight="27.0" prefWidth="140.0" text="Select" />
+                  <Button mnemonicParsing="false" onAction="#selectButtonClicked" prefHeight="27.0" prefWidth="140.0" text="Select" />
               </buttons>
                <BorderPane.margin>
                   <Insets right="10.0" />

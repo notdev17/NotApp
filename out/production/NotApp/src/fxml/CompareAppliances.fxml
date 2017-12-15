@@ -9,19 +9,26 @@
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CompareAppliancesController">
+<!--By Daylen; the FXML File which will be loaded to display the compareappliances page-->
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CompareAppliancesController">
     <children>
       <BorderPane layoutY="1.0" prefHeight="391.0" prefWidth="600.0">
          <top>
             <ToolBar prefHeight="40.0" prefWidth="600.0" BorderPane.alignment="CENTER">
               <items>
-                <Button mnemonicParsing="false" onAction="#backButtonClicked" text="Back" />
-                  <Label text="Current User Appliances: (Click the &quot;+&quot; to add an appliance)" />
-                  <Button alignment="CENTER" mnemonicParsing="false" onAction="#createApplianceButtonClicked" text="+" />
+                  <AnchorPane prefHeight="28.0" prefWidth="580.0">
+                     <children>
+                      <Button mnemonicParsing="false" onAction="#backButtonClicked" text="Back" />
+                        <Label layoutX="212.0" layoutY="6.0" text="Selected User Appliances " />
+                        <Button alignment="CENTER" layoutX="478.0" layoutY="1.0" mnemonicParsing="false" onAction="#createApplianceButtonClicked" text="Add appliance" />
+                     </children>
+                  </AnchorPane>
               </items>
             </ToolBar>
          </top>
@@ -51,16 +58,16 @@
                         </VBox>
                      </content>
                   </ScrollPane>
-                  <ButtonBar prefHeight="40.0" prefWidth="200.0">
+                  <ButtonBar fx:id="myCalculateBox" prefHeight="40.0" prefWidth="200.0">
                     <buttons>
-                        <Button graphicTextGap="0.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="173.0" text="Calculate Savings">
+                        <Button graphicTextGap="0.0" mnemonicParsing="false" onAction="#calcSavingsButtonClicked" prefHeight="25.0" prefWidth="173.0" text="Calculate Savings">
                            <opaqueInsets>
                               <Insets right="10.0" />
                            </opaqueInsets>
                         </Button>
                     </buttons>
                      <VBox.margin>
-                        <Insets right="11.0" top="5.0" />
+                        <Insets right="11.0" top="7.0" />
                      </VBox.margin>
                   </ButtonBar>
                </children>
