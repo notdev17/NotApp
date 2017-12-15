@@ -34,7 +34,10 @@
                         </AnchorPane>
                     </items>
                   </ToolBar>
-                  <TextField fx:id="mySearchBar" alignment="CENTER" onKeyReleased="#searchBarFilter" prefHeight="51.0" prefWidth="555.0" promptText="Search for an Appliance" />
+                  <TextField fx:id="mySearchBar" alignment="CENTER" onKeyReleased="#searchBarFilter" prefHeight="27.0" prefWidth="518.0" promptText="Search for an Appliance">
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </VBox.margin></TextField>
                </children>
             </VBox>
          </top>
