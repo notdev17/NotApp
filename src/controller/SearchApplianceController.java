@@ -26,6 +26,8 @@ import java.io.IOException;
 
 public class SearchApplianceController
 {
+
+    String currentApplianceType;
     //table view from the fxml file
     @FXML
     private TableView<Appliance> myTableView;
@@ -77,6 +79,7 @@ public class SearchApplianceController
             @Override
             public void changed(ObservableValue<? extends Number> observable, Number oldValue, Number newValue)
             {
+                currentApplianceType = myApplianceBox.getItems().get(newValue.intValue());
                 System.out.println("The Appliance you selected was: " + myApplianceBox.getItems().get(newValue.intValue()));
                 /*DEVON
                   When a user clicks an appliance type in the drop down menu, it will be re-populated with the proper
@@ -87,13 +90,51 @@ public class SearchApplianceController
         });
     }
 
+    /**
+     * By: Daylen
+     * When the user clicks the update button, the list of items is
+     * updated to correlate with any filters the user may have input
+     * @param event
+     * @throws IOException
+     */
     @FXML
     public void updateButtonClicked(ActionEvent event) throws IOException
     {
-        System.out.println("Price Min: " + myPriceMinimum.getCharacters());
-        System.out.println("Price Max: " + myPriceMaximum.getCharacters());
-        System.out.println("Energy Min: " + myEnergyMinimum.getCharacters());
-        System.out.println("Energy Max: " + myEnergyMaximum.getCharacters());
+        //if the user has selected an appliance from the drop down
+        if (!currentApplianceType.isEmpty()) {
+            ObservableList<Appliance> updateList = getAppliances(currentApplianceType);
+            int myEnergyMinInt;
+            int myEnergyMaxInt;
+
+            //convert the strings to ints if the fields are not empty
+            if(!myEnergyMinimum.getCharacters().toString().isEmpty()){
+                myEnergyMinInt = Integer.parseInt(myEnergyMinimum.getCharacters().toString());
+            } else {
+                myEnergyMinInt = 0; //if empty
+            }
+            if(!myEnergyMaximum.getCharacters().toString().isEmpty()){
+                myEnergyMaxInt = Integer.parseInt(myEnergyMaximum.getCharacters().toString());
+            } else {
+                myEnergyMaxInt = 9999; //if empty
+            }
+
+            //convert the observable list to an array
+            Object[] w = updateList.toArray();
+
+            //iterate over that array and remove any appliances that are not contained in the filter
+            for (Object a : w) {
+                //cast the objects as appliances
+                if (((Appliance) a).getEnergy() != 0) {
+                    if (((Appliance) a).getEnergy() < myEnergyMinInt)
+                        updateList.remove(a);
+                    else if (((Appliance) a).getEnergy() > myEnergyMaxInt)
+                        updateList.remove(a);
+                }
+            }
+
+            //update the table view
+            myTableView.setItems(updateList);
+        }
     }
 
     /**
@@ -145,7 +186,6 @@ public class SearchApplianceController
                 h2db.selectTable("aircleaner");
                 for (Appliance a : h2db.getAppliances()) {
                     applianceList.add(new AirCleaner( a.getModel(), a.getBrand(), a.getEnergy()));
-                    System.out.println(a);
                 }
                 break;
             //IMPORTANT the energy value for conditioners is in energy efficiency ratio. Not kWHrs/Yr.
@@ -153,7 +193,6 @@ public class SearchApplianceController
                 h2db.selectTable("airconditioner");
                 for (Appliance a : h2db.getAppliances()) {
                     applianceList.add(new AirConditioner( a.getModel(), a.getBrand(), a.getEnergy()));
-                    System.out.println(a);
                 }
                 break;
 
@@ -161,7 +200,6 @@ public class SearchApplianceController
                 h2db.selectTable("dishwasher");
                 for (Appliance a : h2db.getAppliances()) {
                     applianceList.add(new Dishwasher( a.getModel(), a.getBrand(), a.getEnergy()));
-                    System.out.println(a);
                 }
                 break;
 
@@ -169,7 +207,6 @@ public class SearchApplianceController
                 h2db.selectTable("dryer");
                 for (Appliance a : h2db.getAppliances()) {
                     applianceList.add(new Dryer( a.getModel(), a.getBrand(), a.getEnergy()));
-                    System.out.println(a);
                 }
                 break;
 
@@ -177,7 +214,6 @@ public class SearchApplianceController
                 h2db.selectTable("freezer");
                 for (Appliance a : h2db.getAppliances()) {
                     applianceList.add(new Freezer( a.getModel(), a.getBrand(), a.getEnergy()));
-                    System.out.println(a);
                 }
                 break;
 
@@ -185,7 +221,6 @@ public class SearchApplianceController
                 h2db.selectTable("refrigerator");
                 for (Appliance a : h2db.getAppliances()) {
                     applianceList.add(new Refrigerator( a.getModel(), a.getBrand(), a.getEnergy()));
-                    System.out.println(a);
                 }
                 break;
 
@@ -193,10 +228,8 @@ public class SearchApplianceController
                 h2db.selectTable("washingmachine");
                 for (Appliance a : h2db.getAppliances()) {
                     applianceList.add(new WashingMachine( a.getModel(), a.getBrand(), a.getEnergy()));
-                    System.out.println(a);
                 }
                 break;
-
         }
 
 
