@@ -27,12 +27,11 @@ public class MasterController
 
     private Parent myParent;
 
-    public MasterController()
+    public MasterController(Stage stage)
     {
         myApplianceList = new ArrayList<>();
         myLoader = new FXMLLoader();
-        myStage = new Stage();
-        myStage.setOnCloseRequest(e -> Platform.exit());
+        myStage = stage;
         try
         {
             getFirstPage();
@@ -56,10 +55,6 @@ public class MasterController
     {
         myParent = myLoader.load(getClass().getResource("../fxml/CompareAppliances.fxml").openStream());
         ((CompareAppliancesController)myLoader.getController()).setMasterController(this);
-        if (myApplianceList.size() > 0)
-        {
-            ((CompareAppliancesController)myLoader.getController()).addAppliance(myApplianceList.get(0));
-        }
         myStage.setScene(new Scene(myParent));
         myStage.show();
         myLoader = new FXMLLoader();
@@ -74,11 +69,20 @@ public class MasterController
         myLoader = new FXMLLoader();
     }
 
-    void addAppliance(Appliance theAppliance) throws IOException
+    void getCalculationsPage() throws IOException
     {
-        myApplianceList.add(theAppliance);
-        getComparePage();
+        myParent = myLoader.load(getClass().getResource("../fxml/CalculateSavings.fxml").openStream());
+        ((CalculateSavingsController)myLoader.getController()).setMasterController(this);
+        myStage.setScene(new Scene(myParent));
+        myStage.show();
+        myLoader = new FXMLLoader();
     }
+
+    public ArrayList<Appliance> getSelectedAppliances()
+    {
+        return myApplianceList;
+    }
+
 
 
 }

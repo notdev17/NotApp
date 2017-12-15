@@ -8,10 +8,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.Slider;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 
@@ -22,9 +19,7 @@ public class CompareAppliancesController {
     private MasterController masterController;
 
     @FXML
-    private TableView<Appliance> selectedTableView;
-
-    ObservableList<Appliance> applianceList;
+    private TableView<Appliance> myTableView;
 
     //columns in the table view
     @FXML
@@ -35,10 +30,7 @@ public class CompareAppliancesController {
     private TableColumn<Appliance, String> energyColumn;
 
     @FXML
-    Slider myUsageSlider;
-
-    @FXML
-    Button myCalculateButton;
+    ButtonBar myCalculateBox;
 
     @FXML
     private void initialize()
@@ -49,16 +41,9 @@ public class CompareAppliancesController {
         modelColumn.setCellValueFactory(new PropertyValueFactory<Appliance, String>("model"));
         energyColumn.setCellValueFactory(new PropertyValueFactory<Appliance, String>("energy"));
 
-
         if (masterController == null)
         {
-            myUsageSlider.setDisable(true);
-            myCalculateButton.setDisable(true);
-        }
-        else
-        {
-            myUsageSlider.setDisable(false);
-            myCalculateButton.setDisable(false);
+            myCalculateBox.setDisable(true);
         }
     }
 
@@ -75,10 +60,21 @@ public class CompareAppliancesController {
     void setMasterController(MasterController mc)
     {
         masterController = mc;
+        if (masterController.getSelectedAppliances().size() > 0)
+        {
+            myTableView.getItems().addAll(masterController.getSelectedAppliances());
+            myCalculateBox.setDisable(false);
+        }
     }
 
-    void addAppliance(Appliance theAppliance)
-    {
-        selectedTableView.getItems().add(theAppliance);
+    /**
+     * By Daylen
+     * Displays the calculate savings page from the fxml file
+     * @param event, sent when the button is clicked
+     * @throws IOException
+     */
+    @FXML
+    public void calcSavingsButtonClicked(ActionEvent event) throws IOException {
+        masterController.getCalculationsPage();
     }
 }

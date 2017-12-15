@@ -24,12 +24,13 @@ import java.io.IOException;
 
 public class SearchApplianceController
 {
+    private String currentApplianceType;
 
     private MasterController masterController;
 
     //table view from the fxml file
     @FXML
-    private TableView<Appliance> resultTableView;
+    private TableView<Appliance> myTableView;
 
     //columns in the table view
     @FXML
@@ -55,6 +56,33 @@ public class SearchApplianceController
     private TextField myEnergyMaximum;
 
     @FXML
+    private TextField mySearchBar;
+
+    /**
+     * By Daylen
+     * called every time the user types in the search bar
+     * The elements that do not contain the characters typed will be removed
+     */
+    @FXML
+    public void searchBarFilter() {
+        //apply the filters first
+        updateButtonClicked();
+
+        //get the observable list
+        ObservableList<Appliance> currentList = myTableView.getItems();
+        //create a copy as an array so we can go through it
+        Object[] toSearch = currentList.toArray();
+        //traverse the list, if the model of the appliance does not contain the characters typed, remove it
+        for (Object a : toSearch) {
+            if(!((Appliance)a).getModel().contains(mySearchBar.getCharacters()))
+                currentList.remove(a);
+        }
+
+        //update the table view
+        myTableView.setItems(currentList);
+    }
+
+    @FXML
     private void initialize()
     {
         //set up the columns in the table
@@ -72,7 +100,7 @@ public class SearchApplianceController
         myApplianceBox.getItems().add(new WashingMachine().getApplianceType());
         myApplianceBox.getItems().add(new Refrigerator().getApplianceType());
         myApplianceBox.getItems().add(new Freezer().getApplianceType());
-        resultTableView.getItems().add(new Refrigerator("0","0",0));
+
 
 
         myApplianceBox.getSelectionModel().selectedIndexProperty().addListener(new ChangeListener<Number>() {
@@ -84,18 +112,55 @@ public class SearchApplianceController
                   When a user clicks an appliance type in the drop down menu, it will be re-populated with the proper
                   appliances (using getAppliances).
                  */
-                resultTableView.setItems(getAppliances(myApplianceBox.getItems().get(newValue.intValue())));
+                myTableView.setItems(getAppliances(myApplianceBox.getItems().get(newValue.intValue())));
             }
         });
     }
 
+    /**
+     * By: Daylen
+     * When the user clicks the update button, the list of items is
+     * updated to correlate with any filters the user may have input
+     * @throws IOException
+     */
     @FXML
-    public void updateButtonClicked(ActionEvent event) throws IOException
+    public void updateButtonClicked()
     {
-        System.out.println("Price Min: " + myPriceMinimum.getCharacters());
-        System.out.println("Price Max: " + myPriceMaximum.getCharacters());
-        System.out.println("Energy Min: " + myEnergyMinimum.getCharacters());
-        System.out.println("Energy Max: " + myEnergyMaximum.getCharacters());
+        //if the user has selected an appliance from the drop down
+        if (!currentApplianceType.isEmpty()) {
+            ObservableList<Appliance> updateList = getAppliances(currentApplianceType);
+            int myEnergyMinInt;
+            int myEnergyMaxInt;
+
+            //convert the strings to ints if the fields are not empty
+            if(!myEnergyMinimum.getCharacters().toString().isEmpty()){
+                myEnergyMinInt = Integer.parseInt(myEnergyMinimum.getCharacters().toString());
+            } else {
+                myEnergyMinInt = 0; //if empty
+            }
+            if(!myEnergyMaximum.getCharacters().toString().isEmpty()){
+                myEnergyMaxInt = Integer.parseInt(myEnergyMaximum.getCharacters().toString());
+            } else {
+                myEnergyMaxInt = 9999; //if empty
+            }
+
+            //convert the observable list to an array
+            Object[] w = updateList.toArray();
+
+            //iterate over that array and remove any appliances that are not contained in the filter
+            for (Object a : w) {
+                //cast the objects as appliances
+                if (((Appliance) a).getEnergy() != 0) {
+                    if (((Appliance) a).getEnergy() < myEnergyMinInt)
+                        updateList.remove(a);
+                    else if (((Appliance) a).getEnergy() > myEnergyMaxInt)
+                        updateList.remove(a);
+                }
+            }
+
+            //update the table view
+            myTableView.setItems(updateList);
+        }
     }
 
     /**
@@ -113,7 +178,8 @@ public class SearchApplianceController
     @FXML
     public void selectButtonClicked(ActionEvent event) throws IOException
     {
-        masterController.addAppliance(resultTableView.getSelectionModel().getSelectedItem());
+        masterController.getSelectedAppliances().add(myTableView.getSelectionModel().getSelectedItem());
+        masterController.getComparePage();
     }
 
     /**

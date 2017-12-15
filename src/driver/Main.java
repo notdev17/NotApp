@@ -13,30 +13,17 @@ public class Main extends Application {
 
 
     @Override
-    public void start(Stage primaryStage) throws Exception
+    public void start(Stage stage) throws Exception
     {
-        mc = new MasterController();
+        stage.setTitle("Not App: Compare Appliances!");
+        stage.setResizable(false);
+        mc = new MasterController(stage);
     }
 
 
-    public static void main(String[] args) {
-
-
-
+    public static void main(String[] args)
+    {
 
         launch(args);
     }
-
-    /**
-     * initialize database
-     */
-//    public void initializeDatabase() {
-//        h2db = new H2Database();
-//
-//        h2db.selectTable("refrigerator");
-//
-//        for (Appliance a : h2db.getAppliances()) {
-//            System.out.println(a);
-//        }
-//    }
 }
