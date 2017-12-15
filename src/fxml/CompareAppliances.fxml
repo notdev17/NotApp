@@ -25,9 +25,8 @@
                   <AnchorPane prefHeight="28.0" prefWidth="580.0">
                      <children>
                       <Button mnemonicParsing="false" onAction="#backButtonClicked" text="Back" />
-                        <Label layoutX="55.0" layoutY="5.0" text="Selected User Appliances " />
-                        <Label layoutX="445.0" layoutY="5.0" text="Add an appliance" />
-                        <Button alignment="CENTER" layoutX="559.0" mnemonicParsing="false" onAction="#createApplianceButtonClicked" text="+" />
+                        <Label layoutX="212.0" layoutY="6.0" text="Selected User Appliances " />
+                        <Button alignment="CENTER" layoutX="478.0" layoutY="1.0" mnemonicParsing="false" onAction="#createApplianceButtonClicked" text="Add appliance" />
                      </children>
                   </AnchorPane>
               </items>

@@ -9,21 +9,27 @@
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
 
 <!--By Daylen; the FXML File which will be loaded to display the compareappliances page-->
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CompareAppliancesController">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CompareAppliancesController">
     <children>
       <BorderPane layoutY="1.0" prefHeight="391.0" prefWidth="600.0">
          <top>
             <ToolBar prefHeight="40.0" prefWidth="600.0" BorderPane.alignment="CENTER">
               <items>
-                <Button mnemonicParsing="false" onAction="#backButtonClicked" text="Back" />
-                  <Label text="Current User Appliances: (Click the &quot;+&quot; to add an appliance)" />
-                  <Button alignment="CENTER" mnemonicParsing="false" onAction="#createApplianceButtonClicked" text="+" />
+                  <AnchorPane prefHeight="28.0" prefWidth="580.0">
+                     <children>
+                      <Button mnemonicParsing="false" onAction="#backButtonClicked" text="Back" />
+                        <Label layoutX="55.0" layoutY="5.0" text="Selected User Appliances " />
+                        <Label layoutX="445.0" layoutY="5.0" text="Add an appliance" />
+                        <Button alignment="CENTER" layoutX="559.0" mnemonicParsing="false" onAction="#createApplianceButtonClicked" text="+" />
+                     </children>
+                  </AnchorPane>
               </items>
             </ToolBar>
          </top>
