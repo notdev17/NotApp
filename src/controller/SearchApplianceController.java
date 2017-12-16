@@ -250,10 +250,7 @@ public class SearchApplianceController {
                 break;
 
         }
-
-
         h2db.closeConnection();
-
         return applianceList;
     }
 

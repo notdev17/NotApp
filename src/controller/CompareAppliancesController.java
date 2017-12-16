@@ -1,6 +1,7 @@
 package controller;
 
 import appliance.Appliance;
+import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.Node;
@@ -18,11 +19,10 @@ public class CompareAppliancesController {
     @FXML
     ButtonBar myCalculateBox;
 
-    @FXML
-    private VBox sliderVBox;
     private MasterController masterController;
     @FXML
-    private TableView<Appliance> myTableView;
+    private TableView<Appliance> myCompareTableView;
+
     //columns in the table view
     @FXML
     private TableColumn<Appliance, String> brandColumn;
@@ -41,7 +41,7 @@ public class CompareAppliancesController {
         if (masterController == null) {
             myCalculateBox.setDisable(true);
         } else {
-            System.out.println(myTableView.getItems());
+            System.out.println(myCompareTableView.getItems());
             if (masterController.getSelectedAppliances().size() > 0) {
 
                 myCalculateBox.setDisable(false);
@@ -62,7 +62,7 @@ public class CompareAppliancesController {
     void setMasterController(MasterController mc) {
         masterController = mc;
         if (masterController.getSelectedAppliances().size() > 0) {
-            myTableView.getItems().addAll(masterController.getSelectedAppliances());
+            myCompareTableView.getItems().addAll(masterController.getSelectedAppliances());
             System.out.println(masterController.getSelectedAppliances());
             myCalculateBox.setDisable(false);
         }
@@ -78,5 +78,11 @@ public class CompareAppliancesController {
     @FXML
     public void calcSavingsButtonClicked(ActionEvent event) throws IOException {
         masterController.getCalculationsPage();
+    }
+
+    @FXML
+    public void removeButtonClicked() {
+        masterController.getSelectedAppliances().remove(myCompareTableView.getSelectionModel().getSelectedItem());
+        myCompareTableView.setItems(FXCollections.observableArrayList(masterController.getSelectedAppliances()));
     }
 }

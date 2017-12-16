@@ -30,7 +30,7 @@
             </ToolBar>
          </top>
          <center>
-            <TableView fx:id="myTableView" prefHeight="136.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+            <TableView fx:id="myCompareTableView" prefHeight="136.0" prefWidth="600.0" BorderPane.alignment="CENTER">
                <columns>
                   <TableColumn fx:id="modelColumn" prefWidth="190.0" text="Model" />
                   <TableColumn fx:id="brandColumn" prefWidth="216.0" text="Brand" />
@@ -39,17 +39,18 @@
             </TableView>
          </center>
          <bottom>
-            <ButtonBar fx:id="myCalculateBox" prefHeight="0.0" prefWidth="600.0" BorderPane.alignment="BOTTOM_CENTER">
+            <ButtonBar fx:id="myCalculateBox" prefHeight="0.0" prefWidth="600.0" BorderPane.alignment="CENTER">
               <buttons>
-                  <Button mnemonicParsing="false" text="Add to Favorites" />
+                  <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="227.0" text="Add to Favorites" />
                   <Button graphicTextGap="0.0" layoutY="18.0" mnemonicParsing="false" onAction="#calcSavingsButtonClicked" prefHeight="25.0" prefWidth="166.0" text="Calculate Savings">
                      <opaqueInsets>
                         <Insets right="10.0" />
                      </opaqueInsets>
                   </Button>
+                  <Button mnemonicParsing="false" onAction="#removeButtonClicked" prefHeight="8.0" text="Remove Appliance" />
               </buttons>
                <BorderPane.margin>
-                  <Insets right="6.0" />
+                  <Insets right="24.0" />
                </BorderPane.margin>
                <padding>
                   <Insets top="6.0" />
