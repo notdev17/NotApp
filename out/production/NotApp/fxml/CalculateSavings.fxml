@@ -14,7 +14,7 @@
 
 <!--By Daylen; the FXML File which will be loaded to display the calculate savings page-->
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CalculateSavingsController">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CalculateSavingsController">
    <children>
       <BorderPane prefHeight="400.0" prefWidth="600.0">
          <top>
@@ -22,7 +22,7 @@
               <items>
                   <AnchorPane prefHeight="28.0" prefWidth="585.0">
                      <children>
-                        <Button layoutX="509.0" layoutY="2.0" mnemonicParsing="false" onAction="#userProfileButtonClicked" prefHeight="24.0" prefWidth="77.0" text="User Profile" />
+                        <Button layoutX="495.0" layoutY="2.0" mnemonicParsing="false" onAction="#userProfileButtonClicked" text="User Profile" />
                       <Button mnemonicParsing="false" onAction="#backButtonClicked" text="Back" />
                         <Text layoutX="270.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Results" />
                      </children>
@@ -62,7 +62,7 @@
                       <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
                            <children>
                               <Text layoutX="5.0" layoutY="-5.0" strokeType="OUTSIDE" strokeWidth="0.0" text="How much do you pay for electricity?" textAlignment="CENTER" wrappingWidth="143.13671875" y="41.0" />
-                              <TextField alignment="CENTER" layoutX="3.0" layoutY="66.0" promptText="(dollars/kwh)" />
+                              <TextField alignment="CENTER" layoutX="3.0" layoutY="66.0" prefHeight="27.0" prefWidth="145.0" promptText="(dollars/kwh)" />
                            </children></AnchorPane>
                       <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
                            <children>
@@ -71,7 +71,7 @@
                                     <Font name="System Bold" size="19.0" />
                                  </font>
                               </Text>
-                              <Button disable="true" layoutX="37.0" layoutY="52.0" mnemonicParsing="false" text="Add to Favorites" />
+                              <Button disable="true" layoutX="26.0" layoutY="51.0" mnemonicParsing="false" text="Add to Favorites" />
                            </children>
                         </AnchorPane>
                     </items>

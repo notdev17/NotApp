@@ -16,7 +16,7 @@ Note that the compiler will not prevent you from declaring an instance (non-stat
 //Cooling_Capacity__BTU_Hour__d,Electrical_Power_Input__Watts__d,Combined_Energy_Efficiency_Ratio_d,Energy_Efficiency_Ratio_d
 final public class Calculate {
 
-    static double costPerYear(Appliance a, double hrsPerDay, double daysPerWeek) {
+    public static double costPerYear(Appliance a, double hrsPerDay, double daysPerWeek) {
         double kwh = a.getEnergy();
         double hrsPerYear = hrsPerDay * daysPerWeek * 4 * 12; //(hr/day * day/week) * week/month * month/year
         return kwh * hrsPerYear;

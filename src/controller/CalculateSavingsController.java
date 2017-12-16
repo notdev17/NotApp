@@ -58,7 +58,7 @@ public class CalculateSavingsController {
      * @throws IOException
      */
     @FXML
-    public void doneButtonClicked(ActionEvent event) throws IOException {
+    public void doneButtonClicked(ActionEvent event) {
         //get the window from the action event
         Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
 

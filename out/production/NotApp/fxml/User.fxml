@@ -36,9 +36,9 @@
             </ToolBar>
             <TableView fx:id="favTableView" prefHeight="343.0" prefWidth="324.0">
               <columns>
-                <TableColumn prefWidth="75.0" text="Model" />
-                <TableColumn prefWidth="75.0" text="Brand" />
-                  <TableColumn prefWidth="75.0" text="Energy Use" />
+                <TableColumn fx:id="favModelCol" prefWidth="75.0" text="Model" />
+                <TableColumn fx:id="favBrandCol" prefWidth="75.0" text="Brand" />
+                  <TableColumn fx:id="favEnergyCol" prefWidth="75.0" text="Energy Use" />
                   <TableColumn prefWidth="75.0" text="Price" />
               </columns>
             </TableView>

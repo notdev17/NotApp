@@ -51,4 +51,9 @@ public class Appliance {
     public double getEnergy() {
         return energy;
     }
+
+    @Override
+    public String toString() {
+        return "Appliance";
+    }
 }
