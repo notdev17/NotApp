@@ -95,7 +95,7 @@ public class CalculateSavingsController {
     {
         if (calcPriceInput.getCharacters().length() != 0)
         {
-            if (Double.parseDouble(calcPriceInput.getCharacters().toString()) > 0.0 && !calculationsTableView.getSelectionModel().getSelectedItems().isEmpty())
+            if (Double.parseDouble(calcPriceInput.getCharacters().toString()) > 0.0)
             {
                 calculationsTableView.getSelectionModel().getSelectedItem().setPrice(Double.parseDouble(calcPriceInput.getCharacters().toString()));
                 masterController.getCalculationsPage();
