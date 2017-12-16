@@ -33,15 +33,11 @@ public class SearchApplianceController {
     private TableColumn<Appliance, String> modelColumn;
     @FXML
     private TableColumn<Appliance, String> energyColumn;
+    @FXML
+    private TableColumn<Appliance, String> typeColumn;
 
     @FXML
     private ChoiceBox<String> myApplianceBox;
-
-    @FXML
-    private TextField myPriceMinimum;
-
-    @FXML
-    private TextField myPriceMaximum;
 
     @FXML
     private TextField myEnergyMinimum;
@@ -79,11 +75,10 @@ public class SearchApplianceController {
     @FXML
     private void initialize() {
         //set up the columns in the table
-        //priceColumn.setCellValueFactory(new PropertyValueFactory<Appliance, String>("price"));
+        typeColumn.setCellValueFactory(new PropertyValueFactory<Appliance, String>("applianceType"));
         brandColumn.setCellValueFactory(new PropertyValueFactory<Appliance, String>("brand"));
         modelColumn.setCellValueFactory(new PropertyValueFactory<Appliance, String>("model"));
         energyColumn.setCellValueFactory(new PropertyValueFactory<Appliance, String>("energy"));
-
         //set the items in the table to the items returned by the getApplianceType() method
         //resultTableView.setItems(getAppliances());
         myApplianceBox.getItems().add(new AirCleaner().getApplianceType());
@@ -170,8 +165,11 @@ public class SearchApplianceController {
 
     @FXML
     public void selectButtonClicked(ActionEvent event) throws IOException {
-        masterController.getSelectedAppliances().add(myTableView.getSelectionModel().getSelectedItem());
-        masterController.getComparePage();
+        if (!myTableView.getSelectionModel().getSelectedItems().isEmpty())
+        {
+            masterController.getSelectedAppliances().add(myTableView.getSelectionModel().getSelectedItem());
+            masterController.getComparePage();
+        }
     }
 
     /**
@@ -250,10 +248,7 @@ public class SearchApplianceController {
                 break;
 
         }
-
-
         h2db.closeConnection();
-
         return applianceList;
     }
 
@@ -268,6 +263,8 @@ public class SearchApplianceController {
      */
     private void populateListOnLoad() {
         myApplianceBox.getSelectionModel().selectFirst();
+        //System.out.println(myApplianceBox.getValue());
+        currentApplianceType = myApplianceBox.getValue();
         myTableView.setItems(getAppliances(myApplianceBox.getItems().get(0)));
     }
 

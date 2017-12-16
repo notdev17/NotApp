@@ -7,7 +7,6 @@ package appliance;
 public class WashingMachine extends Appliance {
 
     private String applianceType = "Washer";
-    private double price = 550.00;
 
     /**
      * Created by Devon on 12/9/2017
@@ -29,12 +28,8 @@ public class WashingMachine extends Appliance {
         return applianceType;
     }
 
-    public double getPrice() {
-        return price;
-    }
-
     @Override
     public String toString() {
-        return model + " " + brand + " " + energy;
+        return applianceType + " " + model + " " + brand + " " + energy;
     }
 }

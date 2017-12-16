@@ -26,7 +26,7 @@
                <children>
                   <ToolBar prefHeight="40.0" prefWidth="200.0">
                     <items>
-                        <AnchorPane prefHeight="28.0" prefWidth="585.0">
+                        <AnchorPane prefHeight="28.0" prefWidth="570.0">
                            <children>
                             <Button layoutY="1.0" mnemonicParsing="false" onAction="#backButtonClicked" text="Back" />
                               <Text layoutX="245.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Search Screen" wrappingWidth="95.44482421875" />
@@ -48,19 +48,34 @@
                      <children>
                         <VBox prefHeight="200.0" prefWidth="150.0">
                            <children>
-                              <Label text=" Appliance Type" />
+                              <Label text=" Appliance Type">
+                                 <VBox.margin>
+                                    <Insets top="10.0" />
+                                 </VBox.margin></Label>
                               <ChoiceBox fx:id="myApplianceBox" prefHeight="35.0" prefWidth="150.0">
                                  <padding>
                                     <Insets right="6.0" />
                                  </padding>
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" left="5.0" right="3.0" top="5.0" />
+                                 </VBox.margin>
                               </ChoiceBox>
-                              <Label layoutX="10.0" layoutY="10.0" text=" Price Range" />
-                              <TextField fx:id="myPriceMinimum" disable="true" prefHeight="25.0" prefWidth="56.0" promptText="min" />
-                              <TextField fx:id="myPriceMaximum" disable="true" layoutX="42.0" layoutY="31.0" prefHeight="25.0" prefWidth="121.0" promptText="max" />
-                              <Label layoutX="10.0" layoutY="10.0" text=" Energy Range" />
-                              <TextField fx:id="myEnergyMinimum" prefHeight="25.0" prefWidth="56.0" promptText="min" />
-                              <TextField fx:id="myEnergyMaximum" layoutX="42.0" layoutY="31.0" prefHeight="25.0" prefWidth="121.0" promptText="max" />
-                              <Button mnemonicParsing="false" onAction="#updateButtonClicked" text="Update Results" />
+                              <Label layoutX="10.0" layoutY="10.0" text=" Energy Range">
+                                 <VBox.margin>
+                                    <Insets left="5.0" top="5.0" />
+                                 </VBox.margin></Label>
+                              <TextField fx:id="myEnergyMinimum" prefHeight="25.0" prefWidth="56.0" promptText="min">
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" left="5.0" right="3.0" top="5.0" />
+                                 </VBox.margin></TextField>
+                              <TextField fx:id="myEnergyMaximum" layoutX="42.0" layoutY="31.0" prefHeight="25.0" prefWidth="121.0" promptText="max">
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" left="5.0" right="3.0" />
+                                 </VBox.margin></TextField>
+                              <Button mnemonicParsing="false" onAction="#updateButtonClicked" text="Update Results">
+                                 <VBox.margin>
+                                    <Insets left="5.0" />
+                                 </VBox.margin></Button>
       
                            </children>
                         </VBox>
@@ -72,9 +87,10 @@
          <center>
             <TableView fx:id="myTableView" prefHeight="200.0" prefWidth="377.0" BorderPane.alignment="CENTER">
               <columns>
-                <TableColumn fx:id="modelColumn" prefWidth="96.0" text="Model" />
-                <TableColumn fx:id="brandColumn" prefWidth="82.0" text="Brand" />
-                  <TableColumn fx:id="energyColumn" prefWidth="191.0" text="Energy Use (kWh per Year)" />
+                  <TableColumn fx:id="typeColumn" prefWidth="110.0" text="Type" />
+                  <TableColumn fx:id="modelColumn" prefWidth="110.0" text="Model" />
+                  <TableColumn fx:id="brandColumn" prefWidth="110.0" text="Brand" />
+                  <TableColumn fx:id="energyColumn" prefWidth="115.0" text="Energy Use" />
               </columns>
             </TableView>
          </center>

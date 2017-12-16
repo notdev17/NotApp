@@ -7,22 +7,19 @@
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.ToolBar?>
 <?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
+
 <!--By Daylen Nguyen: The FXML for the user page; containing the list of fav-->
+
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.UserController">
    <top>
-      <ToolBar prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+      <ToolBar prefHeight="12.0" prefWidth="600.0" BorderPane.alignment="CENTER">
         <items>
-            <BorderPane prefHeight="17.0" prefWidth="584.0">
-               <left>
-                <Button mnemonicParsing="false" text="Back" BorderPane.alignment="CENTER" />
-               </left>
-               <center>
-                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="User Profile" wrappingWidth="111.837890625" BorderPane.alignment="CENTER" />
-               </center>
-            </BorderPane>
+          <Button mnemonicParsing="false" onAction="#backButtonClicked" text="Back" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="User Profile (Under Maintenance)" textAlignment="CENTER" wrappingWidth="511.837890625" />
         </items>
       </ToolBar>
    </top>
@@ -31,26 +28,31 @@
          <children>
             <ToolBar>
                <items>
-                  <Label alignment="CENTER" prefHeight="17.0" prefWidth="324.0" text="Favorites" textAlignment="CENTER">
+                  <Label alignment="CENTER" prefHeight="32.0" prefWidth="404.0" text="Favorites" textAlignment="CENTER">
                      <font>
                         <Font name="System Bold" size="22.0" />
                      </font>
                   </Label>
                </items>
             </ToolBar>
-            <TableView prefHeight="343.0" prefWidth="324.0">
+            <TableView fx:id="favTableView" prefHeight="329.0" prefWidth="410.0">
               <columns>
-                <TableColumn prefWidth="75.0" text="Model" />
-                <TableColumn prefWidth="75.0" text="Brand" />
-                  <TableColumn prefWidth="75.0" text="Price" />
-                  <TableColumn prefWidth="75.0" text="Energy Use" />
+                  <TableColumn fx:id="favTypeCol" prefWidth="100.0" text="Type" />
+                  <TableColumn fx:id="favModelCol" prefWidth="105.0" text="Model" />
+                  <TableColumn fx:id="favBrandCol" prefWidth="105.0" text="Brand" />
+                  <TableColumn fx:id="favEnergyCol" prefWidth="105.0" text="Energy Use" />
               </columns>
             </TableView>
+            <Pane prefHeight="65.0" prefWidth="416.0">
+               <children>
+                   <Button fx:id="favRemoveButton" layoutX="139.0" layoutY="2.0" mnemonicParsing="false" onAction="#removeFromFavButtonClicked" prefHeight="0.0" prefWidth="138.0" text="Remove from Favorites" textAlignment="CENTER" />
+               </children>
+            </Pane>
          </children>
       </VBox>
    </left>
    <center>
-      <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+      <VBox alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="0.0" minWidth="0.0" prefHeight="365.0" prefWidth="160.0" BorderPane.alignment="CENTER">
          <children>
             <Text strokeType="OUTSIDE" strokeWidth="0.0" text="You are currently signed in as:" />
             <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Guest" />
