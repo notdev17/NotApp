@@ -16,7 +16,9 @@ import javafx.scene.control.cell.PropertyValueFactory;
 
 import java.io.IOException;
 
-
+/**
+ * Created by Daylen on 12/11/2017
+ */
 public class SearchApplianceController {
     private String currentApplianceType;
 
@@ -49,9 +51,8 @@ public class SearchApplianceController {
     private TextField mySearchBar;
 
     /**
-     * By Daylen
-     * called every time the user types in the search bar
-     * The elements that do not contain the characters typed will be removed
+     * By: Daylen on 12/11/2017
+     * Applies the search bar filter to the list of appliances.
      */
     @FXML
     public void searchBarFilter() {
@@ -72,6 +73,10 @@ public class SearchApplianceController {
         myTableView.setItems(currentList);
     }
 
+    /**
+     * By: Devon on 12/11/2017
+     * Applies the search bar filter to the list of appliances.
+     */
     @FXML
     private void initialize() {
         //set up the columns in the table
@@ -79,8 +84,6 @@ public class SearchApplianceController {
         brandColumn.setCellValueFactory(new PropertyValueFactory<Appliance, String>("brand"));
         modelColumn.setCellValueFactory(new PropertyValueFactory<Appliance, String>("model"));
         energyColumn.setCellValueFactory(new PropertyValueFactory<Appliance, String>("energy"));
-        //set the items in the table to the items returned by the getApplianceType() method
-        //resultTableView.setItems(getAppliances());
         myApplianceBox.getItems().add(new AirCleaner().getApplianceType());
         myApplianceBox.getItems().add(new AirConditioner().getApplianceType());
         myApplianceBox.getItems().add(new Dishwasher().getApplianceType());
@@ -93,8 +96,7 @@ public class SearchApplianceController {
         myApplianceBox.getSelectionModel().selectedIndexProperty().addListener(new ChangeListener<Number>() {
             @Override
             public void changed(ObservableValue<? extends Number> observable, Number oldValue, Number newValue) {
-                //System.out.println("The Appliance you selected was: " + myApplianceBox.getItems().get(newValue.intValue()));
-                /*DEVON
+                /*DEVON Edited 12/12/2017
                   When a user clicks an appliance type in the drop down menu, it will be re-populated with the proper
                   appliances (using getAppliances).
                  */
@@ -106,7 +108,7 @@ public class SearchApplianceController {
     }
 
     /**
-     * By: Daylen
+     * By: Daylen on 12/11/2017
      * When the user clicks the update button, the list of items is
      * updated to correlate with any filters the user may have input
      *
@@ -152,17 +154,18 @@ public class SearchApplianceController {
     }
 
     /**
-     * returns back to the compare appliances page
-     * by daylen
-     *
-     * @param event
-     * @throws IOException
+     * By: Daylen on 12/11/2017
+     * When the user clicks the back button, it takes the user back to the compare appliances page.
      */
     @FXML
     public void backButtonClicked(ActionEvent event) throws IOException {
         masterController.getComparePage();
     }
 
+    /**
+     * By: Daylen on 12/11/2017
+     * When the user clicks the back button, it takes the user back to the compare appliances page.
+     */
     @FXML
     public void selectButtonClicked(ActionEvent event) throws IOException {
         if (!myTableView.getSelectionModel().getSelectedItems().isEmpty())
@@ -173,9 +176,8 @@ public class SearchApplianceController {
     }
 
     /**
-     * by Daylen
-     *
-     * @return returns the list of appliances (test atm)
+     * By: Daylen on 12/11/2017
+     * Returns a list of Appliance types to be used in populating myTableView
      */
     public ObservableList<Appliance> getAppliances(String applianceType) {
 
@@ -185,7 +187,7 @@ public class SearchApplianceController {
         H2Database h2db = new H2Database();
 
 
-        /*DEVON
+        /*DEVON edited on 12/11/2017
           Added this switch statement to facilitate applianceList population and search filtering.
           Can likely be refactored to reduce the mostly identical case bodies.
          */
@@ -195,7 +197,6 @@ public class SearchApplianceController {
                 h2db.selectTable("aircleaner");
                 for (Appliance a : h2db.getAppliances()) {
                     applianceList.add(new AirCleaner(a.getModel(), a.getBrand(), a.getEnergy()));
-                    //System.out.println(a);
                 }
                 break;
             //IMPORTANT the energy value for conditioners is in energy efficiency ratio. Not kWHrs/Yr.
@@ -203,7 +204,6 @@ public class SearchApplianceController {
                 h2db.selectTable("airconditioner");
                 for (Appliance a : h2db.getAppliances()) {
                     applianceList.add(new AirConditioner(a.getModel(), a.getBrand(), a.getEnergy()));
-                    //System.out.println(a);
                 }
                 break;
 
@@ -211,7 +211,6 @@ public class SearchApplianceController {
                 h2db.selectTable("dishwasher");
                 for (Appliance a : h2db.getAppliances()) {
                     applianceList.add(new Dishwasher(a.getModel(), a.getBrand(), a.getEnergy()));
-                    //System.out.println(a);
                 }
                 break;
 
@@ -219,7 +218,6 @@ public class SearchApplianceController {
                 h2db.selectTable("dryer");
                 for (Appliance a : h2db.getAppliances()) {
                     applianceList.add(new Dryer(a.getModel(), a.getBrand(), a.getEnergy()));
-                    //System.out.println(a);
                 }
                 break;
 
@@ -227,7 +225,6 @@ public class SearchApplianceController {
                 h2db.selectTable("freezer");
                 for (Appliance a : h2db.getAppliances()) {
                     applianceList.add(new Freezer(a.getModel(), a.getBrand(), a.getEnergy()));
-                    //System.out.println(a);
                 }
                 break;
 
@@ -235,7 +232,6 @@ public class SearchApplianceController {
                 h2db.selectTable("refrigerator");
                 for (Appliance a : h2db.getAppliances()) {
                     applianceList.add(new Refrigerator(a.getModel(), a.getBrand(), a.getEnergy()));
-                    //System.out.println(a);
                 }
                 break;
 
@@ -243,7 +239,6 @@ public class SearchApplianceController {
                 h2db.selectTable("washingmachine");
                 for (Appliance a : h2db.getAppliances()) {
                     applianceList.add(new WashingMachine(a.getModel(), a.getBrand(), a.getEnergy()));
-                    //System.out.println(a);
                 }
                 break;
 
@@ -252,18 +247,21 @@ public class SearchApplianceController {
         return applianceList;
     }
 
+    /**
+     * By: Daylen on 12/14/2017
+     * When the user clicks the back button, it takes the user back to the compare appliances page.
+     */
     public void setMasterController(MasterController mc) {
         masterController = mc;
     }
 
     /**
-     * Populate the appliance list with first item on list onload
+     * Populate the appliance list with first item on the appliance list on load
      *
-     * @author Tim
+     * @author Brandon on 12/15/2017
      */
     private void populateListOnLoad() {
         myApplianceBox.getSelectionModel().selectFirst();
-        //System.out.println(myApplianceBox.getValue());
         currentApplianceType = myApplianceBox.getValue();
         myTableView.setItems(getAppliances(myApplianceBox.getItems().get(0)));
     }

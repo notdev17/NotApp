@@ -11,7 +11,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 
 /**
- * Created by Tim on 12/10/2017.
+ * Created by Tim on 12/13/2017.
  * Used to easily share/transfer relevant data and objects between different scenes.
  */
 public class MasterController {
@@ -28,7 +28,7 @@ public class MasterController {
     private Parent myParent;
 
     /**
-     * Authors: Tim and Brandon on 12/10/2017
+     * Authors: Tim and Brandon on 12/13/2017
      */
     public MasterController(Stage stage) {
         myFavoriteList = new ArrayList<>();
@@ -44,7 +44,7 @@ public class MasterController {
     }
 
     /**
-     * Author: Tim and Brandon on 12/10/2017
+     * Author: Tim and Brandon on 12/13/2017
      * changes scene to FirstPage
      */
     void getFirstPage() throws IOException {
@@ -57,7 +57,7 @@ public class MasterController {
     }
 
     /**
-     * Author: Tim and Brandon on 12/10/2017
+     * Author: Tim and Brandon on 12/13/2017
      * changes scene to CompareAppliances page
      */
     void getComparePage() throws IOException {
@@ -71,6 +71,9 @@ public class MasterController {
 
     /**
      * Author: Tim and Brandon on 12/10/2017
+=======
+     * Author: Tim and Brandono on 12/13/2017
+>>>>>>> 4184cafe7d6f72dfc399cb34b855ffbb1b17d673
      * changes scene to SearchAppliance page.
      */
     void getSearchPage() throws IOException {
@@ -83,7 +86,7 @@ public class MasterController {
     }
 
     /**
-     * Author: Tim and Brandon on 12/10/2017
+     * Author: Tim and Brandon on 12/13/2017
      * changes scene to CalculateSavings page
      */
     void getCalculationsPage() throws IOException {
@@ -96,7 +99,7 @@ public class MasterController {
     }
 
     /**
-     * Author: Tim and Brandon on 12/10/2017
+     * Author: Tim and Brandon on 12/13/2017
      * changes scene to User page
      */
     void getUserPage() throws IOException {
@@ -109,7 +112,7 @@ public class MasterController {
     }
 
     /**
-     * Author: Tim on 12/10/2017
+     * Author: Tim on 12/13/2017
      * returns myApplianceList
      */
     public ArrayList<Appliance> getSelectedAppliances() {
@@ -117,7 +120,7 @@ public class MasterController {
     }
 
     /**
-     * Author: Tim on 12/10/2017
+     * Author: Tim on 12/13/2017
      * returns myFavoriteList
      */
     public ArrayList<Appliance> getFavoriteAppliances() {
@@ -125,7 +128,7 @@ public class MasterController {
     }
 
     /**
-     * Author: Tim on 12/10/2017
+     * Author: Tim on 12/13/2017
      * sets myFavoriteList according to 'list' input
      */
     public void setMyFavoriteList(ArrayList<Appliance> list) {

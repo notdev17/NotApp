@@ -157,7 +157,7 @@ public class H2Database {
     }
 
     /**
-     * Author: Tim on 12/7/2017
+     * Author: Devon 12/7/2017
      * Generates an SQL query based on input s, where s is a valid appliance type.
      * Pre: s is a valid string (see cases below)
      * Post: generates and returns a valid SQL query as a String

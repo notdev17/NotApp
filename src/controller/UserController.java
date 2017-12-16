@@ -12,6 +12,9 @@ import javafx.scene.control.cell.PropertyValueFactory;
 
 import java.io.IOException;
 
+/**
+ * Created by
+ */
 public class UserController {
 
     @FXML

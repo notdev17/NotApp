@@ -14,7 +14,7 @@ public class FirstPageController {
     private MasterController masterController;
 
     /**
-     * Author: Devon on 12/12/2017
+     * Author: Michelle on 12/12/2017
      * On 'event', go to Compare Appliances screen
      */
     @FXML
@@ -23,7 +23,7 @@ public class FirstPageController {
     }
 
     /**
-     * Author: Devon on 12/15/2017
+     * Author: Michelle on 12/15/2017
      * On 'event', go to group website
      */
     @FXML
@@ -39,7 +39,7 @@ public class FirstPageController {
     }
 
     /**
-     * Author: Devon on 12/15/2017
+     * Author: Michelle on 12/15/2017
      */
     public void setMasterController(MasterController mc) {
         masterController = mc;
