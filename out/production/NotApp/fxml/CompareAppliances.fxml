@@ -41,7 +41,7 @@
          <bottom>
             <ButtonBar fx:id="myCalculateBox" prefHeight="0.0" prefWidth="600.0" BorderPane.alignment="CENTER">
               <buttons>
-                  <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="227.0" text="Add to Favorites" />
+                  <Button mnemonicParsing="false" onAction="#addToFavButtonClicked" prefHeight="25.0" prefWidth="227.0" text="Add to Favorites" />
                   <Button graphicTextGap="0.0" layoutY="18.0" mnemonicParsing="false" onAction="#calcSavingsButtonClicked" prefHeight="25.0" prefWidth="166.0" text="Calculate Savings">
                      <opaqueInsets>
                         <Insets right="10.0" />

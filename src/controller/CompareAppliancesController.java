@@ -2,6 +2,7 @@ package controller;
 
 import appliance.Appliance;
 import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.Node;
@@ -13,6 +14,9 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.VBox;
 
 import java.io.IOException;
+import java.util.ArrayList;
+
+import static javafx.collections.FXCollections.observableArrayList;
 
 public class CompareAppliancesController {
 
@@ -63,7 +67,7 @@ public class CompareAppliancesController {
         masterController = mc;
         if (masterController.getSelectedAppliances().size() > 0) {
             myCompareTableView.getItems().addAll(masterController.getSelectedAppliances());
-            System.out.println(masterController.getSelectedAppliances());
+            //System.out.println(masterController.getSelectedAppliances());
             myCalculateBox.setDisable(false);
         }
     }
@@ -83,6 +87,15 @@ public class CompareAppliancesController {
     @FXML
     public void removeButtonClicked() {
         masterController.getSelectedAppliances().remove(myCompareTableView.getSelectionModel().getSelectedItem());
-        myCompareTableView.setItems(FXCollections.observableArrayList(masterController.getSelectedAppliances()));
+        myCompareTableView.setItems(observableArrayList(masterController.getSelectedAppliances()));
+    }
+
+    @FXML
+    public void addToFavButtonClicked() throws IOException {
+        System.err.println(masterController.getFavoriteAppliances());
+        if(myCompareTableView.getSelectionModel().getSelectedItem() != null) {
+            masterController.getFavoriteAppliances().add(myCompareTableView.getSelectionModel().getSelectedItem());
+            masterController.getUserPage();
+        }
     }
 }

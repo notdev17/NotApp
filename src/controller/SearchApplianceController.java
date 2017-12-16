@@ -265,7 +265,7 @@ public class SearchApplianceController {
      */
     private void populateListOnLoad() {
         myApplianceBox.getSelectionModel().selectFirst();
-        System.out.println(myApplianceBox.getValue());
+        //System.out.println(myApplianceBox.getValue());
         currentApplianceType = myApplianceBox.getValue();
         myTableView.setItems(getAppliances(myApplianceBox.getItems().get(0)));
     }
