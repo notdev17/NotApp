@@ -69,7 +69,7 @@
          <center>
             <TableView fx:id="myTableView" prefHeight="200.0" prefWidth="377.0" BorderPane.alignment="CENTER">
               <columns>
-                  <TableColumn fx:id="typeColumn" prefWidth="110.0" text="Appliance Type" />
+                  <TableColumn fx:id="typeColumn" prefWidth="110.0" text="Type" />
                   <TableColumn fx:id="modelColumn" prefWidth="110.0" text="Model" />
                   <TableColumn fx:id="brandColumn" prefWidth="110.0" text="Brand" />
                   <TableColumn fx:id="energyColumn" prefWidth="115.0" text="Energy Use" />
