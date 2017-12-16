@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<!--By Daylen Nguyen: The FXML for the user page; containing the list of fav-->
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.UserController">
+   <top>
+      <ToolBar prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+        <items>
+            <BorderPane prefHeight="17.0" prefWidth="584.0">
+               <left>
+                <Button mnemonicParsing="false" text="Back" BorderPane.alignment="CENTER" />
+               </left>
+               <center>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="User Profile" wrappingWidth="111.837890625" BorderPane.alignment="CENTER" />
+               </center>
+            </BorderPane>
+        </items>
+      </ToolBar>
+   </top>
+   <left>
+      <VBox BorderPane.alignment="CENTER">
+         <children>
+            <ToolBar>
+               <items>
+                  <Label alignment="CENTER" prefHeight="17.0" prefWidth="324.0" text="Favorites" textAlignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="22.0" />
+                     </font>
+                  </Label>
+               </items>
+            </ToolBar>
+            <TableView prefHeight="343.0" prefWidth="324.0">
+              <columns>
+                <TableColumn prefWidth="75.0" text="Model" />
+                <TableColumn prefWidth="75.0" text="Brand" />
+                  <TableColumn prefWidth="75.0" text="Price" />
+                  <TableColumn prefWidth="75.0" text="Energy Use" />
+              </columns>
+            </TableView>
+         </children>
+      </VBox>
+   </left>
+   <center>
+      <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="You are currently signed in as:" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Guest" />
+            <Button disable="true" mnemonicParsing="false" text="Create Account">
+               <VBox.margin>
+                  <Insets top="50.0" />
+               </VBox.margin>
+            </Button>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>

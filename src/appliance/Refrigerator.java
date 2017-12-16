@@ -2,37 +2,41 @@ package appliance;
 
 /**
  * Created by Tim on 12/7/2017.
+ * Edited by Devon on 12/9/2017
  */
-public class Refrigerator implements Appliance {
+public class Refrigerator extends Appliance {
 
-    String model;
-    String brand;
-    double energy;
+    private String applianceType = "Refrigerator";
+    private double price = 150.00;
 
-    public Refrigerator(String m, String b, double e) {
-        model = m;
-        brand = b;
-        energy = e;
+    /**
+     * Created by Devon on 12/9/2017
+     **/
+    public Refrigerator(String inModel, String inBrand, double inEnergy) {
+        super(inModel, inBrand, inEnergy);
     }
 
-    @Override
+    public Refrigerator() {
+        super();
+    }
+
+    //Used when populating lists from database (to avoid call by reference issues)
+    public Refrigerator getCopy() {
+        return new Refrigerator(this.getModel(), this.getBrand(), this.getEnergy());
+    }
+
+    /**
+     * Created by Devon on 12/9/2017
+     **/
     public String getApplianceType() {
-        return "refrigerator";
+        return applianceType;
     }
 
-    @Override
-    public String getModel() {
-        return model;
-    }
-
-    @Override
-    public String getBrand() {
-        return brand;
-    }
-
-    @Override
-    public double getEnergy() {
-        return energy;
+    /**
+     * Created by Devon on 12/9/2017
+     **/
+    public double getPrice() {
+        return price;
     }
 
     @Override

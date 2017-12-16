@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Text?>
+
+<!--By Daylen; the FXML File which will be loaded to display the calculate savings page-->
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CalculateSavingsController">
+   <children>
+      <BorderPane prefHeight="400.0" prefWidth="600.0">
+         <top>
+            <ToolBar prefHeight="40.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+              <items>
+                  <AnchorPane prefHeight="28.0" prefWidth="585.0">
+                     <children>
+                        <Button disable="true" layoutX="494.0" layoutY="1.0" mnemonicParsing="false" text="User Profile" />
+                      <Button mnemonicParsing="false" onAction="#backButtonClicked" text="Back" />
+                        <Text layoutX="270.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Results" />
+                     </children>
+                  </AnchorPane>
+              </items>
+            </ToolBar>
+         </top>
+         <bottom>
+            <ToolBar prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+              <items>
+                  <BorderPane prefHeight="24.0" prefWidth="586.0">
+                     <left>
+                      <Button disable="true" mnemonicParsing="false" text="Export Results" BorderPane.alignment="CENTER" />
+                     </left>
+                     <right>
+                        <Button mnemonicParsing="false" onAction="#doneButtonClicked" text="Done" BorderPane.alignment="CENTER" />
+                     </right>
+                  </BorderPane>
+              </items>
+            </ToolBar>
+         </bottom>
+         <center>
+            <TableView prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+              <columns>
+                <TableColumn prefWidth="75.0" text="Model" />
+                <TableColumn prefWidth="75.0" text="Brand" />
+                  <TableColumn prefWidth="75.0" text="Price" />
+                  <TableColumn prefWidth="75.0" text="Energy Use" />
+                  <TableColumn prefWidth="75.0" text="CALC 1" />
+                  <TableColumn prefWidth="75.0" text="CALC 2" />
+              </columns>
+            </TableView>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>
