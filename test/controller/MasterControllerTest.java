@@ -1,9 +1,6 @@
 package controller;
 
-import javafx.stage.Stage;
 import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.assertThrows;
 
 class MasterControllerTest {
 

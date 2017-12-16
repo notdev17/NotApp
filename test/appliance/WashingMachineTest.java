@@ -1,3 +1,5 @@
+package appliance;
+
 import appliance.WashingMachine;
 import org.junit.jupiter.api.Test;
 

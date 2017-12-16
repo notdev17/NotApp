@@ -1,3 +1,5 @@
+package appliance;
+
 
 import appliance.AirCleaner;
 import org.junit.jupiter.api.Test;

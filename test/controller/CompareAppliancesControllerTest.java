@@ -4,7 +4,8 @@ import org.junit.jupiter.api.Test;
 
 class CompareAppliancesControllerTest {
 
-    private CompareAppliancesController controller;
+    @SuppressWarnings("unused")
+	private CompareAppliancesController controller;
 
     @Test
     void backButtonClicked() {

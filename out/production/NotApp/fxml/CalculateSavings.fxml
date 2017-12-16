@@ -49,12 +49,12 @@
                <children>
                   <TableView fx:id="calculationsTableView" prefHeight="320.0" prefWidth="449.0">
                     <columns>
-                        <TableColumn fx:id="calcTypeCol" prefWidth="70.0" resizable="false" text="Type" />
-                      <TableColumn fx:id="calcModelCol" prefWidth="70.0" resizable="false" text="Model" />
-                      <TableColumn fx:id="calcBrandCol" prefWidth="70.0" resizable="false" text="Brand" />
-                        <TableColumn fx:id="calcEnergyCol" prefWidth="70.0" resizable="false" text="Energy Use" />
-                        <TableColumn fx:id="calcPriceCol" prefWidth="70.0" resizable="false" text="Price" />
-                        <TableColumn fx:id="calcResultCol" prefWidth="95.0" resizable="false" text="Cost Per Year" />
+                        <TableColumn fx:id="calcTypeCol" prefWidth="70.0" text="Type" />
+                      <TableColumn fx:id="calcModelCol" prefWidth="70.0" text="Model" />
+                      <TableColumn fx:id="calcBrandCol" prefWidth="70.0" text="Brand" />
+                        <TableColumn fx:id="calcEnergyCol" prefWidth="70.0" text="Energy Use" />
+                        <TableColumn fx:id="calcPriceCol" prefWidth="70.0" text="Price" />
+                        <TableColumn fx:id="calcResultCol" prefWidth="95.0" text="Cost Per Year" />
                     </columns>
                   </TableView>
                   <SplitPane dividerPositions="0.5723270440251572" orientation="VERTICAL" prefHeight="200.0" prefWidth="160.0">

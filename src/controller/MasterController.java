@@ -1,7 +1,6 @@
 package controller;
 
 import appliance.Appliance;
-import driver.Main;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;

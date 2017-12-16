@@ -1,3 +1,5 @@
+package appliance;
+
 import appliance.AirConditioner;
 import org.junit.jupiter.api.Test;
 

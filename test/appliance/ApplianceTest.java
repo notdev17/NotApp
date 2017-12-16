@@ -1,3 +1,5 @@
+package appliance;
+
 import appliance.Appliance;
 import org.junit.jupiter.api.Test;
 

@@ -1,3 +1,5 @@
+package appliance;
+
 import appliance.Freezer;
 import org.junit.jupiter.api.Test;
 

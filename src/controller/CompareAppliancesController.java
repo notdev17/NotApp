@@ -1,21 +1,13 @@
 package controller;
 
 import appliance.Appliance;
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.Node;
 import javafx.scene.control.ButtonBar;
-import javafx.scene.control.Slider;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
-import javafx.scene.layout.VBox;
-
 import java.io.IOException;
-import java.util.ArrayList;
-
 import static javafx.collections.FXCollections.observableArrayList;
 
 /**

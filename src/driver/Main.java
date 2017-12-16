@@ -11,10 +11,10 @@ import javafx.stage.Stage;
  */
 public class Main extends Application {
 
-    private MasterController mc;
+    @SuppressWarnings("unused")
+	private MasterController mc;
 
     public static void main(String[] args) {
-
         launch(args);
     }
 

@@ -1,3 +1,5 @@
+package appliance;
+
 import appliance.Dryer;
 import org.junit.jupiter.api.Test;
 
