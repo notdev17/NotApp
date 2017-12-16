@@ -2,45 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9d672645-e21c-40be-a241-f2c020b1bd3c" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/NotApp/AirCleanerTest.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/NotApp/AirConditionerTest.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/NotApp/ApplianceTest.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/NotApp/DishwasherTest.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/NotApp/DryerTest.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/NotApp/FreezerTest.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/NotApp/RefrigeratorTest.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/NotApp/WashingMachineTest.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/NotApp/controller/CalculateSavingsControllerTest.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/NotApp/controller/CompareAppliancesControllerTest.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/NotApp/controller/FirstPageControllerTest.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/NotApp/controller/MasterControllerTest.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/NotApp/controller/SearchApplianceControllerTest.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/NotApp/driver/H2DatabaseTest.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/NotApp/driver/MainTest.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/test/NotApp/.gitattributes" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/test/NotApp/.gitignore" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/test/NotApp/NotApp.iml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/test/NotApp/Test Results - All_in_NotApp.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/test/NotApp/database/ESC_Residential_Clothes_Dryers.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/test/NotApp/database/ESC_Residential_Clothes_Washers.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/test/NotApp/database/ESC_Residential_Dishwashers.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/test/NotApp/database/ESC_Residential_Freezers.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/test/NotApp/database/ESC_Residential_Refrigerators.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/test/NotApp/database/ESC_Room_Air_Cleaners.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/test/NotApp/database/ESC_Room_Air_Conditioners.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/test/NotApp/database/airconditioner.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/test/NotApp/database/h2-1.4.196.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/test/NotApp/database/refrigerator.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/test/NotApp/database/washingmachine.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/test/NotApp/dbcsvfilelinks.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/test/NotApp/src/META-INF/MANIFEST.MF" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/test/NotApp/src/fxml/CalculateSavings.fxml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/test/NotApp/src/fxml/CompareAppliances.fxml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/test/NotApp/src/fxml/FirstPage.fxml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/test/NotApp/src/fxml/SearchAppliance.fxml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/test/NotApp/src/fxml/User.fxml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/test/NotApp/src/style/bootstrap3.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/test/NotApp/src/style/notdev.jpg" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/NotApp.iml" afterPath="$PROJECT_DIR$/NotApp.iml" />
     </list>
@@ -74,11 +35,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SearchApplianceController.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="SearchApplianceController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/controller/SearchApplianceController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="355">
-              <caret line="261" column="18" lean-forward="true" selection-start-line="261" selection-start-column="18" selection-end-line="261" selection-end-column="18" />
+            <state relative-caret-position="522">
+              <caret line="252" column="5" lean-forward="false" selection-start-line="252" selection-start-column="5" selection-end-line="252" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -94,6 +55,16 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="FreezerTest.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/test/appliance/FreezerTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="51">
+              <caret line="3" column="23" lean-forward="false" selection-start-line="3" selection-start-column="18" selection-end-line="3" selection-end-column="23" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
     </leaf>
   </component>
   <component name="Git.Settings">
@@ -104,6 +75,13 @@
       <projects_view />
     </option>
   </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/controller/SearchApplianceController.java" />
+      </list>
+    </option>
+  </component>
   <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
   <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
   <component name="JsGulpfileManager">
@@ -111,6 +89,7 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
       <flattenPackages />
@@ -301,7 +280,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="79000" />
+    <option name="totallyTimeSpent" value="117000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -323,7 +302,7 @@
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="DB Browser" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32944915" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -379,8 +358,48 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/controller/SearchApplianceController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="355">
-          <caret line="261" column="18" lean-forward="true" selection-start-line="261" selection-start-column="18" selection-end-line="261" selection-end-column="18" />
+        <state relative-caret-position="321">
+          <caret line="259" column="46" lean-forward="false" selection-start-line="259" selection-start-column="46" selection-end-line="259" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/driver/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="12" column="21" lean-forward="false" selection-start-line="12" selection-start-column="21" selection-end-line="12" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controller/MasterController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="202">
+          <caret line="58" column="0" lean-forward="false" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/driver/H2Database.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="202">
+          <caret line="107" column="0" lean-forward="false" selection-start-line="107" selection-start-column="0" selection-end-line="107" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controller/SearchApplianceController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="522">
+          <caret line="252" column="5" lean-forward="false" selection-start-line="252" selection-start-column="5" selection-end-line="252" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/appliance/FreezerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="23" lean-forward="false" selection-start-line="3" selection-start-column="18" selection-end-line="3" selection-end-column="23" />
           <folding />
         </state>
       </provider>
