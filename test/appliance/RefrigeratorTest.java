@@ -26,6 +26,6 @@ class RefrigeratorTest {
     @Test
     void toStringTest() {
         refrigerator = new Refrigerator("Model", "Brand", 1311.0);
-        assertEquals(refrigerator.toString(), "Model Brand 1311.0");
+        assertEquals(refrigerator.toString(), "Refrigerator Model Brand 1311.0");
     }
 }

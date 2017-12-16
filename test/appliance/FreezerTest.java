@@ -26,6 +26,6 @@ class FreezerTest {
     @Test
     void toStringTest() {
         freezer = new Freezer("Model", "Brand", 111.0);
-        assertEquals(freezer.toString(), "Model Brand 111.0");
+        assertEquals(freezer.toString(), "Freezer Model Brand 111.0");
     }
 }

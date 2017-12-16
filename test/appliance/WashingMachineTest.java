@@ -26,6 +26,6 @@ class WashingMachineTest {
     @Test
     void toStringTest() {
         washingMachine = new WashingMachine("Model", "Brand", 31.0);
-        assertEquals(washingMachine.toString(), "Model Brand 31.0");
+        assertEquals(washingMachine.toString(), "Washer Model Brand 31.0");
     }
 }

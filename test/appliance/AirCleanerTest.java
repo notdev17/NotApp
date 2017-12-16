@@ -27,6 +27,6 @@ class AirCleanerTest {
     @Test
     void toStringTest() {
         airCleaner = new AirCleaner("Model", "Brand", 200);
-        assertEquals(airCleaner.toString(), "Model Brand 200.0");
+        assertEquals(airCleaner.toString(), "Air Cleaner Model Brand 200.0");
     }
 }

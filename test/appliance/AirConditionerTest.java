@@ -26,6 +26,6 @@ class AirConditionerTest {
     @Test
     void toStringTest() {
         airConditioner = new AirConditioner("Model", "Brand", 111.0);
-        assertEquals(airConditioner.toString(), "Model Brand 111.0");
+        assertEquals(airConditioner.toString(), "Air Conditioner Model Brand 111.0");
     }
 }

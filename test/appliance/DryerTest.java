@@ -26,6 +26,6 @@ class DryerTest {
     @Test
     void toStringTest() {
         dryer = new Dryer("Model", "Brand", 38.0);
-        assertEquals(dryer.toString(), "Model Brand 38.0");
+        assertEquals(dryer.toString(), "Dryer Model Brand 38.0");
     }
 }

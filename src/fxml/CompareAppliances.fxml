@@ -19,7 +19,7 @@
          <top>
             <ToolBar BorderPane.alignment="CENTER">
               <items>
-                  <AnchorPane prefHeight="30.0" prefWidth="575.0">
+                  <AnchorPane prefHeight="30.0" prefWidth="572.0">
                      <children>
                       <Button mnemonicParsing="false" onAction="#backButtonClicked" text="Back" />
                         <Label layoutX="212.0" layoutY="6.0" text="Selected User Appliances " />

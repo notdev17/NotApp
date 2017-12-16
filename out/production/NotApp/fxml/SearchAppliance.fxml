@@ -26,7 +26,7 @@
                <children>
                   <ToolBar prefHeight="40.0" prefWidth="200.0">
                     <items>
-                        <AnchorPane prefHeight="28.0" prefWidth="585.0">
+                        <AnchorPane prefHeight="28.0" prefWidth="570.0">
                            <children>
                             <Button layoutY="1.0" mnemonicParsing="false" onAction="#backButtonClicked" text="Back" />
                               <Text layoutX="245.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Search Screen" wrappingWidth="95.44482421875" />
