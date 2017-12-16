@@ -8,6 +8,8 @@ public class Appliance {
     protected String brand;
     //Holds estimated energy use in kilowatt hours
     protected double energy;
+    protected double price;
+    protected double result;
 
     /**
      * Created by Devon on 12/9/2017
@@ -45,12 +47,30 @@ public class Appliance {
         return brand;
     }
 
+    public void setPrice(Double thePrice)
+    {
+        price = thePrice;
+        result = price * getEnergy();
+    }
+
+    public double getPrice()
+    {
+        return price;
+    }
+
+    public double getResult()
+    {
+        return result;
+    }
+
     /**
      * Created by Devon on 12/9/2017
      **/
     public double getEnergy() {
         return energy;
     }
+
+
 
     @Override
     public String toString() {

@@ -5,8 +5,10 @@ import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.Node;
+import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 
@@ -16,8 +18,6 @@ public class CalculateSavingsController {
 
     @FXML
     private TableView<Appliance> calculationsTableView;
-//    @FXML
-//    private TableView<Appliance> calculationsTableView;
 
     //columns in the table view
     @FXML
@@ -25,15 +25,15 @@ public class CalculateSavingsController {
     @FXML
     private TableColumn<Appliance, String> calcBrandCol;
     @FXML
-    private TableColumn<Appliance, String> calcPriceCol;
-    @FXML
     private TableColumn<Appliance, String> calcEnergyCol;
     @FXML
     private TableColumn<Appliance, String> calcTypeCol;
     @FXML
-    private TableColumn<Appliance, String> calc1Col;
+    private TableColumn<Appliance, Double> calcPriceCol;
     @FXML
-    private TableColumn<Appliance, String> calc2Col;
+    private TableColumn<Appliance, Double> calcResultCol;
+    @FXML
+    private TextField calcPriceInput;
 
     private MasterController masterController;
 
@@ -43,9 +43,12 @@ public class CalculateSavingsController {
         calcTypeCol.setCellValueFactory(new PropertyValueFactory<Appliance, String>("applianceType"));
         calcModelCol.setCellValueFactory(new PropertyValueFactory<Appliance, String>("model"));
         calcBrandCol.setCellValueFactory(new PropertyValueFactory<Appliance, String>("brand"));
-        //calcPriceCol.setCellValueFactory(new PropertyValueFactory<Appliance, String>("price"));
         calcEnergyCol.setCellValueFactory(new PropertyValueFactory<Appliance, String>("energy"));
-//      calc2Col.setCellValueFactory(new PropertyValueFactory<Appliance, String>("calculation2"));
+        calcPriceCol.setCellValueFactory(new PropertyValueFactory<Appliance, Double>("price"));
+        calcResultCol.setCellValueFactory(new PropertyValueFactory<Appliance, Double>("result"));
+
+
+
     }
     @FXML
     public void backButtonClicked(ActionEvent event) throws IOException {
@@ -86,6 +89,18 @@ public class CalculateSavingsController {
             masterController.getFavoriteAppliances().add(calculationsTableView.getSelectionModel().getSelectedItem());
             masterController.getUserPage();
             calculationsTableView.setItems(FXCollections.observableArrayList(masterController.getFavoriteAppliances()));
+        }
+    }
+    @FXML
+    public void updateButtonClicked() throws IOException
+    {
+        if (calcPriceInput.getCharacters().length() != 0)
+        {
+            if (Double.parseDouble(calcPriceInput.getCharacters().toString()) > 0.0)
+            {
+                calculationsTableView.getSelectionModel().getSelectedItem().setPrice(Double.parseDouble(calcPriceInput.getCharacters().toString()));
+                masterController.getCalculationsPage();
+            }
         }
     }
 }

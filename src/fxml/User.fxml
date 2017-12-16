@@ -37,11 +37,10 @@
             </ToolBar>
             <TableView fx:id="favTableView" prefHeight="329.0" prefWidth="410.0">
               <columns>
-                  <TableColumn fx:id="favTypeCol" prefWidth="85.0" text="Type" />
-                  <TableColumn fx:id="favModelCol" text="Model" />
-                  <TableColumn fx:id="favBrandCol" prefWidth="85.0" text="Brand" />
-                  <TableColumn fx:id="favEnergyCol" prefWidth="85.0" text="Energy Use" />
-                  <TableColumn fx:id="favPriceCol" text="Price" />
+                  <TableColumn fx:id="favTypeCol" prefWidth="100.0" text="Type" />
+                  <TableColumn fx:id="favModelCol" prefWidth="105.0" text="Model" />
+                  <TableColumn fx:id="favBrandCol" prefWidth="105.0" text="Brand" />
+                  <TableColumn fx:id="favEnergyCol" prefWidth="105.0" text="Energy Use" />
               </columns>
             </TableView>
             <Pane prefHeight="65.0" prefWidth="416.0">

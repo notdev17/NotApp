@@ -29,8 +29,6 @@ public class UserController {
     @FXML
     private TableColumn<Appliance, String> favTypeCol;
     @FXML
-    private TableColumn<Appliance, String> favPriceCol;
-    @FXML
     private Button favRemoveButton;
 
     @FXML
