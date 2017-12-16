@@ -1,5 +1,7 @@
 package appliance;
 
+import javafx.fxml.FXML;
+
 /**
  * Created by Devon on 12/9/2017
  **/
@@ -8,8 +10,8 @@ public class Appliance {
     protected String brand;
     //Holds estimated energy use in kilowatt hours
     protected double energy;
-    private double price = 0.0;
-    private double result = 0.0;
+    protected double price = 0.0;
+    protected double result = 0.0;
 
     /**
      * Created by Devon on 12/9/2017
@@ -51,7 +53,7 @@ public class Appliance {
         return brand;
     }
 
-    public void setPrice(Double thePrice)
+    public void setPrice(double thePrice)
     {
         price = thePrice;
         result = price * getEnergy();

@@ -63,7 +63,7 @@
                            <children>
                               <Text layoutX="5.0" layoutY="-5.0" strokeType="OUTSIDE" strokeWidth="0.0" text="How much do you pay for electricity?" textAlignment="CENTER" wrappingWidth="143.13671875" y="41.0" />
                               <TextField fx:id="calcPriceInput" alignment="CENTER" layoutX="3.0" layoutY="66.0" prefHeight="27.0" prefWidth="145.0" promptText="(dollars/kwh)" />
-                              <Button fx:id="calcUpdateButton" layoutX="50.0" layoutY="100.0" mnemonicParsing="false" onAction="#updateButtonClicked" text="Update" />
+                              <Button layoutX="50.0" layoutY="100.0" mnemonicParsing="false" onAction="#updateButtonClicked" text="Update" />
                            </children></AnchorPane>
                       <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
                            <children>
