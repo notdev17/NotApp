@@ -1,7 +1,5 @@
 package appliance;
 
-import javafx.fxml.FXML;
-
 /**
  * Created by Devon on 12/9/2017
  **/
@@ -55,8 +53,9 @@ public class Appliance {
 
     public void setPrice(double thePrice)
     {
-        price = thePrice;
-        result = price * getEnergy();
+        price = Math.round(thePrice);
+        result = Math.round(price * getEnergy());
+
     }
 
     public double getPrice()
