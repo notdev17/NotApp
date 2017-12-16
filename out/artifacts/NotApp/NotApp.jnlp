@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?><jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="NotApp.jnlp">
+    <information>
+        <title>NotApp</title>
+        <vendor>Unknown</vendor>
+        <description>none</description>
+        <offline-allowed/>
+    </information>
+    <update check="background"/>
+    <resources>
+        <j2se version="9.0.1+" href="http://java.sun.com/products/autodl/j2se"/>
+        <jar href="NotApp.jar" size="294333" download="eager"/>
+        <jar href="database/h2-1.4.196.jar" size="1821816" download="eager"/>
+    </resources>
+    <jfx:javafx-desc width="600" height="400" main-class="driver.Main" name="Main"/>
+</jnlp>
+
