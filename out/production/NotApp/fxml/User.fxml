@@ -27,26 +27,27 @@
          <children>
             <ToolBar>
                <items>
-                  <Label alignment="CENTER" prefHeight="17.0" prefWidth="324.0" text="Favorites" textAlignment="CENTER">
+                  <Label alignment="CENTER" prefHeight="32.0" prefWidth="404.0" text="Favorites" textAlignment="CENTER">
                      <font>
                         <Font name="System Bold" size="22.0" />
                      </font>
                   </Label>
                </items>
             </ToolBar>
-            <TableView fx:id="favTableView" prefHeight="343.0" prefWidth="324.0">
+            <TableView fx:id="favTableView" prefHeight="329.0" prefWidth="410.0">
               <columns>
-                <TableColumn fx:id="favModelCol" prefWidth="75.0" text="Model" />
-                <TableColumn fx:id="favBrandCol" prefWidth="75.0" text="Brand" />
-                  <TableColumn fx:id="favEnergyCol" prefWidth="75.0" text="Energy Use" />
-                  <TableColumn prefWidth="75.0" text="Price" />
+                  <TableColumn fx:id="favTypeCol" prefWidth="85.0" text="Type" />
+                  <TableColumn fx:id="favModelCol" text="Model" />
+                  <TableColumn fx:id="favBrandCol" prefWidth="85.0" text="Brand" />
+                  <TableColumn fx:id="favEnergyCol" prefWidth="85.0" text="Energy Use" />
+                  <TableColumn fx:id="favPriceCol" text="Price" />
               </columns>
             </TableView>
          </children>
       </VBox>
    </left>
    <center>
-      <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+      <VBox alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="0.0" minWidth="0.0" prefHeight="365.0" prefWidth="160.0" BorderPane.alignment="CENTER">
          <children>
             <Text strokeType="OUTSIDE" strokeWidth="0.0" text="You are currently signed in as:" />
             <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Guest" />

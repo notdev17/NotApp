@@ -28,6 +28,8 @@ public class CalculateSavingsController {
     @FXML
     private TableColumn<Appliance, String> calcEnergyCol;
     @FXML
+    private TableColumn<Appliance, String> calcTypeCol;
+    @FXML
     private TableColumn<Appliance, String> calc1Col;
     @FXML
     private TableColumn<Appliance, String> calc2Col;
@@ -37,13 +39,12 @@ public class CalculateSavingsController {
     @FXML
     private void initialize() {
         //set up the columns in the table
-        //priceColumn.setCellValueFactory(new PropertyValueFactory<Appliance, String>("price"));
+        calcTypeCol.setCellValueFactory(new PropertyValueFactory<Appliance, String>("applianceType"));
         calcModelCol.setCellValueFactory(new PropertyValueFactory<Appliance, String>("model"));
         calcBrandCol.setCellValueFactory(new PropertyValueFactory<Appliance, String>("brand"));
         //calcPriceCol.setCellValueFactory(new PropertyValueFactory<Appliance, String>("price"));
         calcEnergyCol.setCellValueFactory(new PropertyValueFactory<Appliance, String>("energy"));
-//        calc1Col.setCellValueFactory(new PropertyValueFactory<Appliance, String>("calculation1"));
-//        calc2Col.setCellValueFactory(new PropertyValueFactory<Appliance, String>("calculation2"));
+//      calc2Col.setCellValueFactory(new PropertyValueFactory<Appliance, String>("calculation2"));
     }
     @FXML
     public void backButtonClicked(ActionEvent event) throws IOException {

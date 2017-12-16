@@ -25,6 +25,10 @@ public class UserController {
     private TableColumn<Appliance, String> favModelCol;
     @FXML
     private TableColumn<Appliance, String> favEnergyCol;
+    @FXML
+    private TableColumn<Appliance, String> favTypeCol;
+    @FXML
+    private TableColumn<Appliance, String> favPriceCol;
 
     @FXML
     private void initialize() {
@@ -33,6 +37,7 @@ public class UserController {
         favBrandCol.setCellValueFactory(new PropertyValueFactory<Appliance, String>("brand"));
         favModelCol.setCellValueFactory(new PropertyValueFactory<Appliance, String>("model"));
         favEnergyCol.setCellValueFactory(new PropertyValueFactory<Appliance, String>("energy"));
+        favTypeCol.setCellValueFactory(new PropertyValueFactory<Appliance, String>("applianceType"));
 
         if (masterController != null) {
             favTableView.setItems(FXCollections.observableArrayList(masterController.getFavoriteAppliances()));

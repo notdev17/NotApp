@@ -35,10 +35,10 @@
          <center>
             <TableView fx:id="myCompareTableView" prefHeight="136.0" prefWidth="600.0" BorderPane.alignment="CENTER">
                <columns>
-                  <TableColumn fx:id="typeColumn" prefWidth="150.0" resizable="false" text="Appliance Type" />
-                  <TableColumn fx:id="modelColumn" prefWidth="150.0" resizable="false" text="Model" />
-                  <TableColumn fx:id="brandColumn" prefWidth="150.0" resizable="false" text="Brand" />
-                  <TableColumn fx:id="energyColumn" prefWidth="150.0" resizable="false" text="Energy Use" />
+                  <TableColumn fx:id="typeColumn" prefWidth="150.0" text="Type" />
+                  <TableColumn fx:id="modelColumn" prefWidth="150.0" text="Model" />
+                  <TableColumn fx:id="brandColumn" prefWidth="150.0" text="Brand" />
+                  <TableColumn fx:id="energyColumn" prefWidth="150.0" text="Energy Use" />
                </columns>
             </TableView>
          </center>
