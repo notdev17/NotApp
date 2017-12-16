@@ -10,19 +10,15 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
+
 <!--By Daylen Nguyen: The FXML for the user page; containing the list of fav-->
+
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.UserController">
    <top>
-      <ToolBar prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+      <ToolBar prefHeight="12.0" prefWidth="600.0" BorderPane.alignment="CENTER">
         <items>
-            <BorderPane prefHeight="17.0" prefWidth="584.0">
-               <left>
-                <Button mnemonicParsing="false" text="Back" BorderPane.alignment="CENTER" />
-               </left>
-               <center>
-                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="User Profile" wrappingWidth="111.837890625" BorderPane.alignment="CENTER" />
-               </center>
-            </BorderPane>
+          <Button mnemonicParsing="false" onAction="#backButtonClicked" text="Back" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="User Profile (Under Maintenance)" textAlignment="CENTER" wrappingWidth="511.837890625" />
         </items>
       </ToolBar>
    </top>
@@ -38,12 +34,12 @@
                   </Label>
                </items>
             </ToolBar>
-            <TableView prefHeight="343.0" prefWidth="324.0">
+            <TableView fx:id="favTableView" prefHeight="343.0" prefWidth="324.0">
               <columns>
-                <TableColumn prefWidth="75.0" text="Model" />
-                <TableColumn prefWidth="75.0" text="Brand" />
+                <TableColumn fx:id="favModelCol" prefWidth="75.0" text="Model" />
+                <TableColumn fx:id="favBrandCol" prefWidth="75.0" text="Brand" />
+                  <TableColumn fx:id="favEnergyCol" prefWidth="75.0" text="Energy Use" />
                   <TableColumn prefWidth="75.0" text="Price" />
-                  <TableColumn prefWidth="75.0" text="Energy Use" />
               </columns>
             </TableView>
          </children>

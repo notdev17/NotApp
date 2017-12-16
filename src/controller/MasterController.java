@@ -15,6 +15,8 @@ import java.util.ArrayList;
 public class MasterController {
     private ArrayList<Appliance> myApplianceList;
 
+    private ArrayList<Appliance> myFavoriteList;
+
     private FXMLLoader myLoader;
 
     private Stage myStage;
@@ -22,6 +24,7 @@ public class MasterController {
     private Parent myParent;
 
     public MasterController(Stage stage) {
+        myFavoriteList = new ArrayList<>();
         myApplianceList = new ArrayList<>();
         myLoader = new FXMLLoader();
         myStage = stage;
@@ -65,9 +68,23 @@ public class MasterController {
         myLoader = new FXMLLoader();
     }
 
+    void getUserPage() throws IOException {
+        myParent = myLoader.load(getClass().getResource("../fxml/User.fxml").openStream());
+        ((UserController) myLoader.getController()).setMasterController(this);
+        myStage.setScene(new Scene(myParent));
+        myStage.show();
+        myLoader = new FXMLLoader();
+    }
+
     public ArrayList<Appliance> getSelectedAppliances() {
         return myApplianceList;
     }
 
+    public ArrayList<Appliance> getFavoriteAppliances() {
+        return myFavoriteList;
+    }
 
+    public void setMyFavoriteList(ArrayList<Appliance> list) {
+        myFavoriteList = list;
+    }
 }

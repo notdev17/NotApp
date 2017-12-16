@@ -1,22 +1,32 @@
 package controller;
 
 import appliance.Appliance;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.Node;
 import javafx.scene.control.ButtonBar;
+import javafx.scene.control.Slider;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.layout.VBox;
 
 import java.io.IOException;
+import java.util.ArrayList;
+
+import static javafx.collections.FXCollections.observableArrayList;
 
 public class CompareAppliancesController {
 
     @FXML
     ButtonBar myCalculateBox;
+
     private MasterController masterController;
     @FXML
-    private TableView<Appliance> myTableView;
+    private TableView<Appliance> myCompareTableView;
+
     //columns in the table view
     @FXML
     private TableColumn<Appliance, String> brandColumn;
@@ -32,9 +42,14 @@ public class CompareAppliancesController {
         brandColumn.setCellValueFactory(new PropertyValueFactory<Appliance, String>("brand"));
         modelColumn.setCellValueFactory(new PropertyValueFactory<Appliance, String>("model"));
         energyColumn.setCellValueFactory(new PropertyValueFactory<Appliance, String>("energy"));
-
         if (masterController == null) {
             myCalculateBox.setDisable(true);
+        } else {
+            System.out.println(myCompareTableView.getItems());
+            if (masterController.getSelectedAppliances().size() > 0) {
+
+                myCalculateBox.setDisable(false);
+            }
         }
     }
 
@@ -51,7 +66,8 @@ public class CompareAppliancesController {
     void setMasterController(MasterController mc) {
         masterController = mc;
         if (masterController.getSelectedAppliances().size() > 0) {
-            myTableView.getItems().addAll(masterController.getSelectedAppliances());
+            myCompareTableView.getItems().addAll(masterController.getSelectedAppliances());
+            //System.out.println(masterController.getSelectedAppliances());
             myCalculateBox.setDisable(false);
         }
     }
@@ -66,5 +82,20 @@ public class CompareAppliancesController {
     @FXML
     public void calcSavingsButtonClicked(ActionEvent event) throws IOException {
         masterController.getCalculationsPage();
+    }
+
+    @FXML
+    public void removeButtonClicked() {
+        masterController.getSelectedAppliances().remove(myCompareTableView.getSelectionModel().getSelectedItem());
+        myCompareTableView.setItems(observableArrayList(masterController.getSelectedAppliances()));
+    }
+
+    @FXML
+    public void addToFavButtonClicked() throws IOException {
+        System.err.println(masterController.getFavoriteAppliances());
+        if(myCompareTableView.getSelectionModel().getSelectedItem() != null) {
+            masterController.getFavoriteAppliances().add(myCompareTableView.getSelectionModel().getSelectedItem());
+            masterController.getUserPage();
+        }
     }
 }
