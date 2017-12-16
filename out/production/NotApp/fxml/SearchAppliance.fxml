@@ -18,7 +18,7 @@
 
 <!--By Daylen; the FXML File which will be loaded to display the searchappliance page-->
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SearchApplianceController">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SearchApplianceController">
    <children>
       <BorderPane prefHeight="400.0" prefWidth="600.0">
          <top>
@@ -72,9 +72,9 @@
          <center>
             <TableView fx:id="myTableView" prefHeight="200.0" prefWidth="377.0" BorderPane.alignment="CENTER">
               <columns>
-                <TableColumn fx:id="modelColumn" prefWidth="96.0" text="Model" />
-                <TableColumn fx:id="brandColumn" prefWidth="82.0" text="Brand" />
-                  <TableColumn fx:id="energyColumn" prefWidth="191.0" text="Energy Use (kWh per Year)" />
+                <TableColumn fx:id="modelColumn" prefWidth="96.0" resizable="false" text="Model" />
+                <TableColumn fx:id="brandColumn" prefWidth="82.0" resizable="false" text="Brand" />
+                  <TableColumn fx:id="energyColumn" prefWidth="191.0" resizable="false" text="Energy Use (kWh per Year)" />
               </columns>
             </TableView>
          </center>

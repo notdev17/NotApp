@@ -14,7 +14,7 @@
 
 <!--By Daylen; the FXML File which will be loaded to display the calculate savings page-->
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CalculateSavingsController">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CalculateSavingsController">
    <children>
       <BorderPane prefHeight="400.0" prefWidth="600.0">
          <top>
@@ -49,12 +49,12 @@
                <children>
                   <TableView fx:id="calculationsTableView" prefHeight="320.0" prefWidth="449.0">
                     <columns>
-                      <TableColumn fx:id="calcModelCol" prefWidth="75.0" text="Model" />
-                      <TableColumn fx:id="calcBrandCol" prefWidth="75.0" text="Brand" />
-                        <TableColumn fx:id="calcEnergyCol" prefWidth="75.0" text="Energy Use" />
-                        <TableColumn fx:id="calcPriceCol" prefWidth="75.0" text="Price" />
-                        <TableColumn fx:id="calc1Col" prefWidth="75.0" text="CALC 1" />
-                        <TableColumn fx:id="calc2Col" prefWidth="75.0" text="CALC 2" />
+                      <TableColumn fx:id="calcModelCol" prefWidth="75.0" resizable="false" text="Model" />
+                      <TableColumn fx:id="calcBrandCol" prefWidth="75.0" resizable="false" text="Brand" />
+                        <TableColumn fx:id="calcEnergyCol" prefWidth="75.0" resizable="false" text="Energy Use" />
+                        <TableColumn fx:id="calcPriceCol" prefWidth="75.0" resizable="false" text="Price" />
+                        <TableColumn fx:id="calc1Col" prefWidth="75.0" resizable="false" text="CALC 1" />
+                        <TableColumn fx:id="calc2Col" prefWidth="75.0" resizable="false" text="CALC 2" />
                     </columns>
                   </TableView>
                   <SplitPane dividerPositions="0.5" orientation="VERTICAL" prefHeight="200.0" prefWidth="160.0">

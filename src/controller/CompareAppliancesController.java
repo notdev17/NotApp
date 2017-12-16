@@ -88,6 +88,10 @@ public class CompareAppliancesController {
     public void removeButtonClicked() {
         masterController.getSelectedAppliances().remove(myCompareTableView.getSelectionModel().getSelectedItem());
         myCompareTableView.setItems(observableArrayList(masterController.getSelectedAppliances()));
+        if (masterController.getSelectedAppliances().size() == 0)
+        {
+            myCalculateBox.setDisable(true);
+        }
     }
 
     @FXML

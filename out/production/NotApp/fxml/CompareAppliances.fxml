@@ -13,7 +13,7 @@
 
 <!--By Daylen; the FXML File which will be loaded to display the compareappliances page-->
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CompareAppliancesController">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CompareAppliancesController">
     <children>
       <BorderPane layoutY="1.0" prefHeight="391.0" prefWidth="600.0">
          <top>
@@ -35,9 +35,9 @@
          <center>
             <TableView fx:id="myCompareTableView" prefHeight="136.0" prefWidth="600.0" BorderPane.alignment="CENTER">
                <columns>
-                  <TableColumn fx:id="modelColumn" prefWidth="190.0" text="Model" />
-                  <TableColumn fx:id="brandColumn" prefWidth="216.0" text="Brand" />
-                  <TableColumn fx:id="energyColumn" prefWidth="193.0" text="Energy Use" />
+                  <TableColumn fx:id="modelColumn" prefWidth="190.0" resizable="false" text="Model" />
+                  <TableColumn fx:id="brandColumn" prefWidth="216.0" resizable="false" text="Brand" />
+                  <TableColumn fx:id="energyColumn" prefWidth="193.0" resizable="false" text="Energy Use" />
                </columns>
             </TableView>
          </center>
