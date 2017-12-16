@@ -18,7 +18,7 @@
 
 <!--By Daylen; the FXML File which will be loaded to display the searchappliance page-->
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SearchApplianceController">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SearchApplianceController">
    <children>
       <BorderPane prefHeight="400.0" prefWidth="600.0">
          <top>
@@ -48,16 +48,34 @@
                      <children>
                         <VBox prefHeight="200.0" prefWidth="150.0">
                            <children>
-                              <Label text=" Appliance Type" />
+                              <Label text=" Appliance Type">
+                                 <VBox.margin>
+                                    <Insets top="10.0" />
+                                 </VBox.margin></Label>
                               <ChoiceBox fx:id="myApplianceBox" prefHeight="35.0" prefWidth="150.0">
                                  <padding>
                                     <Insets right="6.0" />
                                  </padding>
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" left="5.0" right="3.0" top="5.0" />
+                                 </VBox.margin>
                               </ChoiceBox>
-                              <Label layoutX="10.0" layoutY="10.0" text=" Energy Range" />
-                              <TextField fx:id="myEnergyMinimum" prefHeight="25.0" prefWidth="56.0" promptText="min" />
-                              <TextField fx:id="myEnergyMaximum" layoutX="42.0" layoutY="31.0" prefHeight="25.0" prefWidth="121.0" promptText="max" />
-                              <Button mnemonicParsing="false" onAction="#updateButtonClicked" text="Update Results" />
+                              <Label layoutX="10.0" layoutY="10.0" text=" Energy Range">
+                                 <VBox.margin>
+                                    <Insets left="5.0" top="5.0" />
+                                 </VBox.margin></Label>
+                              <TextField fx:id="myEnergyMinimum" prefHeight="25.0" prefWidth="56.0" promptText="min">
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" left="5.0" right="3.0" top="5.0" />
+                                 </VBox.margin></TextField>
+                              <TextField fx:id="myEnergyMaximum" layoutX="42.0" layoutY="31.0" prefHeight="25.0" prefWidth="121.0" promptText="max">
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" left="5.0" right="3.0" />
+                                 </VBox.margin></TextField>
+                              <Button mnemonicParsing="false" onAction="#updateButtonClicked" text="Update Results">
+                                 <VBox.margin>
+                                    <Insets left="5.0" />
+                                 </VBox.margin></Button>
       
                            </children>
                         </VBox>

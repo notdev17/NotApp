@@ -1,6 +1,7 @@
 package controller;
 
 import appliance.Appliance;
+import driver.Main;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -31,7 +32,7 @@ public class MasterController {
         try {
             getFirstPage();
         } catch (Exception ex) {
-            System.out.println(ex);
+            ex.printStackTrace();
         }
 
     }
@@ -39,7 +40,9 @@ public class MasterController {
     void getFirstPage() throws IOException {
         myParent = myLoader.load(getClass().getResource("../fxml/FirstPage.fxml").openStream());
         ((FirstPageController) myLoader.getController()).setMasterController(this);
-        myStage.setScene(new Scene(myParent));
+        Scene scene = new Scene(myParent);
+        scene.getStylesheets().add(Main.class.getResource("../style/bootstrap3.css").toExternalForm());
+        myStage.setScene(scene);
         myStage.show();
         myLoader = new FXMLLoader();
     }
@@ -47,7 +50,9 @@ public class MasterController {
     void getComparePage() throws IOException {
         myParent = myLoader.load(getClass().getResource("../fxml/CompareAppliances.fxml").openStream());
         ((CompareAppliancesController) myLoader.getController()).setMasterController(this);
-        myStage.setScene(new Scene(myParent));
+        Scene scene = new Scene(myParent);
+        scene.getStylesheets().add(Main.class.getResource("../style/bootstrap3.css").toExternalForm());
+        myStage.setScene(scene);
         myStage.show();
         myLoader = new FXMLLoader();
     }
@@ -55,7 +60,9 @@ public class MasterController {
     void getSearchPage() throws IOException {
         myParent = myLoader.load(getClass().getResource("../fxml/SearchAppliance.fxml").openStream());
         ((SearchApplianceController) myLoader.getController()).setMasterController(this);
-        myStage.setScene(new Scene(myParent));
+        Scene scene = new Scene(myParent);
+        scene.getStylesheets().add(Main.class.getResource("../style/bootstrap3.css").toExternalForm());
+        myStage.setScene(scene);
         myStage.show();
         myLoader = new FXMLLoader();
     }
@@ -63,7 +70,9 @@ public class MasterController {
     void getCalculationsPage() throws IOException {
         myParent = myLoader.load(getClass().getResource("../fxml/CalculateSavings.fxml").openStream());
         ((CalculateSavingsController) myLoader.getController()).setMasterController(this);
-        myStage.setScene(new Scene(myParent));
+        Scene scene = new Scene(myParent);
+        scene.getStylesheets().add(Main.class.getResource("../style/bootstrap3.css").toExternalForm());
+        myStage.setScene(scene);
         myStage.show();
         myLoader = new FXMLLoader();
     }
@@ -71,7 +80,9 @@ public class MasterController {
     void getUserPage() throws IOException {
         myParent = myLoader.load(getClass().getResource("../fxml/User.fxml").openStream());
         ((UserController) myLoader.getController()).setMasterController(this);
-        myStage.setScene(new Scene(myParent));
+        Scene scene = new Scene(myParent);
+        scene.getStylesheets().add(Main.class.getResource("../style/bootstrap3.css").toExternalForm());
+        myStage.setScene(scene);
         myStage.show();
         myLoader = new FXMLLoader();
     }
