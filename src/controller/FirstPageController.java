@@ -4,6 +4,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 
 import java.io.IOException;
+import java.net.URI;
 
 public class FirstPageController {
 
@@ -15,7 +16,13 @@ public class FirstPageController {
     }
 
     @FXML
-    public void tutorialButtonClicked(ActionEvent event) {
+    public void websiteButtonClicked(ActionEvent event)
+    {
+        try{
+            URI uri = new URI("http://notdev.us");
+            java.awt.Desktop.getDesktop().browse(uri);
+        } catch (Exception ex)
+        { System.out.println(ex);}
 
 
     }
