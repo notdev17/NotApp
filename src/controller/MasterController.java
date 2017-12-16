@@ -65,6 +65,14 @@ public class MasterController {
         myLoader = new FXMLLoader();
     }
 
+    void getUserPage() throws IOException {
+        myParent = myLoader.load(getClass().getResource("../fxml/User.fxml").openStream());
+        ((UserController) myLoader.getController()).setMasterController(this);
+        myStage.setScene(new Scene(myParent));
+        myStage.show();
+        myLoader = new FXMLLoader();
+    }
+
     public ArrayList<Appliance> getSelectedAppliances() {
         return myApplianceList;
     }

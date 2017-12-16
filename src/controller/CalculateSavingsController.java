@@ -66,6 +66,11 @@ public class CalculateSavingsController {
         window.close();
     }
 
+    @FXML
+    public void userProfileButtonClicked() throws IOException{
+        masterController.getUserPage();
+    }
+
     void setMasterController(MasterController mc) {
         masterController = mc;
         if (masterController.getSelectedAppliances().size() > 0) {

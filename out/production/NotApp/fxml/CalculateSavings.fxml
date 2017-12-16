@@ -10,7 +10,7 @@
 
 <!--By Daylen; the FXML File which will be loaded to display the calculate savings page-->
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CalculateSavingsController">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CalculateSavingsController">
    <children>
       <BorderPane prefHeight="400.0" prefWidth="600.0">
          <top>
@@ -18,7 +18,7 @@
               <items>
                   <AnchorPane prefHeight="28.0" prefWidth="585.0">
                      <children>
-                        <Button disable="true" layoutX="494.0" layoutY="1.0" mnemonicParsing="false" text="User Profile" />
+                        <Button layoutX="494.0" layoutY="2.0" mnemonicParsing="false" onAction="#userProfileButtonClicked" prefHeight="24.0" prefWidth="77.0" text="User Profile" />
                       <Button mnemonicParsing="false" onAction="#backButtonClicked" text="Back" />
                         <Text layoutX="270.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Results" />
                      </children>
@@ -41,14 +41,14 @@
             </ToolBar>
          </bottom>
          <center>
-            <TableView prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+            <TableView fx:id="calculationsTableView" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
               <columns>
-                <TableColumn prefWidth="75.0" text="Model" />
-                <TableColumn prefWidth="75.0" text="Brand" />
-                  <TableColumn prefWidth="75.0" text="Price" />
-                  <TableColumn prefWidth="75.0" text="Energy Use" />
-                  <TableColumn prefWidth="75.0" text="CALC 1" />
-                  <TableColumn prefWidth="75.0" text="CALC 2" />
+                <TableColumn fx:id="calcModelCol" prefWidth="75.0" text="Model" />
+                <TableColumn fx:id="calcBrandCol" prefWidth="75.0" text="Brand" />
+                  <TableColumn fx:id="calcPriceCol" prefWidth="75.0" text="Price" />
+                  <TableColumn fx:id="calcEnergyCol" prefWidth="75.0" text="Energy Use" />
+                  <TableColumn fx:id="calc1Col" prefWidth="75.0" text="CALC 1" />
+                  <TableColumn fx:id="calc2Col" prefWidth="75.0" text="CALC 2" />
               </columns>
             </TableView>
          </center>

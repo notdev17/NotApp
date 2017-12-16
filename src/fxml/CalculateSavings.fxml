@@ -18,7 +18,7 @@
               <items>
                   <AnchorPane prefHeight="28.0" prefWidth="585.0">
                      <children>
-                        <Button disable="true" layoutX="494.0" layoutY="1.0" mnemonicParsing="false" text="User Profile" />
+                        <Button layoutX="494.0" layoutY="2.0" mnemonicParsing="false" onAction="#userProfileButtonClicked" prefHeight="24.0" prefWidth="77.0" text="User Profile" />
                       <Button mnemonicParsing="false" onAction="#backButtonClicked" text="Back" />
                         <Text layoutX="270.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Results" />
                      </children>

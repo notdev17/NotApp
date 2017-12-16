@@ -16,17 +16,17 @@
 
 <!--By Daylen; the FXML File which will be loaded to display the compareappliances page-->
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CompareAppliancesController">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CompareAppliancesController">
     <children>
       <BorderPane layoutY="1.0" prefHeight="391.0" prefWidth="600.0">
          <top>
             <ToolBar prefHeight="40.0" prefWidth="600.0" BorderPane.alignment="CENTER">
               <items>
-                  <AnchorPane prefHeight="28.0" prefWidth="580.0">
+                  <AnchorPane prefHeight="30.0" prefWidth="588.0">
                      <children>
                       <Button mnemonicParsing="false" onAction="#backButtonClicked" text="Back" />
                         <Label layoutX="212.0" layoutY="6.0" text="Selected User Appliances " />
-                        <Button alignment="CENTER" layoutX="478.0" layoutY="1.0" mnemonicParsing="false" onAction="#createApplianceButtonClicked" text="Add appliance" />
+                        <Button alignment="CENTER" layoutX="424.0" layoutY="1.0" mnemonicParsing="false" onAction="#createApplianceButtonClicked" prefHeight="25.0" prefWidth="166.0" text="Add appliance" />
                      </children>
                   </AnchorPane>
               </items>
@@ -58,9 +58,9 @@
                         </VBox>
                      </content>
                   </ScrollPane>
-                  <ButtonBar fx:id="myCalculateBox" prefHeight="40.0" prefWidth="200.0">
+                  <ButtonBar fx:id="myCalculateBox" prefHeight="40.0" prefWidth="612.0">
                     <buttons>
-                        <Button graphicTextGap="0.0" mnemonicParsing="false" onAction="#calcSavingsButtonClicked" prefHeight="25.0" prefWidth="173.0" text="Calculate Savings">
+                        <Button graphicTextGap="0.0" mnemonicParsing="false" onAction="#calcSavingsButtonClicked" prefHeight="25.0" prefWidth="166.0" text="Calculate Savings">
                            <opaqueInsets>
                               <Insets right="10.0" />
                            </opaqueInsets>
