@@ -43,6 +43,6 @@ public class AirCleaner extends Appliance {
 
     @Override
     public String toString() {
-        return applianceType + ": " + model + ", " + brand + ", " + energy;
+        return applianceType + " " + model + " " + brand + " " + energy;
     }
 }

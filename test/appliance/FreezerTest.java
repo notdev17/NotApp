@@ -1,10 +1,12 @@
-package appliance;
-
 import appliance.Freezer;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
+/**
+ * Created by notDev on 12/15/2017
+ * NOTE: This was copied from AirCleanerTest and slightly edited. See AirCleanerTest for relevent documentation.
+ */
 class FreezerTest {
 
     Freezer freezer = new Freezer();
@@ -18,11 +20,6 @@ class FreezerTest {
     @Test
     void getApplianceType() {
         assertEquals(freezer.getApplianceType(), "Freezer");
-    }
-
-    @Test
-    void getPrice() {
-        assertEquals(freezer.getPrice(), 150.0);
     }
 
     @Test

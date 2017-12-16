@@ -1,10 +1,12 @@
-package appliance;
-
 import appliance.AirConditioner;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
+/**
+ * Created by notDev on 12/15/2017
+ * NOTE: This was copied from AirCleanerTest and slightly edited. See AirCleanerTest for relevent documentation.
+ */
 class AirConditionerTest {
 
     AirConditioner airConditioner = new AirConditioner();
@@ -18,11 +20,6 @@ class AirConditionerTest {
     @Test
     void getApplianceType() {
         assertEquals(airConditioner.getApplianceType(), "Air Conditioner");
-    }
-
-    @Test
-    void getPrice() {
-        assertEquals(airConditioner.getPrice(), 300.0);
     }
 
     @Test

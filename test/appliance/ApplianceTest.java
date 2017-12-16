@@ -4,6 +4,9 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotSame;
 
+/**
+ * Created 12/15/2017 by notDev
+ */
 class ApplianceTest {
 
     Appliance appliance;

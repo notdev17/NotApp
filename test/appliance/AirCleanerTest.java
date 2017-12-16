@@ -1,9 +1,11 @@
-
 import appliance.AirCleaner;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
+/**
+ * Created by notDev on 12/15/2017
+ */
 class AirCleanerTest {
 
     private AirCleaner airCleaner= new AirCleaner();
@@ -31,6 +33,6 @@ class AirCleanerTest {
     @Test
     void toStringTest() {
         airCleaner = new AirCleaner("Model", "Brand", 200);
-        assertEquals(airCleaner.toString(), "Air Cleaner Model Brand 200.0");
+        assertEquals(airCleaner.toString(), "Air Cleaner: Model, Brand, 200.0");
     }
 }
