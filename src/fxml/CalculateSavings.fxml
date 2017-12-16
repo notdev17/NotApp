@@ -49,20 +49,21 @@
                <children>
                   <TableView fx:id="calculationsTableView" prefHeight="320.0" prefWidth="449.0">
                     <columns>
-                        <TableColumn fx:id="calcTypeCol" prefWidth="75.0" resizable="false" text="Type" />
-                      <TableColumn fx:id="calcModelCol" prefWidth="75.0" resizable="false" text="Model" />
-                      <TableColumn fx:id="calcBrandCol" prefWidth="75.0" resizable="false" text="Brand" />
-                        <TableColumn fx:id="calcEnergyCol" prefWidth="75.0" resizable="false" text="Energy Use" />
-                        <TableColumn fx:id="calcPriceCol" prefWidth="75.0" resizable="false" text="Price" />
-                        <TableColumn fx:id="calc1Col" prefWidth="75.0" resizable="false" text="CALC 1" />
+                        <TableColumn fx:id="calcTypeCol" prefWidth="70.0" resizable="false" text="Type" />
+                      <TableColumn fx:id="calcModelCol" prefWidth="70.0" resizable="false" text="Model" />
+                      <TableColumn fx:id="calcBrandCol" prefWidth="70.0" resizable="false" text="Brand" />
+                        <TableColumn fx:id="calcEnergyCol" prefWidth="70.0" resizable="false" text="Energy Use" />
+                        <TableColumn fx:id="calcPriceCol" prefWidth="70.0" resizable="false" text="Price" />
+                        <TableColumn fx:id="calcResultCol" prefWidth="95.0" resizable="false" text="Cost Per Year" />
                     </columns>
                   </TableView>
-                  <SplitPane dividerPositions="0.5" orientation="VERTICAL" prefHeight="200.0" prefWidth="160.0">
+                  <SplitPane dividerPositions="0.5723270440251572" orientation="VERTICAL" prefHeight="200.0" prefWidth="160.0">
                     <items>
                       <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
                            <children>
                               <Text layoutX="5.0" layoutY="-5.0" strokeType="OUTSIDE" strokeWidth="0.0" text="How much do you pay for electricity?" textAlignment="CENTER" wrappingWidth="143.13671875" y="41.0" />
-                              <TextField alignment="CENTER" layoutX="3.0" layoutY="66.0" prefHeight="27.0" prefWidth="145.0" promptText="(dollars/kwh)" />
+                              <TextField fx:id="calcPriceInput" alignment="CENTER" layoutX="3.0" layoutY="66.0" prefHeight="27.0" prefWidth="145.0" promptText="(dollars/kwh)" />
+                              <Button fx:id="calcUpdateButton" layoutX="50.0" layoutY="100.0" mnemonicParsing="false" onAction="#updateButtonClicked" text="Update" />
                            </children></AnchorPane>
                       <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
                            <children>
