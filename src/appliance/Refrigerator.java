@@ -1,31 +1,41 @@
 package appliance;
 
 /**
- * Created by Tim on 12/7/2017.
- * Edited by Devon on 12/9/2017
+ * Created by Devon on 12/9/2017
+ * Represents air cleaner/purifier machines.
  */
 public class Refrigerator extends Appliance {
 
     private String applianceType = "Refrigerator";
 
     /**
-     * Created by Devon on 12/9/2017
+     * Author: Devon on 12/9/2017
+     * See Appliance for 'super' method. applianceType is pre-defined and does not change,
+     * so no additional constructor input is necessary
      **/
     public Refrigerator(String inModel, String inBrand, double inEnergy) {
         super(inModel, inBrand, inEnergy);
     }
 
+    /**
+     * Author: Devon on 12/9/2017
+     * See super()
+     */
     public Refrigerator() {
         super();
     }
 
-    //Used when populating lists from database (to avoid call by reference issues)
+    /**
+     * Author: Devon on 12/9/2017
+     * See super()
+     */
     public Refrigerator getCopy() {
         return new Refrigerator(this.getModel(), this.getBrand(), this.getEnergy());
     }
 
     /**
-     * Created by Devon on 12/9/2017
+     * Author: Devon on 12/9/2017
+     * Returns appliance type.
      **/
     public String getApplianceType() {
         return applianceType;

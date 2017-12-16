@@ -10,6 +10,7 @@ import java.util.ArrayList;
 
 /**
  * Created by Tim on 12/7/2017.
+ * Allows the use of locally stored CSVs to be used as a database.
  */
 public class H2Database {
 
