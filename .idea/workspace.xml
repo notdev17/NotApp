@@ -1,22 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="58872dad-c50b-497a-85d3-b9f0679a52df" name="Default" comment="initial MasterController commit">
+    <list default="true" id="58872dad-c50b-497a-85d3-b9f0679a52df" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/NotApp.iml" afterPath="$PROJECT_DIR$/NotApp.iml" />
       <change beforePath="$PROJECT_DIR$/out/production/NotApp/NotApp.iml" afterPath="$PROJECT_DIR$/out/production/NotApp/NotApp.iml" />
       <change beforePath="$PROJECT_DIR$/out/production/NotApp/appliance/AirCleaner.class" afterPath="$PROJECT_DIR$/out/production/NotApp/appliance/AirCleaner.class" />
       <change beforePath="$PROJECT_DIR$/out/production/NotApp/appliance/Appliance.class" afterPath="$PROJECT_DIR$/out/production/NotApp/appliance/Appliance.class" />
       <change beforePath="$PROJECT_DIR$/out/production/NotApp/controller/SearchApplianceController.class" afterPath="$PROJECT_DIR$/out/production/NotApp/controller/SearchApplianceController.class" />
       <change beforePath="$PROJECT_DIR$/out/test/NotApp/appliance/AirCleanerTest.class" afterPath="$PROJECT_DIR$/out/test/NotApp/appliance/AirCleanerTest.class" />
       <change beforePath="$PROJECT_DIR$/out/test/NotApp/appliance/ApplianceTest.class" afterPath="$PROJECT_DIR$/out/test/NotApp/appliance/ApplianceTest.class" />
-      <change beforePath="$PROJECT_DIR$/src/appliance/AirCleaner.java" afterPath="$PROJECT_DIR$/src/appliance/AirCleaner.java" />
-      <change beforePath="$PROJECT_DIR$/src/appliance/Appliance.java" afterPath="$PROJECT_DIR$/src/appliance/Appliance.java" />
-      <change beforePath="$PROJECT_DIR$/src/controller/CalculateSavingsController.java" afterPath="$PROJECT_DIR$/src/controller/CalculateSavingsController.java" />
-      <change beforePath="$PROJECT_DIR$/src/controller/SearchApplianceController.java" afterPath="$PROJECT_DIR$/src/controller/SearchApplianceController.java" />
-      <change beforePath="$PROJECT_DIR$/src/fxml/CalculateSavings.fxml" afterPath="$PROJECT_DIR$/src/fxml/CalculateSavings.fxml" />
-      <change beforePath="$PROJECT_DIR$/test/appliance/AirCleanerTest.java" afterPath="$PROJECT_DIR$/test/appliance/AirCleanerTest.java" />
-      <change beforePath="$PROJECT_DIR$/test/appliance/ApplianceTest.java" afterPath="$PROJECT_DIR$/test/appliance/ApplianceTest.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -473,7 +465,14 @@
       <option name="project" value="LOCAL" />
       <updated>1513355136924</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="initial MasterController commit">
+      <created>1513384148694</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1513384148694</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -557,9 +556,9 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="initial MasterController commit" />
     <MESSAGE value="added test files" />
-    <option name="LAST_COMMIT_MESSAGE" value="added test files" />
+    <MESSAGE value="initial MasterController commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="initial MasterController commit" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
