@@ -96,7 +96,7 @@ public class SearchApplianceController {
         myApplianceBox.getSelectionModel().selectedIndexProperty().addListener(new ChangeListener<Number>() {
             @Override
             public void changed(ObservableValue<? extends Number> observable, Number oldValue, Number newValue) {
-                /*DEVON Edited 12/12/2017
+                /*DEVON
                   When a user clicks an appliance type in the drop down menu, it will be re-populated with the proper
                   appliances (using getAppliances).
                  */
@@ -111,8 +111,6 @@ public class SearchApplianceController {
      * By: Daylen on 12/11/2017
      * When the user clicks the update button, the list of items is
      * updated to correlate with any filters the user may have input
-     *
-     * @throws IOException
      */
     @FXML
     public void updateButtonClicked() {
@@ -177,6 +175,7 @@ public class SearchApplianceController {
 
     /**
      * By: Daylen on 12/11/2017
+     * (edited/expanded on 12/11/2017 by Devon)
      * Returns a list of Appliance types to be used in populating myTableView
      */
     public ObservableList<Appliance> getAppliances(String applianceType) {

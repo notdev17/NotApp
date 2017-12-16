@@ -1,13 +1,21 @@
 package controller;
 
 import appliance.Appliance;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.Node;
 import javafx.scene.control.ButtonBar;
+import javafx.scene.control.Slider;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.layout.VBox;
+
 import java.io.IOException;
+import java.util.ArrayList;
+
 import static javafx.collections.FXCollections.observableArrayList;
 
 /**
@@ -80,7 +88,7 @@ public class CompareAppliancesController {
     }
 
     /**
-     * Author: Daylen on 12/14/2017
+     * Author: Michelle on 12/14/2017
      * On event, displays the calculate savings page from the fxml file
      */
     @FXML
@@ -89,7 +97,7 @@ public class CompareAppliancesController {
     }
 
     /**
-     * Author: Daylen on 12/14/2017
+     * Author: Michelle on 12/14/2017
      * When the remove button is clicked, if an appliance is currently selected, appliance is removed from the table view
      */
     @FXML
@@ -104,7 +112,7 @@ public class CompareAppliancesController {
     }
 
     /**
-     * Author: Daylen on 12/15/2017
+     * Author: Michelle on 12/15/2017
      * When the add to favorites button is selected, adds the selected appliance to user favorites.
      */
     @FXML

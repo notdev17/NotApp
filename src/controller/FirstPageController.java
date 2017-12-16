@@ -39,7 +39,8 @@ public class FirstPageController {
     }
 
     /**
-     * Author: Michelle on 12/15/2017
+     * Author: Michelle on 12/13/2017
+     * Enables use in master controller class
      */
     public void setMasterController(MasterController mc) {
         masterController = mc;

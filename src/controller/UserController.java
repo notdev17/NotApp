@@ -5,6 +5,7 @@ import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.ButtonBar;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
@@ -12,10 +13,12 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import java.io.IOException;
 
 /**
- * Created by
+ * Created by notDev on 12/15/2017
  */
 public class UserController {
 
+    @FXML
+    ButtonBar myCalculateBox;
     private MasterController masterController;
     @FXML
     private TableView<Appliance> favTableView;
@@ -31,10 +34,11 @@ public class UserController {
     @FXML
     private Button favRemoveButton;
 
+    /**
+     * By: Daylen on 12/15/2017
+     */
     @FXML
     private void initialize() {
-        //set up the columns in the table
-        //priceColumn.setCellValueFactory(new PropertyValueFactory<Appliance, String>("price"));
         favBrandCol.setCellValueFactory(new PropertyValueFactory<Appliance, String>("brand"));
         favModelCol.setCellValueFactory(new PropertyValueFactory<Appliance, String>("model"));
         favEnergyCol.setCellValueFactory(new PropertyValueFactory<Appliance, String>("energy"));
@@ -51,6 +55,10 @@ public class UserController {
         masterController.getComparePage();
     }
 
+    /**
+     * Author: Brandon on 12/15/2017
+     * If the user has favorited appliances this populates the user page with them.
+     */
     void setMasterController(MasterController mc) {
         masterController = mc;
         if (masterController.getFavoriteAppliances().size() > 0)
@@ -66,15 +74,17 @@ public class UserController {
 
     /**
      * By Daylen
-     * Displays the calculate savings page from the fxml file
-     *
-     * @param event, sent when the button is clicked
-     * @throws IOException
+     * Displays the calculate savings page from the fxml file when the user clicks the 'Calculate Savings' button.
      */
     @FXML
     public void calcSavingsButtonClicked(ActionEvent event) throws IOException {
         masterController.getCalculationsPage();
     }
+
+    /**
+     * Author: Devon on 12/15/2017
+     * Removes selected appliance from table view and user favorites list on button clicked event
+     */
     @FXML
     void removeFromFavButtonClicked() {
         //remove the selected item from the favorites list in the master controller

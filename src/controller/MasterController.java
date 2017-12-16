@@ -1,6 +1,7 @@
 package controller;
 
 import appliance.Appliance;
+import driver.Main;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -27,7 +28,7 @@ public class MasterController {
     private Parent myParent;
 
     /**
-     * Authors: Tim and Brandon on 12/13/2017
+     * Authors: Brandon on 12/13/2017
      */
     public MasterController(Stage stage) {
         myFavoriteList = new ArrayList<>();
@@ -43,11 +44,11 @@ public class MasterController {
     }
 
     /**
-     * Author: Tim and Brandon on 12/13/2017
+     * Author: Brandon on 12/13/2017
      * changes scene to FirstPage
      */
     void getFirstPage() throws IOException {
-        myParent = myLoader.load(getClass().getClassLoader().getResourceAsStream("fxml/FirstPage.fxml"));
+        myParent = myLoader.load(getClass().getResource("../fxml/FirstPage.fxml").openStream());
         ((FirstPageController) myLoader.getController()).setMasterController(this);
         Scene scene = new Scene(myParent);
         myStage.setScene(scene);
@@ -56,53 +57,56 @@ public class MasterController {
     }
 
     /**
-     * Author: Tim and Brandon on 12/13/2017
+     * Author: Brandon on 12/13/2017
      * changes scene to CompareAppliances page
      */
     void getComparePage() throws IOException {
-        myParent = myLoader.load(getClass().getClassLoader().getResourceAsStream("fxml/CompareAppliances.fxml"));
+        myParent = myLoader.load(getClass().getResource("../fxml/CompareAppliances.fxml").openStream());
         ((CompareAppliancesController) myLoader.getController()).setMasterController(this);
         Scene scene = new Scene(myParent);
+        scene.getStylesheets().add(Main.class.getResource("../style/bootstrap3.css").toExternalForm());
         myStage.setScene(scene);
         myStage.show();
         myLoader = new FXMLLoader();
     }
 
     /**
-     * Author: Tim and Brandon on 12/10/2017
-=======
+     * Author: Brandon on 12/13/2017
      * changes scene to SearchAppliance page.
      */
     void getSearchPage() throws IOException {
-        myParent = myLoader.load(getClass().getClassLoader().getResourceAsStream("fxml/SearchAppliance.fxml"));
+        myParent = myLoader.load(getClass().getResource("../fxml/SearchAppliance.fxml").openStream());
         ((SearchApplianceController) myLoader.getController()).setMasterController(this);
         Scene scene = new Scene(myParent);
+        scene.getStylesheets().add(Main.class.getResource("../style/bootstrap3.css").toExternalForm());
         myStage.setScene(scene);
         myStage.show();
         myLoader = new FXMLLoader();
     }
 
     /**
-     * Author: Tim and Brandon on 12/13/2017
+     * Author: Brandon on 12/13/2017
      * changes scene to CalculateSavings page
      */
     void getCalculationsPage() throws IOException {
-        myParent = myLoader.load(getClass().getClassLoader().getResourceAsStream("fxml/CalculateSavings.fxml"));
+        myParent = myLoader.load(getClass().getResource("../fxml/CalculateSavings.fxml").openStream());
         ((CalculateSavingsController) myLoader.getController()).setMasterController(this);
         Scene scene = new Scene(myParent);
+        scene.getStylesheets().add(Main.class.getResource("../style/bootstrap3.css").toExternalForm());
         myStage.setScene(scene);
         myStage.show();
         myLoader = new FXMLLoader();
     }
 
     /**
-     * Author: Tim and Brandon on 12/13/2017
+     * Author: Brandon on 12/13/2017
      * changes scene to User page
      */
     void getUserPage() throws IOException {
-        myParent = myLoader.load(getClass().getClassLoader().getResourceAsStream("fxml/User.fxml"));
+        myParent = myLoader.load(getClass().getResource("../fxml/User.fxml").openStream());
         ((UserController) myLoader.getController()).setMasterController(this);
         Scene scene = new Scene(myParent);
+        scene.getStylesheets().add(Main.class.getResource("../style/bootstrap3.css").toExternalForm());
         myStage.setScene(scene);
         myStage.show();
         myLoader = new FXMLLoader();

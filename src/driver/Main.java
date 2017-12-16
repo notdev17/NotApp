@@ -18,6 +18,9 @@ public class Main extends Application {
         launch(args);
     }
 
+    /*
+      Edited 12/15/2017 by Tim
+     */
     @Override
     public void start(Stage stage) throws Exception {
         stage.setTitle("Not App: Compare Appliances!");
