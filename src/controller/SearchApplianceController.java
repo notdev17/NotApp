@@ -165,8 +165,11 @@ public class SearchApplianceController {
 
     @FXML
     public void selectButtonClicked(ActionEvent event) throws IOException {
-        masterController.getSelectedAppliances().add(myTableView.getSelectionModel().getSelectedItem());
-        masterController.getComparePage();
+        if (!myTableView.getSelectionModel().getSelectedItems().isEmpty())
+        {
+            masterController.getSelectedAppliances().add(myTableView.getSelectionModel().getSelectedItem());
+            masterController.getComparePage();
+        }
     }
 
     /**

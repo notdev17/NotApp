@@ -46,7 +46,7 @@
             </TableView>
             <Pane prefHeight="65.0" prefWidth="416.0">
                <children>
-                   <Button layoutX="139.0" layoutY="2.0" mnemonicParsing="false" onAction="#removeFromFavButtonClicked" prefHeight="0.0" prefWidth="138.0" text="Remove from Favorites" textAlignment="CENTER" />
+                   <Button fx:id="favRemoveButton" layoutX="139.0" layoutY="2.0" mnemonicParsing="false" onAction="#removeFromFavButtonClicked" prefHeight="0.0" prefWidth="138.0" text="Remove from Favorites" textAlignment="CENTER" />
                </children>
             </Pane>
          </children>
