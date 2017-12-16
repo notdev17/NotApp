@@ -6,6 +6,7 @@ package appliance;
  */
 public class AirConditioner extends Appliance {
 
+    private double price = 300.00;
 
     private String applianceType = "Air Conditioner";
 
@@ -27,6 +28,10 @@ public class AirConditioner extends Appliance {
 
     public String getApplianceType() {
         return applianceType;
+    }
+
+    public double getPrice() {
+        return price;
     }
 
     @Override

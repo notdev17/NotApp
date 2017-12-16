@@ -8,8 +8,6 @@ public class Appliance {
     protected String brand;
     //Holds estimated energy use in kilowatt hours
     protected double energy;
-    private double price = 0.0;
-    private double result = 0.0;
 
     /**
      * Created by Devon on 12/9/2017
@@ -18,8 +16,6 @@ public class Appliance {
         model = inModel;
         brand = inBrand;
         energy = inEnergy;
-        price = 0.0;
-        result = 0.0;
     }
 
     //Default constructor. Also used in sub-types. Used for easy program testing.
@@ -27,8 +23,6 @@ public class Appliance {
         model = "";
         brand = "";
         energy = 0;
-        price = 0.0;
-        result = 0.0;
     }
 
     //TODO test this with other sub-type getCopys. (Might need override statements for them to work properly)
@@ -51,30 +45,12 @@ public class Appliance {
         return brand;
     }
 
-    public void setPrice(Double thePrice)
-    {
-        price = thePrice;
-        result = price * getEnergy();
-    }
-
-    public double getPrice()
-    {
-        return price;
-    }
-
-    public double getResult()
-    {
-        return result;
-    }
-
     /**
      * Created by Devon on 12/9/2017
      **/
     public double getEnergy() {
         return energy;
     }
-
-
 
     @Override
     public String toString() {
