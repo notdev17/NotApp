@@ -44,15 +44,11 @@ public class CompareAppliancesController {
         brandColumn.setCellValueFactory(new PropertyValueFactory<Appliance, String>("brand"));
         modelColumn.setCellValueFactory(new PropertyValueFactory<Appliance, String>("model"));
         energyColumn.setCellValueFactory(new PropertyValueFactory<Appliance, String>("energy"));
-        if (masterController == null) {
+        if (masterController == null)
+        {
             myCalculateBox.setDisable(true);
-        } else {
-            System.out.println(myCompareTableView.getItems());
-            if (masterController.getSelectedAppliances().size() > 0) {
-
-                myCalculateBox.setDisable(false);
-            }
         }
+
     }
 
     @FXML
@@ -98,7 +94,6 @@ public class CompareAppliancesController {
 
     @FXML
     public void addToFavButtonClicked() throws IOException {
-        System.err.println(masterController.getFavoriteAppliances());
         if(myCompareTableView.getSelectionModel().getSelectedItem() != null) {
             masterController.getFavoriteAppliances().add(myCompareTableView.getSelectionModel().getSelectedItem());
             masterController.getUserPage();

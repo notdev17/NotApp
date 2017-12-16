@@ -1,6 +1,7 @@
 package controller;
 
 import appliance.Appliance;
+import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.Node;
@@ -76,6 +77,15 @@ public class CalculateSavingsController {
         masterController = mc;
         if (masterController.getSelectedAppliances().size() > 0) {
             calculationsTableView.getItems().addAll(masterController.getSelectedAppliances());
+        }
+    }
+
+    @FXML
+    public void addToFavButtonClicked() throws IOException {
+        if(calculationsTableView.getSelectionModel().getSelectedItem() != null) {
+            masterController.getFavoriteAppliances().add(calculationsTableView.getSelectionModel().getSelectedItem());
+            masterController.getUserPage();
+            calculationsTableView.setItems(FXCollections.observableArrayList(masterController.getFavoriteAppliances()));
         }
     }
 }

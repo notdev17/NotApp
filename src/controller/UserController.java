@@ -4,6 +4,7 @@ import appliance.Appliance;
 import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.Button;
 import javafx.scene.control.ButtonBar;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
@@ -29,6 +30,8 @@ public class UserController {
     private TableColumn<Appliance, String> favTypeCol;
     @FXML
     private TableColumn<Appliance, String> favPriceCol;
+    @FXML
+    private Button favRemoveButton;
 
     @FXML
     private void initialize() {
@@ -39,8 +42,9 @@ public class UserController {
         favEnergyCol.setCellValueFactory(new PropertyValueFactory<Appliance, String>("energy"));
         favTypeCol.setCellValueFactory(new PropertyValueFactory<Appliance, String>("applianceType"));
 
-        if (masterController != null) {
-            favTableView.setItems(FXCollections.observableArrayList(masterController.getFavoriteAppliances()));
+        if (masterController == null)
+        {
+            favRemoveButton.setDisable(true);
         }
     }
 
@@ -51,10 +55,14 @@ public class UserController {
 
     void setMasterController(MasterController mc) {
         masterController = mc;
-        if (masterController.getSelectedAppliances().size() > 0) {
+        if (masterController.getFavoriteAppliances().size() > 0)
+        {
             favTableView.setItems(FXCollections.observableArrayList(masterController.getFavoriteAppliances()));
-            //favTableView.getItems().addAll(masterController.getSelectedAppliances());
-            //myCalculateBox.setDisable(false);
+            favRemoveButton.setDisable(false);
+        }
+        else
+        {
+            favRemoveButton.setDisable(true);
         }
     }
 
@@ -68,5 +76,17 @@ public class UserController {
     @FXML
     public void calcSavingsButtonClicked(ActionEvent event) throws IOException {
         masterController.getCalculationsPage();
+    }
+    @FXML
+    void removeFromFavButtonClicked() {
+        //remove the selected item from the favorites list in the master controller
+        masterController.getFavoriteAppliances().remove(favTableView.getSelectionModel().getSelectedItem());
+
+        //refresh the table view
+        favTableView.setItems(FXCollections.observableArrayList(masterController.getFavoriteAppliances()));
+        if (favTableView.getSelectionModel().getSelectedItems().isEmpty())
+        {
+            favRemoveButton.setDisable(true);
+        }
     }
 }
