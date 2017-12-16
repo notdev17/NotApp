@@ -147,13 +147,13 @@ public class H2Database {
       updated file paths to match new CSV files
      */
     private void parseCsvFiles() {
-        command("CREATE TABLE AIR_CONDITIONER AS SELECT * FROM CSVREAD('./database/ESC_Room_Air_Conditioners.csv');");
-        command("CREATE TABLE AIR_CLEANER AS SELECT * FROM CSVREAD('./database/ESC_Room_Air_Cleaners.csv');");
-        command("CREATE TABLE WASHING_MACHINE AS SELECT * FROM CSVREAD('./database/ESC_Residential_Clothes_Washers.csv');");
-        command("CREATE TABLE DRYING_MACHINE AS SELECT * FROM CSVREAD('./database/ESC_Residential_Clothes_Dryers.csv');");
-        command("CREATE TABLE REFRIGERATOR AS SELECT * FROM CSVREAD('./database/ESC_Residential_Refrigerators.csv');");
-        command("CREATE TABLE FREEZER AS SELECT * FROM CSVREAD('./database/ESC_Residential_Freezers.csv');");
-        command("CREATE TABLE DISHWASHER AS SELECT * FROM CSVREAD('./database/ESC_Residential_Dishwashers.csv');");
+        command("CREATE TABLE AIR_CONDITIONER AS SELECT * FROM CSVREAD('database/ESC_Room_Air_Conditioners.csv');");
+        command("CREATE TABLE AIR_CLEANER AS SELECT * FROM CSVREAD('database/ESC_Room_Air_Cleaners.csv');");
+        command("CREATE TABLE WASHING_MACHINE AS SELECT * FROM CSVREAD('database/ESC_Residential_Clothes_Washers.csv');");
+        command("CREATE TABLE DRYING_MACHINE AS SELECT * FROM CSVREAD('database/ESC_Residential_Clothes_Dryers.csv');");
+        command("CREATE TABLE REFRIGERATOR AS SELECT * FROM CSVREAD('database/ESC_Residential_Refrigerators.csv');");
+        command("CREATE TABLE FREEZER AS SELECT * FROM CSVREAD('database/ESC_Residential_Freezers.csv');");
+        command("CREATE TABLE DISHWASHER AS SELECT * FROM CSVREAD('database/ESC_Residential_Dishwashers.csv');");
     }
 
     /**

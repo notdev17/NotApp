@@ -130,8 +130,9 @@ public class CalculateSavingsController {
         //If user input is not empty
         if (calcPriceInput.getCharacters().length() != 0)
         {
-            //And if input is a double greater than 0
-            if (Double.parseDouble(calcPriceInput.getCharacters().toString()) > 0.0)
+            //And if input is a double greater than 0 and less or equal to 10,000
+            if (Double.parseDouble(calcPriceInput.getCharacters().toString()) > 0.0
+                    && Double.parseDouble(calcPriceInput.getCharacters().toString()) <= 10000.00)
             {
                 //Multiply estimated energy by user input for each item, and store product in the relevant
                 //appliance objects (in order to display value in table view)

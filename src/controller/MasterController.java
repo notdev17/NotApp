@@ -48,7 +48,7 @@ public class MasterController {
      * changes scene to FirstPage
      */
     void getFirstPage() throws IOException {
-        myParent = myLoader.load(getClass().getResource("../fxml/FirstPage.fxml").openStream());
+        myParent = myLoader.load(getClass().getClassLoader().getResourceAsStream("fxml/FirstPage.fxml"));
         ((FirstPageController) myLoader.getController()).setMasterController(this);
         Scene scene = new Scene(myParent);
         myStage.setScene(scene);
@@ -61,24 +61,22 @@ public class MasterController {
      * changes scene to CompareAppliances page
      */
     void getComparePage() throws IOException {
-        myParent = myLoader.load(getClass().getResource("../fxml/CompareAppliances.fxml").openStream());
+        myParent = myLoader.load(getClass().getClassLoader().getResourceAsStream("fxml/CompareAppliances.fxml"));
         ((CompareAppliancesController) myLoader.getController()).setMasterController(this);
         Scene scene = new Scene(myParent);
-        scene.getStylesheets().add(Main.class.getResource("../style/bootstrap3.css").toExternalForm());
         myStage.setScene(scene);
         myStage.show();
         myLoader = new FXMLLoader();
     }
 
     /**
-     * Author: Tim and Brandono on 12/10/2017
+     * Author: Tim and Brandon on 12/10/2017
      * changes scene to SearchAppliance page.
      */
     void getSearchPage() throws IOException {
-        myParent = myLoader.load(getClass().getResource("../fxml/SearchAppliance.fxml").openStream());
+        myParent = myLoader.load(getClass().getClassLoader().getResourceAsStream("fxml/SearchAppliance.fxml"));
         ((SearchApplianceController) myLoader.getController()).setMasterController(this);
         Scene scene = new Scene(myParent);
-        scene.getStylesheets().add(Main.class.getResource("../style/bootstrap3.css").toExternalForm());
         myStage.setScene(scene);
         myStage.show();
         myLoader = new FXMLLoader();
@@ -89,10 +87,9 @@ public class MasterController {
      * changes scene to CalculateSavings page
      */
     void getCalculationsPage() throws IOException {
-        myParent = myLoader.load(getClass().getResource("../fxml/CalculateSavings.fxml").openStream());
+        myParent = myLoader.load(getClass().getClassLoader().getResourceAsStream("fxml/CalculateSavings.fxml"));
         ((CalculateSavingsController) myLoader.getController()).setMasterController(this);
         Scene scene = new Scene(myParent);
-        scene.getStylesheets().add(Main.class.getResource("../style/bootstrap3.css").toExternalForm());
         myStage.setScene(scene);
         myStage.show();
         myLoader = new FXMLLoader();
@@ -103,10 +100,9 @@ public class MasterController {
      * changes scene to User page
      */
     void getUserPage() throws IOException {
-        myParent = myLoader.load(getClass().getResource("../fxml/User.fxml").openStream());
+        myParent = myLoader.load(getClass().getClassLoader().getResourceAsStream("fxml/User.fxml"));
         ((UserController) myLoader.getController()).setMasterController(this);
         Scene scene = new Scene(myParent);
-        scene.getStylesheets().add(Main.class.getResource("../style/bootstrap3.css").toExternalForm());
         myStage.setScene(scene);
         myStage.show();
         myLoader = new FXMLLoader();
