@@ -13,7 +13,7 @@
 
 <!--By Daylen; the FXML File which will be loaded to display the First page-->
 
-<Pane maxHeight="600.0" maxWidth="400.0" minHeight="400.0" minWidth="600.0" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.FirstPageController">
+<Pane maxHeight="600.0" maxWidth="400.0" minHeight="400.0" minWidth="600.0" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.FirstPageController">
     <children>
       <BorderPane fx:id="fppane" layoutX="2.0" layoutY="1.0" prefHeight="400.0" prefWidth="600.0">
          <center>
@@ -42,7 +42,7 @@
                         <Font name="System Bold" size="19.0" />
                      </font>
                   </Button>
-                  <Button disable="true" layoutX="212.0" layoutY="95.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="181.0" text="Tutorial">
+                  <Button layoutX="212.0" layoutY="95.0" mnemonicParsing="false" onAction="#websiteButtonClicked" prefHeight="47.0" prefWidth="181.0" text="Our Website">
                      <font>
                         <Font name="System Bold" size="19.0" />
                      </font>
@@ -56,7 +56,7 @@
          <top>
             <ToolBar prefHeight="40.0" prefWidth="600.0" BorderPane.alignment="CENTER">
               <items>
-                  <AnchorPane prefHeight="28.0" prefWidth="582.0">
+                  <AnchorPane prefHeight="28.0" prefWidth="577.0">
                      <children>
                       <Button disable="true" mnemonicParsing="false" text="Back" />
                         <Text layoutX="250.0" layoutY="18.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Home Screen" />
