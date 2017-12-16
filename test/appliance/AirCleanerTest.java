@@ -16,12 +16,7 @@ class AirCleanerTest {
 
     @Test
     void getApplianceType() {
-<<<<<<< HEAD
-        airCleaner = new AirCleaner();
-        assertEquals("Air Cleaner", airCleaner.getApplianceType());
-=======
         assertEquals(airCleaner.getApplianceType(), "Air Cleaner");
->>>>>>> tim
     }
 
     @Test
