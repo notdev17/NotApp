@@ -38,7 +38,8 @@ public class CalculateSavingsController {
     private MasterController masterController;
 
     @FXML
-    private void initialize() {
+    private void initialize()
+    {
         //set up the columns in the table
         calcTypeCol.setCellValueFactory(new PropertyValueFactory<Appliance, String>("applianceType"));
         calcModelCol.setCellValueFactory(new PropertyValueFactory<Appliance, String>("model"));
@@ -46,8 +47,6 @@ public class CalculateSavingsController {
         calcEnergyCol.setCellValueFactory(new PropertyValueFactory<Appliance, String>("energy"));
         calcPriceCol.setCellValueFactory(new PropertyValueFactory<Appliance, Double>("price"));
         calcResultCol.setCellValueFactory(new PropertyValueFactory<Appliance, Double>("result"));
-
-
 
     }
     @FXML
