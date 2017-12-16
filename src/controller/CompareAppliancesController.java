@@ -34,11 +34,13 @@ public class CompareAppliancesController {
     private TableColumn<Appliance, String> modelColumn;
     @FXML
     private TableColumn<Appliance, String> energyColumn;
+    @FXML
+    private TableColumn<Appliance, String> typeColumn;
 
     @FXML
     private void initialize() {
         //set up the columns in the table
-        //priceColumn.setCellValueFactory(new PropertyValueFactory<Appliance, String>("price"));
+        typeColumn.setCellValueFactory(new PropertyValueFactory<Appliance, String>("applianceType"));
         brandColumn.setCellValueFactory(new PropertyValueFactory<Appliance, String>("brand"));
         modelColumn.setCellValueFactory(new PropertyValueFactory<Appliance, String>("model"));
         energyColumn.setCellValueFactory(new PropertyValueFactory<Appliance, String>("energy"));

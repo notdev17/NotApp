@@ -40,7 +40,7 @@ public class Dryer extends Appliance {
 
     @Override
     public String toString() {
-        return model + " " + brand + " " + energy;
+        return applianceType + " " + model + " " + brand + " " + energy;
     }
 }
 
