@@ -3,7 +3,7 @@ package appliance;
 /**
  * Created by Devon on 12/9/2017
  */
-public class AirCleaner extends Appliance implements Comparable {
+public class AirCleaner extends Appliance {
 
     private String applianceType = "Air Cleaner";
     private double price = 150.00;
@@ -37,30 +37,6 @@ public class AirCleaner extends Appliance implements Comparable {
     public double getPrice() {
         return price;
     }
-
-//    /**BACKUP. DON'T ERASE!!!
-//     * Created by Devon on 12/15/2017
-//     * Compares 'this' to some Object o. Returns 0 if 'this' is equivalent to o.
-//     **/
-//    public int compareTo(Object o) {
-//        if(o.getClass().getName().compareTo(this.getClass().getName()) == 0) {
-//            AirCleaner obj = (AirCleaner) o;
-//            if(obj.getBrand().compareTo(this.getBrand()) == 0 && obj.getModel().compareTo(this.getModel()) == 0) {
-//                return 0;
-//            }
-//            else {
-//                if(obj.getBrand().compareTo(this.getBrand()) == 0) {
-//                    return obj.getModel().compareTo(this.getModel());
-//                }
-//                else {
-//                    return obj.getBrand().compareTo(this.getBrand());
-//                }
-//            }
-//        }
-//        else {
-//            return 1;
-//        }
-//    }
 
     @Override
     public String toString() {

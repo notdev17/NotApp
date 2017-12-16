@@ -51,28 +51,4 @@ public class Appliance {
     public double getEnergy() {
         return energy;
     }
-
-    /**
-     * Created by Devon on 12/15/2017
-     * Compares 'this' to some Object o. Returns 0 if 'this' is equivalent to o.
-     **/
-    public int compareTo(Object o) {
-        if(o.getClass().getName().compareTo(this.getClass().getName()) == 0) {
-            Appliance obj = (Appliance) o;
-            if(obj.getBrand().compareTo(this.getBrand()) == 0 && obj.getModel().compareTo(this.getModel()) == 0) {
-                return 0;
-            }
-            else {
-                if(obj.getBrand().compareTo(this.getBrand()) == 0) {
-                    return obj.getModel().compareTo(this.getModel());
-                }
-                else {
-                    return obj.getBrand().compareTo(this.getBrand());
-                }
-            }
-        }
-        else {
-            return 1;
-        }
-    }
 }
