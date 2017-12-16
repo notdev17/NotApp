@@ -41,7 +41,6 @@ public class MasterController {
         myParent = myLoader.load(getClass().getResource("../fxml/FirstPage.fxml").openStream());
         ((FirstPageController) myLoader.getController()).setMasterController(this);
         Scene scene = new Scene(myParent);
-        scene.getStylesheets().add(Main.class.getResource("../style/bootstrap3.css").toExternalForm());
         myStage.setScene(scene);
         myStage.show();
         myLoader = new FXMLLoader();
@@ -51,7 +50,6 @@ public class MasterController {
         myParent = myLoader.load(getClass().getResource("../fxml/CompareAppliances.fxml").openStream());
         ((CompareAppliancesController) myLoader.getController()).setMasterController(this);
         Scene scene = new Scene(myParent);
-        scene.getStylesheets().add(Main.class.getResource("../style/bootstrap3.css").toExternalForm());
         myStage.setScene(scene);
         myStage.show();
         myLoader = new FXMLLoader();
@@ -61,7 +59,6 @@ public class MasterController {
         myParent = myLoader.load(getClass().getResource("../fxml/SearchAppliance.fxml").openStream());
         ((SearchApplianceController) myLoader.getController()).setMasterController(this);
         Scene scene = new Scene(myParent);
-        scene.getStylesheets().add(Main.class.getResource("../style/bootstrap3.css").toExternalForm());
         myStage.setScene(scene);
         myStage.show();
         myLoader = new FXMLLoader();
@@ -71,7 +68,6 @@ public class MasterController {
         myParent = myLoader.load(getClass().getResource("../fxml/CalculateSavings.fxml").openStream());
         ((CalculateSavingsController) myLoader.getController()).setMasterController(this);
         Scene scene = new Scene(myParent);
-        scene.getStylesheets().add(Main.class.getResource("../style/bootstrap3.css").toExternalForm());
         myStage.setScene(scene);
         myStage.show();
         myLoader = new FXMLLoader();
@@ -81,7 +77,6 @@ public class MasterController {
         myParent = myLoader.load(getClass().getResource("../fxml/User.fxml").openStream());
         ((UserController) myLoader.getController()).setMasterController(this);
         Scene scene = new Scene(myParent);
-        scene.getStylesheets().add(Main.class.getResource("../style/bootstrap3.css").toExternalForm());
         myStage.setScene(scene);
         myStage.show();
         myLoader = new FXMLLoader();
