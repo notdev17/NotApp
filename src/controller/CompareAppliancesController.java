@@ -3,10 +3,13 @@ package controller;
 import appliance.Appliance;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.Node;
 import javafx.scene.control.ButtonBar;
+import javafx.scene.control.Slider;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.layout.VBox;
 
 import java.io.IOException;
 
@@ -14,6 +17,9 @@ public class CompareAppliancesController {
 
     @FXML
     ButtonBar myCalculateBox;
+
+    @FXML
+    private VBox sliderVBox;
     private MasterController masterController;
     @FXML
     private TableView<Appliance> myTableView;
@@ -32,9 +38,14 @@ public class CompareAppliancesController {
         brandColumn.setCellValueFactory(new PropertyValueFactory<Appliance, String>("brand"));
         modelColumn.setCellValueFactory(new PropertyValueFactory<Appliance, String>("model"));
         energyColumn.setCellValueFactory(new PropertyValueFactory<Appliance, String>("energy"));
-
         if (masterController == null) {
             myCalculateBox.setDisable(true);
+        } else {
+            System.out.println(myTableView.getItems());
+            if (masterController.getSelectedAppliances().size() > 0) {
+
+                myCalculateBox.setDisable(false);
+            }
         }
     }
 
@@ -52,6 +63,7 @@ public class CompareAppliancesController {
         masterController = mc;
         if (masterController.getSelectedAppliances().size() > 0) {
             myTableView.getItems().addAll(masterController.getSelectedAppliances());
+            System.out.println(masterController.getSelectedAppliances());
             myCalculateBox.setDisable(false);
         }
     }

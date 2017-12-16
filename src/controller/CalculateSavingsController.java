@@ -40,7 +40,7 @@ public class CalculateSavingsController {
         //priceColumn.setCellValueFactory(new PropertyValueFactory<Appliance, String>("price"));
         calcModelCol.setCellValueFactory(new PropertyValueFactory<Appliance, String>("model"));
         calcBrandCol.setCellValueFactory(new PropertyValueFactory<Appliance, String>("brand"));
-        calcPriceCol.setCellValueFactory(new PropertyValueFactory<Appliance, String>("price"));
+        //calcPriceCol.setCellValueFactory(new PropertyValueFactory<Appliance, String>("price"));
         calcEnergyCol.setCellValueFactory(new PropertyValueFactory<Appliance, String>("energy"));
 //        calc1Col.setCellValueFactory(new PropertyValueFactory<Appliance, String>("calculation1"));
 //        calc2Col.setCellValueFactory(new PropertyValueFactory<Appliance, String>("calculation2"));
