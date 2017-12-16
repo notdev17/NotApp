@@ -23,7 +23,7 @@
       </ToolBar>
    </top>
    <left>
-      <VBox BorderPane.alignment="CENTER">
+      <VBox alignment="CENTER" BorderPane.alignment="CENTER">
          <children>
             <ToolBar>
                <items>
@@ -34,7 +34,7 @@
                   </Label>
                </items>
             </ToolBar>
-            <TableView fx:id="favTableView" prefHeight="343.0" prefWidth="324.0">
+            <TableView fx:id="favTableView" prefHeight="313.0" prefWidth="320.0">
               <columns>
                 <TableColumn fx:id="favModelCol" prefWidth="75.0" text="Model" />
                 <TableColumn fx:id="favBrandCol" prefWidth="75.0" text="Brand" />
@@ -42,6 +42,7 @@
                   <TableColumn prefWidth="75.0" text="Price" />
               </columns>
             </TableView>
+            <Button mnemonicParsing="false" onAction="#removeFromFavButtonClicked" prefHeight="0.0" prefWidth="138.0" text="Remove from Favorites" />
          </children>
       </VBox>
    </left>

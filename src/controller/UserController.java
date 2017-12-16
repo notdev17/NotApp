@@ -46,22 +46,16 @@ public class UserController {
 
     void setMasterController(MasterController mc) {
         masterController = mc;
-        if (masterController.getSelectedAppliances().size() > 0) {
+        if (masterController.getFavoriteAppliances().size() > 0) {
             favTableView.setItems(FXCollections.observableArrayList(masterController.getFavoriteAppliances()));
-            //favTableView.getItems().addAll(masterController.getSelectedAppliances());
-            //myCalculateBox.setDisable(false);
         }
     }
-
-    /**
-     * By Daylen
-     * Displays the calculate savings page from the fxml file
-     *
-     * @param event, sent when the button is clicked
-     * @throws IOException
-     */
     @FXML
-    public void calcSavingsButtonClicked(ActionEvent event) throws IOException {
-        masterController.getCalculationsPage();
+    void removeFromFavButtonClicked() {
+        //remove the selected item from the favorites list in the master controller
+        masterController.getFavoriteAppliances().remove(favTableView.getSelectionModel().getSelectedItem());
+
+        //refresh the table view
+        favTableView.setItems(FXCollections.observableArrayList(masterController.getFavoriteAppliances()));
     }
 }
