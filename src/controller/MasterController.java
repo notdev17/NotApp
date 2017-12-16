@@ -11,11 +11,14 @@ import java.io.IOException;
 import java.util.ArrayList;
 
 /**
- * Created by Tim on 12/14/2017.
+ * Created by Tim on 12/10/2017.
+ * Used to easily share/transfer relevant data and objects between different scenes.
  */
 public class MasterController {
+    //Holds appliances to be listed in the compare appliances page
     private ArrayList<Appliance> myApplianceList;
 
+    //Holds User's favorited appliances.
     private ArrayList<Appliance> myFavoriteList;
 
     private FXMLLoader myLoader;
@@ -24,6 +27,9 @@ public class MasterController {
 
     private Parent myParent;
 
+    /**
+     * Authors: Tim and Brandon on 12/10/2017
+     */
     public MasterController(Stage stage) {
         myFavoriteList = new ArrayList<>();
         myApplianceList = new ArrayList<>();
@@ -37,6 +43,10 @@ public class MasterController {
 
     }
 
+    /**
+     * Author: Tim and Brandon on 12/10/2017
+     * changes scene to FirstPage
+     */
     void getFirstPage() throws IOException {
         myParent = myLoader.load(getClass().getResource("../fxml/FirstPage.fxml").openStream());
         ((FirstPageController) myLoader.getController()).setMasterController(this);
@@ -46,50 +56,82 @@ public class MasterController {
         myLoader = new FXMLLoader();
     }
 
+    /**
+     * Author: Tim and Brandon on 12/10/2017
+     * changes scene to CompareAppliances page
+     */
     void getComparePage() throws IOException {
         myParent = myLoader.load(getClass().getResource("../fxml/CompareAppliances.fxml").openStream());
         ((CompareAppliancesController) myLoader.getController()).setMasterController(this);
         Scene scene = new Scene(myParent);
+        scene.getStylesheets().add(Main.class.getResource("../style/bootstrap3.css").toExternalForm());
         myStage.setScene(scene);
         myStage.show();
         myLoader = new FXMLLoader();
     }
 
+    /**
+     * Author: Tim and Brandono on 12/10/2017
+     * changes scene to SearchAppliance page.
+     */
     void getSearchPage() throws IOException {
         myParent = myLoader.load(getClass().getResource("../fxml/SearchAppliance.fxml").openStream());
         ((SearchApplianceController) myLoader.getController()).setMasterController(this);
         Scene scene = new Scene(myParent);
+        scene.getStylesheets().add(Main.class.getResource("../style/bootstrap3.css").toExternalForm());
         myStage.setScene(scene);
         myStage.show();
         myLoader = new FXMLLoader();
     }
 
+    /**
+     * Author: Tim and Brandon on 12/10/2017
+     * changes scene to CalculateSavings page
+     */
     void getCalculationsPage() throws IOException {
         myParent = myLoader.load(getClass().getResource("../fxml/CalculateSavings.fxml").openStream());
         ((CalculateSavingsController) myLoader.getController()).setMasterController(this);
         Scene scene = new Scene(myParent);
+        scene.getStylesheets().add(Main.class.getResource("../style/bootstrap3.css").toExternalForm());
         myStage.setScene(scene);
         myStage.show();
         myLoader = new FXMLLoader();
     }
 
+    /**
+     * Author: Tim and Brandon on 12/10/2017
+     * changes scene to User page
+     */
     void getUserPage() throws IOException {
         myParent = myLoader.load(getClass().getResource("../fxml/User.fxml").openStream());
         ((UserController) myLoader.getController()).setMasterController(this);
         Scene scene = new Scene(myParent);
+        scene.getStylesheets().add(Main.class.getResource("../style/bootstrap3.css").toExternalForm());
         myStage.setScene(scene);
         myStage.show();
         myLoader = new FXMLLoader();
     }
 
+    /**
+     * Author: Tim on 12/10/2017
+     * returns myApplianceList
+     */
     public ArrayList<Appliance> getSelectedAppliances() {
         return myApplianceList;
     }
 
+    /**
+     * Author: Tim on 12/10/2017
+     * returns myFavoriteList
+     */
     public ArrayList<Appliance> getFavoriteAppliances() {
         return myFavoriteList;
     }
 
+    /**
+     * Author: Tim on 12/10/2017
+     * sets myFavoriteList according to 'list' input
+     */
     public void setMyFavoriteList(ArrayList<Appliance> list) {
         myFavoriteList = list;
     }

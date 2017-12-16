@@ -4,8 +4,11 @@ import controller.MasterController;
 import javafx.application.Application;
 import javafx.stage.Stage;
 
-import static javafx.application.Application.launch;
 
+/**
+ * Created by Tim on 12/7/2017
+ * Main program driver
+ */
 public class Main extends Application {
 
     private MasterController mc;

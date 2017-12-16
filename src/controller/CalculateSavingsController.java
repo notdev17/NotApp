@@ -14,8 +14,12 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
+/**
+ * Created by Michelle on 12/15/2017
+ */
 public class CalculateSavingsController {
 
+    //Table view to hold the relevant output values
     @FXML
     private TableView<Appliance> calculationsTableView;
 
@@ -37,6 +41,10 @@ public class CalculateSavingsController {
 
     private MasterController masterController;
 
+    /**
+     * Author: Michelle on 12/15/2017
+     * Initializes table view columns.
+     */
     @FXML
     private void initialize()
     {
@@ -49,17 +57,20 @@ public class CalculateSavingsController {
         calcResultCol.setCellValueFactory(new PropertyValueFactory<Appliance, Double>("result"));
 
     }
+
+    /**
+     * Author: Michelle on 12/15/2017
+     * Event listener for the back button.
+     * On event, return to Compare Page.
+     */
     @FXML
     public void backButtonClicked(ActionEvent event) throws IOException {
         masterController.getComparePage();
     }
 
     /**
-     * closes the window when the done button that is clicked
-     * By: Daylen
-     *
-     * @param event
-     * @throws IOException
+     * Author: Michelle on 12/15/2017
+     * Closes the window (program) on 'event'
      */
     @FXML
     public void doneButtonClicked(ActionEvent event) {
@@ -70,11 +81,19 @@ public class CalculateSavingsController {
         window.close();
     }
 
+    /**
+     * Author: Michelle on 12/15/2017
+     * Goes to the User Page scene on button clicked.
+     */
     @FXML
     public void userProfileButtonClicked() throws IOException{
         masterController.getUserPage();
     }
 
+    /**
+     * Author: Michelle on 12/15/2017
+     * If selectedAppliances (stored in masterController) is not empty, uses selectedAppliances to populate table view
+     */
     void setMasterController(MasterController mc) {
         masterController = mc;
         if (masterController.getSelectedAppliances().size() > 0) {
@@ -82,21 +101,40 @@ public class CalculateSavingsController {
         }
     }
 
+    /**
+     * Author: Michelle on 12/15/2017
+     * Adds selected appliance to the favoriteAppliances list.
+     * Post: a new appliance will be added to the user's favorite's list, and user will be taken to the User Page.
+     */
     @FXML
     public void addToFavButtonClicked() throws IOException {
+        //If an appliance is selected
         if(calculationsTableView.getSelectionModel().getSelectedItem() != null) {
+            //add selected appliance to user favorites
             masterController.getFavoriteAppliances().add(calculationsTableView.getSelectionModel().getSelectedItem());
+            //go to user page
             masterController.getUserPage();
+            //populate user page with viewable list of favorites
             calculationsTableView.setItems(FXCollections.observableArrayList(masterController.getFavoriteAppliances()));
         }
     }
+
+    /**
+     * Author: Brandon on 12/15/2017
+     * On event, updates calculations page with valid 'cost per year' values.
+     * @throws IOException
+     */
     @FXML
     public void updateButtonClicked() throws IOException
     {
+        //If user input is not empty
         if (calcPriceInput.getCharacters().length() != 0)
         {
+            //And if input is a double greater than 0
             if (Double.parseDouble(calcPriceInput.getCharacters().toString()) > 0.0)
             {
+                //Multiply estimated energy by user input for each item, and store product in the relevant
+                //appliance objects (in order to display value in table view)
                 for (int i = 0; i < calculationsTableView.getItems().size(); i++)
                 {
                     calculationsTableView.getItems().get(i).setPrice(Double.parseDouble(calcPriceInput.getCharacters().toString()));

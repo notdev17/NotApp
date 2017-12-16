@@ -18,8 +18,13 @@ public class H2Database {
     private ResultSet result;
     //Holds all read inputs as the appropriate Appliance sub-type
     private ArrayList<Appliance> appliances;
+    //Used to ensure proper CSV files and proper Appliance sub-types are used on calls throughout the program
     private String currentAppliance;
 
+    /**
+     * Author: Tim on 12/7/2017
+     * Instantiates the connection between program and H2 database.
+     */
     public H2Database() {
         try {
             Class.forName("org.h2.Driver");
@@ -35,6 +40,12 @@ public class H2Database {
         appliances = new ArrayList<Appliance>();
     }
 
+    /**
+     * Author: Tim on 12/7/2017
+     * Used to select a DB table based on input 'str'
+     * Pre: str is a valid input [airconditioner, refrigerator, washingmachine, dryer, freezer, aircleaner, dishwasher]
+     * Post: Will successfully send a valid SQL query to H2 DBMS.
+     */
     public void selectTable(String str) {
         currentAppliance = str;
 
@@ -42,8 +53,11 @@ public class H2Database {
         sql(query);
     }
 
-    /*DEVON
-      Added new else branches for additional appliance types
+
+    /**
+     * Author: Tim on 12/7/2017
+     * Used to populate 'appliance' with valid Appliance sub-types
+     * Returns a list of Appliance sub-types
      */
     public ArrayList<Appliance> getAppliances() {
         try {
@@ -52,6 +66,9 @@ public class H2Database {
                         b = result.getString("brand");
                 double e = result.getDouble("energy");
 
+                /*DEVON (edited 12/9/2017)
+                  Added new else branches for additional appliance types
+                 */
                 if (currentAppliance.equals("airconditioner")) {
                     appliances.add(new AirConditioner(m, b, e));
                 } else if (currentAppliance.equals("refrigerator")) {
@@ -77,6 +94,7 @@ public class H2Database {
     }
 
     /**
+     * Author: Tim on 12/7/2017
      * For SQL statements
      *
      * @param str
@@ -91,6 +109,7 @@ public class H2Database {
     }
 
     /**
+     * Author: Tim on 12/7/2017
      * For DBMS commands
      *
      * @param str
@@ -104,6 +123,10 @@ public class H2Database {
         }
     }
 
+    /**
+     * Author: Tim on 12/7/2017
+     * Closes DB connection
+     */
     public void closeConnection() {
         try {
             conn.close();
@@ -112,6 +135,10 @@ public class H2Database {
         }
     }
 
+    /**
+     * Author: Tim on 12/7/2017
+     * Clears all query-generated tables from DB
+     */
     private void clear() {
         command("DROP ALL OBJECTS");
     }
@@ -129,22 +156,19 @@ public class H2Database {
         command("CREATE TABLE DISHWASHER AS SELECT * FROM CSVREAD('./database/ESC_Residential_Dishwashers.csv');");
     }
 
-    /*Edited By Devon, 12/12/2017
-      Updated query attribute names to match new CSV database files
-      Added new switch cases for additional database files
-     */
-
     /**
-     * AIRCONDITIONER(model, brand, energy)
-     * WASHINGMACHINE(model, brand, energy)
-     * REFRIGERATOR(mode, brand, energy)
-     *
-     * @param s - type of appliance
-     * @return query string for sql
+     * Author: Tim on 12/7/2017
+     * Generates an SQL query based on input s, where s is a valid appliance type.
+     * Pre: s is a valid string (see cases below)
+     * Post: generates and returns a valid SQL query as a String
      */
     private String generateSelectQuery(String s) {
         String query = "";
 
+        /*Edited By Devon, 12/12/2017
+          Updated query attribute names to match new CSV database files
+          Added new switch cases for additional database files
+         */
         switch (s) {
             case "airconditioner":
                 query = "SELECT Model_Number AS model," +
