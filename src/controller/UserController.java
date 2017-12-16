@@ -17,8 +17,6 @@ import java.io.IOException;
  */
 public class UserController {
 
-    @FXML
-    ButtonBar myCalculateBox;
     private MasterController masterController;
     @FXML
     private TableView<Appliance> favTableView;

@@ -72,8 +72,6 @@ public class MasterController {
     /**
      * Author: Tim and Brandon on 12/10/2017
 =======
-     * Author: Tim and Brandono on 12/13/2017
->>>>>>> 4184cafe7d6f72dfc399cb34b855ffbb1b17d673
      * changes scene to SearchAppliance page.
      */
     void getSearchPage() throws IOException {
