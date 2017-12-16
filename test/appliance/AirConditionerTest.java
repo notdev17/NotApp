@@ -13,6 +13,9 @@ class AirConditionerTest {
         assertEquals(airConditioner2.toString(), airConditioner.toString());
     }
 
+    /**
+     * Author: Brandon on 12/15/2017
+     */
     @Test
     void getApplianceType() {
         assertEquals(airConditioner.getApplianceType(), "Air Conditioner");
