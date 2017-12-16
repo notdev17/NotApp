@@ -1,8 +1,8 @@
 package appliance;
 
 /**
- * Created by Tim on 12/7/2017.
- * Edited and expanded by Devon on 12/9/2017
+ * Created by Devon on 12/9/2017
+ * Represents air cleaner/purifier machines.
  */
 public class AirConditioner extends Appliance {
 
@@ -10,21 +10,34 @@ public class AirConditioner extends Appliance {
     private String applianceType = "Air Conditioner";
 
     /**
-     * Created by Devon on 12/9/2017
+     * Author: Devon on 12/9/2017
+     * See Appliance for 'super' method. applianceType and price are pre-defined and do not change,
+     * so no constructor input is necessary
      **/
     public AirConditioner(String inModel, String inBrand, double inEnergy) {
         super(inModel, inBrand, inEnergy);
     }
 
+    /**
+     * Author: Devon on 12/9/2017
+     * See super()
+     */
     public AirConditioner() {
         super();
     }
 
-    //Used when populating lists from database (to avoid call by reference issues)
+    /**
+     * Author: Devon on 12/9/2017
+     * See super()
+     */
     public AirConditioner getCopy() {
         return new AirConditioner(this.getModel(), this.getBrand(), this.getEnergy());
     }
 
+    /**
+     * Author: Devon on 12/9/2017
+     * Returns appliance type.
+     **/
     public String getApplianceType() {
         return applianceType;
     }

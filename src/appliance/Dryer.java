@@ -2,28 +2,40 @@ package appliance;
 
 /**
  * Created by Devon on 12/9/2017
+ * Represents air cleaner/purifier machines.
  */
 public class Dryer extends Appliance {
 
     private String applianceType = "Dryer";
+
     /**
-     * Created by Devon on 12/9/2017
+     * Author: Devon on 12/9/2017
+     * See Appliance for 'super' method. applianceType is pre-defined and does not change,
+     * so no additional constructor input is necessary
      **/
     public Dryer(String inModel, String inBrand, double inEnergy) {
         super(inModel, inBrand, inEnergy);
     }
 
+    /**
+     * Author: Devon on 12/9/2017
+     * See super()
+     */
     public Dryer() {
         super();
     }
 
-    //Used when populating lists from database (to avoid call by reference issues)
+    /**
+     * Author: Devon on 12/9/2017
+     * See super()
+     */
     public Dryer getCopy() {
         return new Dryer(this.getModel(), this.getBrand(), this.getEnergy());
     }
 
     /**
-     * Created by Devon on 12/9/2017
+     * Author: Devon on 12/9/2017
+     * Returns appliance type.
      **/
     public String getApplianceType() {
         return applianceType;
