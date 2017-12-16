@@ -69,4 +69,12 @@ public class UserController {
     public void calcSavingsButtonClicked(ActionEvent event) throws IOException {
         masterController.getCalculationsPage();
     }
+    @FXML
+    void removeFromFavButtonClicked() {
+        //remove the selected item from the favorites list in the master controller
+        masterController.getFavoriteAppliances().remove(favTableView.getSelectionModel().getSelectedItem());
+
+        //refresh the table view
+        favTableView.setItems(FXCollections.observableArrayList(masterController.getFavoriteAppliances()));
+    }
 }
