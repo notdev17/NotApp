@@ -121,8 +121,7 @@ public class CalculateSavingsController {
 
     /**
      * Author: Brandon on 12/15/2017
-     * On event, updates calculations page with valid 'cost per year' values.
-     * @throws IOException
+     * Updates the calculations page with valid 'cost per year' values.
      */
     @FXML
     public void updateButtonClicked() throws IOException

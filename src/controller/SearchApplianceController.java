@@ -96,10 +96,9 @@ public class SearchApplianceController {
         myApplianceBox.getSelectionModel().selectedIndexProperty().addListener(new ChangeListener<Number>() {
             @Override
             public void changed(ObservableValue<? extends Number> observable, Number oldValue, Number newValue) {
-                /*DEVON
-                  When a user clicks an appliance type in the drop down menu, it will be re-populated with the proper
-                  appliances (using getAppliances).
-                 */
+
+                //When a user clicks an appliance type in the drop down menu, it will be re-populated with the proper
+                //appliances (using getAppliances).
                 myTableView.setItems(getAppliances(myApplianceBox.getItems().get(newValue.intValue())));
             }
         });
