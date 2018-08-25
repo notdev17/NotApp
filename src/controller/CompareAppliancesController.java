@@ -19,7 +19,8 @@ import java.util.ArrayList;
 import static javafx.collections.FXCollections.observableArrayList;
 
 /**
- * Created by Daylen on 12/11/2017
+ * The controller for the compare appliance page.
+ * 
  */
 public class CompareAppliancesController {
 
@@ -41,7 +42,6 @@ public class CompareAppliancesController {
     private TableColumn<Appliance, String> typeColumn;
 
     /**
-     * Author: Daylen on 12/11/2017
      * Initializes the columns in the table view
      */
     @FXML
@@ -58,7 +58,6 @@ public class CompareAppliancesController {
     }
 
     /**
-     * Author: Daylen on 12/11/2017
      * When the back button is clicked (event), displays the first page screen
      */
     @FXML
@@ -67,7 +66,6 @@ public class CompareAppliancesController {
     }
 
     /**
-     * Author: Daylen on 12/11/2017
      * When the create(add) appliance button is clicked (event), displays the search appliances page.
      */
     @FXML
@@ -76,7 +74,6 @@ public class CompareAppliancesController {
     }
 
     /**
-     * Author: Daylen on 12/14/2017
      * Enables the 'Calculate Savings' button when at least one appliances has been selected
      */
     void setMasterController(MasterController mc) {
@@ -88,7 +85,6 @@ public class CompareAppliancesController {
     }
 
     /**
-     * Author: Michelle on 12/14/2017
      * On event, displays the calculate savings page from the fxml file
      */
     @FXML
@@ -97,7 +93,6 @@ public class CompareAppliancesController {
     }
 
     /**
-     * Author: Michelle on 12/14/2017
      * When the remove button is clicked, if an appliance is currently selected, appliance is removed from the table view
      */
     @FXML
@@ -112,7 +107,6 @@ public class CompareAppliancesController {
     }
 
     /**
-     * Author: Michelle on 12/15/2017
      * When the add to favorites button is selected, adds the selected appliance to user favorites.
      */
     @FXML

@@ -27,10 +27,10 @@ public class MasterController {
 
     private Parent myParent;
 
-    /**
-     * Authors: Brandon on 12/13/2017
-     */
+    /** Constructor containing  */
     public MasterController(Stage stage) {
+
+        // creates lists to be populated with appliances
         myFavoriteList = new ArrayList<>();
         myApplianceList = new ArrayList<>();
         myLoader = new FXMLLoader();
@@ -44,7 +44,6 @@ public class MasterController {
     }
 
     /**
-     * Author: Brandon on 12/13/2017
      * changes scene to FirstPage
      */
     void getFirstPage() throws IOException {
@@ -57,7 +56,6 @@ public class MasterController {
     }
 
     /**
-     * Author: Brandon on 12/13/2017
      * changes scene to CompareAppliances page
      */
     void getComparePage() throws IOException {
@@ -71,7 +69,6 @@ public class MasterController {
     }
 
     /**
-     * Author: Brandon on 12/13/2017
      * changes scene to SearchAppliance page.
      */
     void getSearchPage() throws IOException {
@@ -85,7 +82,6 @@ public class MasterController {
     }
 
     /**
-     * Author: Brandon on 12/13/2017
      * changes scene to CalculateSavings page
      */
     void getCalculationsPage() throws IOException {
@@ -99,7 +95,6 @@ public class MasterController {
     }
 
     /**
-     * Author: Brandon on 12/13/2017
      * changes scene to User page
      */
     void getUserPage() throws IOException {
@@ -113,7 +108,6 @@ public class MasterController {
     }
 
     /**
-     * Author: Tim on 12/13/2017
      * returns myApplianceList
      */
     public ArrayList<Appliance> getSelectedAppliances() {
@@ -121,7 +115,6 @@ public class MasterController {
     }
 
     /**
-     * Author: Tim on 12/13/2017
      * returns myFavoriteList
      */
     public ArrayList<Appliance> getFavoriteAppliances() {
@@ -129,7 +122,6 @@ public class MasterController {
     }
 
     /**
-     * Author: Tim on 12/13/2017
      * sets myFavoriteList according to 'list' input
      */
     public void setMyFavoriteList(ArrayList<Appliance> list) {

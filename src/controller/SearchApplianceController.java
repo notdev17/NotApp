@@ -17,7 +17,7 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import java.io.IOException;
 
 /**
- * Created by Daylen on 12/11/2017
+ * 
  */
 public class SearchApplianceController {
     private String currentApplianceType;
@@ -38,6 +38,7 @@ public class SearchApplianceController {
     @FXML
     private TableColumn<Appliance, String> typeColumn;
 
+
     @FXML
     private ChoiceBox<String> myApplianceBox;
 
@@ -51,7 +52,6 @@ public class SearchApplianceController {
     private TextField mySearchBar;
 
     /**
-     * By: Daylen on 12/11/2017
      * Applies the search bar filter to the list of appliances.
      */
     @FXML
@@ -74,7 +74,6 @@ public class SearchApplianceController {
     }
 
     /**
-     * By: Devon on 12/11/2017
      * Applies the search bar filter to the list of appliances.
      */
     @FXML
@@ -107,7 +106,6 @@ public class SearchApplianceController {
     }
 
     /**
-     * By: Daylen on 12/11/2017
      * When the user clicks the update button, the list of items is
      * updated to correlate with any filters the user may have input
      */
@@ -151,7 +149,6 @@ public class SearchApplianceController {
     }
 
     /**
-     * By: Daylen on 12/11/2017
      * When the user clicks the back button, it takes the user back to the compare appliances page.
      */
     @FXML
@@ -160,7 +157,6 @@ public class SearchApplianceController {
     }
 
     /**
-     * By: Daylen on 12/11/2017
      * When the user clicks the back button, it takes the user back to the compare appliances page.
      */
     @FXML
@@ -173,8 +169,6 @@ public class SearchApplianceController {
     }
 
     /**
-     * By: Daylen on 12/11/2017
-     * (edited/expanded on 12/11/2017 by Devon)
      * Returns a list of Appliance types to be used in populating myTableView
      */
     public ObservableList<Appliance> getAppliances(String applianceType) {
@@ -185,7 +179,7 @@ public class SearchApplianceController {
         H2Database h2db = new H2Database();
 
 
-        /*DEVON edited on 12/11/2017
+        /*
           Added this switch statement to facilitate applianceList population and search filtering.
           Can likely be refactored to reduce the mostly identical case bodies.
          */
@@ -246,7 +240,6 @@ public class SearchApplianceController {
     }
 
     /**
-     * By: Daylen on 12/14/2017
      * When the user clicks the back button, it takes the user back to the compare appliances page.
      */
     public void setMasterController(MasterController mc) {
@@ -255,8 +248,6 @@ public class SearchApplianceController {
 
     /**
      * Populate the appliance list with first item on the appliance list on load
-     *
-     * @author Brandon on 12/15/2017
      */
     private void populateListOnLoad() {
         myApplianceBox.getSelectionModel().selectFirst();

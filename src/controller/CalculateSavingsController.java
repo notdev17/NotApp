@@ -15,7 +15,7 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 /**
- * Created by Michelle on 12/15/2017
+    Controller for the Calculate savings page.
  */
 public class CalculateSavingsController {
 
@@ -39,10 +39,10 @@ public class CalculateSavingsController {
     @FXML
     private TextField calcPriceInput;
 
+    
     private MasterController masterController;
 
     /**
-     * Author: Michelle on 12/15/2017
      * Initializes table view columns.
      */
     @FXML
@@ -59,7 +59,6 @@ public class CalculateSavingsController {
     }
 
     /**
-     * Author: Michelle on 12/15/2017
      * Event listener for the back button.
      * On event, return to Compare Page.
      */
@@ -69,7 +68,6 @@ public class CalculateSavingsController {
     }
 
     /**
-     * Author: Michelle on 12/15/2017
      * Closes the window (program) on 'event'
      */
     @FXML
@@ -82,7 +80,6 @@ public class CalculateSavingsController {
     }
 
     /**
-     * Author: Michelle on 12/15/2017
      * Goes to the User Page scene on button clicked.
      */
     @FXML
@@ -91,7 +88,6 @@ public class CalculateSavingsController {
     }
 
     /**
-     * Author: Michelle on 12/15/2017
      * If selectedAppliances (stored in masterController) is not empty, uses selectedAppliances to populate table view
      */
     void setMasterController(MasterController mc) {
@@ -102,7 +98,6 @@ public class CalculateSavingsController {
     }
 
     /**
-     * Author: Michelle on 12/15/2017
      * Adds selected appliance to the favoriteAppliances list.
      * Post: a new appliance will be added to the user's favorite's list, and user will be taken to the User Page.
      */
@@ -120,7 +115,6 @@ public class CalculateSavingsController {
     }
 
     /**
-     * Author: Brandon on 12/15/2017
      * Updates the calculations page with valid 'cost per year' values.
      */
     @FXML

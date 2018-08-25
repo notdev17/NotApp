@@ -6,7 +6,6 @@ import javafx.stage.Stage;
 
 
 /**
- * Created by Tim on 12/7/2017
  * Main program driver
  */
 public class Main extends Application {
@@ -18,9 +17,7 @@ public class Main extends Application {
         launch(args);
     }
 
-    /*
-      Edited 12/15/2017 by Tim
-     */
+    // Creates the panel and master controller. JavaFX uses this method when starting the program.
     @Override
     public void start(Stage stage) throws Exception {
         stage.setTitle("Not App: Compare Appliances!");

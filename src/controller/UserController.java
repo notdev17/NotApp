@@ -13,15 +13,19 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import java.io.IOException;
 
 /**
- * Created by notDev on 12/15/2017
+ * Controller used for the user page
  */
 public class UserController {
+
 
     @FXML
     ButtonBar myCalculateBox;
     private MasterController masterController;
+
+
     @FXML
     private TableView<Appliance> favTableView;
+    
     //columns in the table view
     @FXML
     private TableColumn<Appliance, String> favBrandCol;
@@ -34,11 +38,11 @@ public class UserController {
     @FXML
     private Button favRemoveButton;
 
-    /**
-     * By: Daylen on 12/15/2017
-     */
+
+    // Initializes the tables for the page
     @FXML
     private void initialize() {
+        // Setup Col values for table
         favBrandCol.setCellValueFactory(new PropertyValueFactory<Appliance, String>("brand"));
         favModelCol.setCellValueFactory(new PropertyValueFactory<Appliance, String>("model"));
         favEnergyCol.setCellValueFactory(new PropertyValueFactory<Appliance, String>("energy"));
@@ -50,13 +54,13 @@ public class UserController {
         }
     }
 
+    // action for the back button being pressed
     @FXML
     public void backButtonClicked(ActionEvent event) throws IOException {
         masterController.getComparePage();
     }
 
-    /**
-     * Author: Brandon on 12/15/2017
+    /**     
      * If the user has favorited appliances this populates the user page with them.
      */
     void setMasterController(MasterController mc) {
@@ -73,7 +77,6 @@ public class UserController {
     }
 
     /**
-     * By Daylen
      * Displays the calculate savings page from the fxml file when the user clicks the 'Calculate Savings' button.
      */
     @FXML
@@ -82,7 +85,6 @@ public class UserController {
     }
 
     /**
-     * Author: Devon on 12/15/2017
      * Removes selected appliance from table view and user favorites list on button clicked event
      */
     @FXML

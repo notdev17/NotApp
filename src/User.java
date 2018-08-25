@@ -1,7 +1,7 @@
 import appliance.*;
 import java.util.ArrayList;
 
-/** Created by Devon on 12/13/2017
+/** 
  * Represents a User for the notApp application
  */
 public class User {

@@ -1,7 +1,6 @@
 package appliance;
 
 /**
- * Created by Devon on 12/9/2017
  * Represents air cleaner/purifier machines.
  */
 public class Dryer extends Appliance {
@@ -9,7 +8,6 @@ public class Dryer extends Appliance {
     private String applianceType = "Dryer";
 
     /**
-     * Author: Devon on 12/9/2017
      * See Appliance for 'super' method. applianceType is pre-defined and does not change,
      * so no additional constructor input is necessary
      **/
@@ -18,7 +16,6 @@ public class Dryer extends Appliance {
     }
 
     /**
-     * Author: Devon on 12/9/2017
      * See super()
      */
     public Dryer() {
@@ -26,7 +23,6 @@ public class Dryer extends Appliance {
     }
 
     /**
-     * Author: Devon on 12/9/2017
      * See super()
      */
     public Dryer getCopy() {
@@ -34,7 +30,6 @@ public class Dryer extends Appliance {
     }
 
     /**
-     * Author: Devon on 12/9/2017
      * Returns appliance type.
      **/
     public String getApplianceType() {

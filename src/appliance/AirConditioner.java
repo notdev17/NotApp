@@ -1,7 +1,6 @@
 package appliance;
 
 /**
- * Created by Devon on 12/9/2017
  * Represents air cleaner/purifier machines.
  */
 public class AirConditioner extends Appliance {
@@ -10,7 +9,6 @@ public class AirConditioner extends Appliance {
     private String applianceType = "Air Conditioner";
 
     /**
-     * Author: Devon on 12/9/2017
      * See Appliance for 'super' method. applianceType and price are pre-defined and do not change,
      * so no constructor input is necessary
      **/
@@ -19,7 +17,6 @@ public class AirConditioner extends Appliance {
     }
 
     /**
-     * Author: Devon on 12/9/2017
      * See super()
      */
     public AirConditioner() {
@@ -27,7 +24,6 @@ public class AirConditioner extends Appliance {
     }
 
     /**
-     * Author: Devon on 12/9/2017
      * See super()
      */
     public AirConditioner getCopy() {
@@ -35,7 +31,6 @@ public class AirConditioner extends Appliance {
     }
 
     /**
-     * Author: Devon on 12/9/2017
      * Returns appliance type.
      **/
     public String getApplianceType() {
