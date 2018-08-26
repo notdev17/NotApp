@@ -28,7 +28,7 @@ Namely, [the U.S. Department of Energy's Database](https://www.regulations.doe.g
 
 | Filter by Energy Usage | Search by Model        |
 | ---------------------- | ---------------------- |
-| ![](.\img\search1.png) | ![](.\img\search2.png) |
+| ![a](./img/search1.png) | ![](./img/search2.png) |
 
 
 
@@ -40,7 +40,7 @@ A **use-case** for this specific page would be to estimate the cost of a collect
 
 | Use-Case 1                          | Use-Case 2              |
 | :---------------------------------- | :---------------------- |
-| ![calculate3](.\img\calculate3.png) | ![calc](.\img\calc.png) |
+| ![calculate3](./img/calculate3.png) | ![calc](./img/calc.png) |
 
 
 
@@ -48,7 +48,7 @@ A **use-case** for this specific page would be to estimate the cost of a collect
 
 The user page is currently incomplete, although has a functioning favorites page. Which allows users to create a separate list of appliances from the comparison page.
 
-![fav](.\img\fav.png)
+![fav](./img/fav.png)
 
 ------
 
@@ -60,7 +60,7 @@ This was a **Team project** where we had created and designed an application t
 
 We had **analyzing requirements** as well as created prototypes and mockups through involved UX which had then gone through review through our peers. 
 
-![](D:\_DRIVE\#CODE\Overhaul\NotApp\img\prototype image.png)
+![](./img/prototype.png)
 
 
 
@@ -72,14 +72,14 @@ The usage of FXML allowed for our team to quickly develop a non-intimidating, mo
 
 The **source code for our user-interface** may be accessed through the directory: `\src\fxml\`	
 
-![img](D:\_DRIVE\#CODE\Overhaul\NotApp\img\scene-builder-in-action.jpg) 
+![img](./img/scene-builder-in-action.jpg) 
 
 > ##### Example FXML Code:
 >
-> ![img](D:\_DRIVE\#CODE\Overhaul\NotApp\img\ex-code.png) 
+> ![img](./img/ex-code.png) 
 
 ## Back-End: [H2Database](http://h2database.com/html/main.html)
 
 H2Database is a **Java SQL database** to which we had opt'd to configure an in-memory database. More specifically, when the program is initially executed the data is loaded from the CSV files contained within the `./database/` directory. This is accomplished, through the `./src/driver/H2Database.java` which is used to interact with the DB server. This includes, connecting to the server, sending queries, parsing the CSVs and other various SQL and DBMS commands.
 
-![img](.\img\db.png) 
+![img](./img/db.png) 
