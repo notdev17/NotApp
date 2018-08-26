@@ -65,7 +65,7 @@ This was a **Team project** where we had created and designed an application t
 
 We had **analyzing requirements** as well as created prototypes and mockups through involved UX which had then gone through review through our peers. 
 
-![](./img/prototype image.png)
+![](./img/prototype.png)
 
 
 
