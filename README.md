@@ -12,7 +12,11 @@
 
 
 
+## Requirements
+To run this program, you will need to install the latest version of [Java](https://www.java.com/en/download/)
 
+## Running The Program
+To start the program you will need to download the repo. Inside the root directory you will find the `notApp.jar`. Simply double click this and the program will execute.
 
 ## Table of Contents
 - [Features and Functionality](#features-and-functionality)
