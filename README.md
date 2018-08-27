@@ -4,11 +4,11 @@
 | ---------------------------------------------- | ---------------------------------- | ----------------------------------- | ----------------------------------- | ------------------------------------- |
 | [Michelle](https://github.com/michellesuchang) | [Tim](https://github.com/podoodoo) | [Brandon](https://github.com/Ciyon) | [Devon](https://github.com/DevonS3) | [Daylen](https://github.com/flannyan) |
 
-> A basic application to compare various home appliances, their energy usage and cost.
->
-> Created as a team project to develop our skills in UX and software development. 
->
-> This program was created through the use of an [**in-memory H2Database**](http://h2database.com/html/main.html) to facilitate our dataset as well as [**JavaFX**](https://docs.oracle.com/javase/8/javafx/get-started-tutorial/index.html) to create our user-interface.
+A basic application to compare various home appliances, their energy usage and cost.
+
+Created as a team project to develop our skills in UX and software development. 
+
+This program was created through the use of an [**in-memory H2Database**](http://h2database.com/html/main.html) to facilitate our dataset as well as [**JavaFX**](https://docs.oracle.com/javase/8/javafx/get-started-tutorial/index.html) to create our user-interface.
 
 
 
